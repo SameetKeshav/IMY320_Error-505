@@ -1,0 +1,246 @@
+/* Group 181 */
+.userPanel {
+  position: absolute;
+  width: 25%;
+  height: 95vh;
+  right: 0;
+  top: 0;
+}
+
+/* Rectangle 59 */
+.panelBlock {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  //   left: calc(50% - 276px / 2 + 502px);
+  //   top: 87px;
+
+  background: #f0f5ff;
+  border-radius: 0px 0px 0px 200px;
+}
+
+/* Group 166 */
+.panelContent {
+  position: absolute;
+    width: 90%;
+    height: 80%;
+  left: 80px;
+  top: 40px;
+}
+
+/* Group 183 */
+.tutorTitle {
+  //   position: absolute;
+  //   width: 244px;
+  //   height: 28px;
+  //   left: 1014px;
+  //   top: 93px;
+}
+
+/* mdi:academic-cap */
+.tutorIcon {
+  //   position: absolute;
+  //   width: 24px;
+  //   height: 24px;
+  //   left: 1234px;
+  //   top: 97px;
+}
+
+/* Vector */
+.capIcon {
+  position: absolute;
+  //   left: 0%;
+    right: 0;
+  //   top: 12.5%;
+  //   bottom: 12.5%;
+  font-size: 100px;
+  color: #c34ffd;
+}
+
+/* Tutors */
+.tutorheading {
+  //   position: absolute;
+  //   width: 63px;
+  //   height: 28px;
+  //   left: calc(50% - 63px / 2 + 405.5px);
+  //   top: calc(50% - 28px / 2 - 307px);
+
+  font-family: "Outfit";
+  font-weight: 600;
+  font-size: 100px;
+  //   line-height: 28px;
+  /* identical to box height */
+
+  color: #333333;
+}
+
+/* Classmates */
+.classmates {
+  position: absolute;
+  width: 115px;
+  height: 28px;
+  left: calc(50% - 115px / 2 + 431.5px);
+  top: calc(50% - 28px / 2 - 195px);
+
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 28px;
+  /* identical to box height */
+
+  color: #333333;
+}
+
+/* Group 182 */
+.tutorUser {
+  position: absolute;
+  width: 100%;
+//   height: 100%;
+  left: 10%;
+//   top: 131px;
+}
+
+/* image 1 */
+.tutorImg {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+//   left: 1034px;
+//   top: 131px;
+
+  background: url("https://media.istockphoto.com/id/597958694/photo/young-adult-male-student-in-the-lobby-of-a-university.jpg?s=612x612&w=0&k=20&c=QaNEzmcKrLJzmwOcu2lgwm1B7rm3Ouq2McYYdmoMGpU=");
+  border-radius: 100px;
+}
+
+/* James Payne */
+.tutorName {
+  position: absolute;
+//   width: 88px;
+//   height: 19px;
+//   left: calc(50% - 88px / 2 + 481px);
+//   top: calc(50% - 19px / 2 - 265.5px);
+
+  font-family: "Outfit";
+//   font-style: normal;
+  font-weight: 500;
+  font-size: 80px;
+//   line-height: 19px;
+  /* identical to box height */
+
+  color: #333333;
+}
+
+/* Group 138 */
+.classUser {
+  position: absolute;
+  width: 165px;
+  height: 34px;
+  left: 1034px;
+  top: 246px;
+}
+
+/* Natasha Schwarts */
+.className {
+  position: absolute;
+  width: 122px;
+  height: 19px;
+  left: calc(50% - 122px / 2 + 498px);
+  top: calc(50% - 19px / 2 - 150.5px);
+
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #333333;
+}
+
+/* image 1 */
+.classImg {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  left: 1034px;
+  top: 246px;
+
+  background: url("https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg");
+  border-radius: 100px;
+}
+
+/* Group 139 */
+.classUser2 {
+  position: absolute;
+  width: 145px;
+  height: 34px;
+  left: 1034px;
+  top: 310px;
+}
+
+/* Kaden Bernard */
+.className2 {
+  position: absolute;
+  width: 102px;
+  height: 19px;
+  left: calc(50% - 102px / 2 + 488px);
+  top: calc(50% - 19px / 2 - 86.5px);
+
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #333333;
+}
+
+/* image 1 */
+.classImg2 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  left: 1034px;
+  top: 310px;
+
+  background: url("https://remembermephotography.com/wp-content/uploads/2016/04/BD008cc.jpg");
+  border-radius: 100px;
+}
+
+/* Line 15 */
+.line15 {
+  position: absolute;
+  width: 224px;
+  height: 0px;
+  left: 1258px;
+  top: 178px;
+
+  border: 1px solid #e5e5e5;
+  transform: rotate(-180deg);
+}
+
+/* Line 16 */
+.line16 {
+  position: absolute;
+  width: 224.01px;
+  height: 0px;
+  left: 1258px;
+  top: 294px;
+
+  border: 1px solid #e5e5e5;
+  transform: rotate(180deg);
+}
+
+/* Line 17 */
+.line17 {
+  position: absolute;
+  width: 224px;
+  height: 0px;
+  left: 1258px;
+  top: 358.75px;
+
+  border: 1px solid #e5e5e5;
+  transform: rotate(180deg);
+}

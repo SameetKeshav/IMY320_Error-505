@@ -14,6 +14,7 @@ export class HomeComponent {
   myChats = false;
   mySchedule = false;
   modulePage = false;
+  request=true;
 
   isactivityStream(){
     this.activityStream=true;
@@ -29,6 +30,10 @@ export class HomeComponent {
     this.activityStream=false;
     this.myChats = false;
     this.mySchedule = true;
+  }
+
+  requestChange(){
+    this.request=false;
   }
 
 }

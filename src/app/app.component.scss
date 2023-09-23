@@ -2,3 +2,223 @@
     width: 0px; /* Adjust the width to make it thinner */
   }
   
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  .tutorPage {
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+  }
+  
+  .messages {
+    width: 50%;
+    height: 88vh;
+    position: absolute;
+    overflow: auto;
+    //   left: 25%;
+    font-family: Inter, sans-serif;
+  }
+  
+  .messagesContainer {
+    display: flex;
+    flex-direction: column;
+    width: 597px;
+    height: 585px;
+    left: 17px;
+    top: 0px;
+    position: absolute;
+    gap: 23px;
+  }
+  
+  .messageContainer2 {
+    width: 597px;
+    height: 57px;
+  }
+  
+  .messageImg {
+    width: 34.17px;
+    height: 33.41px;
+    position: absolute;
+    overflow: hidden;
+  }
+  
+  .userImg {
+    width: 34.17px;
+    height: 33.41px;
+    position: absolute;
+    border-radius: 100px;
+    object-fit: cover;
+  }
+  
+  .messageName {
+    left: 45px;
+    //   top: 2px;
+    position: absolute;
+    color: black;
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    word-wrap: break-word;
+  }
+  
+  .messageText {
+    width: 552px;
+    left: 45px;
+    //   top: 25px;
+    margin-top: 20px;
+    position: absolute;
+    color: black;
+    font-size: 13px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  
+  .messageTime {
+    left: 150px;
+    //   top: 6px;
+    margin-top: 3px;
+    position: absolute;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 11px;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    word-wrap: break-word;
+  }
+  
+  .myMessageContainer2 {
+    width: 590.17px;
+    height: 59px;
+  }
+  
+  .myMessageImg {
+    width: 34.17px;
+    height: 33.41px;
+    left: 556px;
+    //   top: 0px;
+    position: absolute;
+  }
+  
+  .myUserImg {
+    width: 34.17px;
+    height: 33.41px;
+    left: 0px;
+    //   top: 0px;
+    position: absolute;
+    border-radius: 100px;
+    object-fit: cover;
+  }
+  
+  .myMessageName {
+    left: 458px;
+    //   top: 5px;
+    position: absolute;
+    color: black;
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    word-wrap: break-word;
+  }
+  
+  .myMessageText {
+    width: 552px;
+    left: 0px;
+    //   top: 27px;
+    margin-top: 20px;
+    position: absolute;
+    text-align: right;
+    color: black;
+    font-size: 13px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  
+  .myMessageTime {
+    left: 340px;
+    //   top: 8px;
+    position: absolute;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 11px;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    word-wrap: break-word;
+  }
+  
+  //==================================messages==================================
+  
+  .messageBar {
+    width: 632px;
+    height: 33px;
+    bottom: 2.5%;
+    position: absolute;
+  }
+  
+  .messageBarInner {
+    width: 632px;
+    height: 33px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: #bfcdee;
+    border-radius: 50px;
+  }
+  
+  .messageIcons {
+    width: 87px;
+    height: 33px;
+    left: 545px;
+    top: 0px;
+    position: absolute;
+  }
+  
+  .messageIconInner {
+    width: 87px;
+    height: 33px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: #809fea;
+    border-radius: 50px;
+  }
+  
+  .messageIconContainer {
+    width: 58px;
+    height: 19px;
+    left: 15px;
+    top: 7px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .messageIcon {
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+  }
+  
+  .messageInputText {
+    left: 17.36px;
+    top: 7px;
+    position: absolute;
+    color: #4c7296;
+    font-size: 14px;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    word-wrap: break-word;
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 80%;
+  }
+  
+
+  //==================================requestmessage==================================
+
+  

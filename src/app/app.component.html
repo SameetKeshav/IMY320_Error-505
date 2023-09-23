@@ -146,9 +146,6 @@
         </button>
       </div>
 
-
-
-
       <!-- //chat stuff -->
 
       <div
@@ -180,7 +177,6 @@
               left: 385px;
               top: 0px;
               position: absolute;
-              
             "
           >
             <div
@@ -448,7 +444,7 @@
                 position: absolute;
                 color: black;
                 font-size: 16px;
-                font-family: Inter , sans-serif;
+                font-family: Inter, sans-serif;
                 font-weight: 600;
                 word-wrap: break-word;
               "
@@ -711,6 +707,7 @@
                 left: 0px;
                 top: 0px;
                 position: absolute;
+                cursor: pointer;
               "
             >
               <i
@@ -730,6 +727,7 @@
                 justify-content: flex-start;
                 align-items: flex-start;
                 display: inline-flex;
+                cursor: pointer;
               "
             >
               <i
@@ -739,21 +737,25 @@
             </div>
           </div>
         </div>
-        <div
+        <input
+          type="text"
           class="messageInputText"
           style="
             left: 17.36px;
             top: 7px;
             position: absolute;
             color: #4c7296;
-            font-size: 16px;
+            font-size: 14px;
             font-family: Inter, sans-serif;
             font-weight: 600;
             word-wrap: break-word;
+            border: none; /* Remove the default input border */
+            outline: none; /* Remove the input focus outline */
+            background: transparent; /* Make the input background transparent */
+            width: 80%; /* Make the input take up the entire container width */
           "
-        >
-          Message...
-        </div>
+          placeholder="Message..."
+        />
       </div>
 
       <!-- user bar -->

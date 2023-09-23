@@ -333,6 +333,9 @@ html {
 .Day{
     width: 20%;
     border-right: #E5E5E5 solid 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .Day Label{

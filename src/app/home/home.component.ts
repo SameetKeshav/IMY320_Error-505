@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import * as activityData from '../../data/activityStream.json'
+import * as chatData from '../../data/chatList.json'
 
 @Component({
   selector: 'app-home',
@@ -7,12 +9,19 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  activityStreamData: any[];
+  chatList: any[];
   modules=[1,2,3];
   days=[1,2,3,4];
   notifications = [1,2,3];
   activityStream=true;
   myChats = false;
   mySchedule = false;
+
+  constructor(){
+    this.activityStreamData = activityData;
+    this.chatList = chatData;
+  }
 
   isactivityStream(){
     this.activityStream=true;

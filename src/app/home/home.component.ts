@@ -14,16 +14,21 @@ export class HomeComponent {
   chatList: any[];
   schedule: any[];
   modules=[1,2,3];
-  days=[1,2,3,4];
   notifications = [1,2,3];
   activityStream=true;
   myChats = false;
   mySchedule = false;
+  days: string[] = [];
+  days2: number[] = [];
 
   constructor(){
     this.activityStreamData = activityData;
     this.chatList = chatData;
     this.schedule = scheduleData;
+    console.log(this.activityStreamData);
+    console.log(this.activityStreamData.length);
+    console.log(this.activityStreamData[0].date);
+    
   }
 
   isactivityStream(){

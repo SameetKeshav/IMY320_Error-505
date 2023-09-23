@@ -50,16 +50,19 @@
                 <div class = "scrollable">
                     <div *ngIf="activityStream" class="Activity_container">
                         <div class = "TopicTitle"><b>Activity Stream</b></div>
-                        <div *ngFor="let day of days" >
+                        <div *ngFor="let day of activityStreamData;let i = index" >
                             <div class="recordDay">
                                 <div class="icon">
                                 </div>
                                 <div class="border"></div>
-                                <div class="dayText">Today, 21/09
+                                <div class="dayText" *ngIf = "i===0">Today, {{day.date}}
+                                    <div class="border2"></div>
+                                </div>
+                                <div class="dayText" *ngIf = "i!==0"> {{day.date}}
                                     <div class="border2"></div>
                                 </div>
                             </div>
-                            <div *ngFor="let note of notifications" class="record">
+                            <div *ngFor="let note of notifications " class="record">
                                 <div class="icon">
                                     <i class="fa fa-comments" aria-hidden="true"></i>
                                     <label>52</label>

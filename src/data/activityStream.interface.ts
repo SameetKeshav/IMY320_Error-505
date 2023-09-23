@@ -1,6 +1,8 @@
 export interface ActivityStream {
-  name: string;
-  description: string;
   date: string;
-  category: string;
+  name: string[];
+  category: string[];
+  time: string[];
+  message: string[];
+
 }

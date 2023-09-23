@@ -150,210 +150,72 @@
         </button>
       </div>
 
-      <!-- //*ngIf="!request" -->
 
       <!-- //chat stuff -->
 
-      <div class="messages">
-        <div class="messageContainer">
-
-
-
-
-
-
-
-
-          
-          <div
-            class="requestNoti"
-            style="
-              width: 395px;
-              height: 124px;
-              left: 240px;
-              top: 50px;
-              position: absolute;
-            "
-          >
-            <div
-              class="requestNotiInner"
-              style="
-                width: 395px;
-                height: 124px;
-                left: 395px;
-                top: 124px;
-                position: absolute;
-                transform: rotate(-180deg);
-                transform-origin: 0 0;
-                background: #aabfed;
-                border-radius: 10px;
-              "
-            ></div>
-            <div
-              class="requestNotiText"
-              style="
-                left: 14px;
-                top: 11px;
-                position: absolute;
-                color: #333333;
-                font-size: 25px;
-                font-family: Outfit, sans-serif;
-                font-weight: 500;
-                word-wrap: break-word;
-              "
-            >
-              Request Made:
+      <div class="messages" *ngIf="!request">
+        <div class="messagesContainer">
+          <div class="messageContainerRequest">
+            <div class="myMessageImg">
+              <img
+                class="myUserImg"
+                src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+              />
             </div>
-            <div
-              class="requestNotiModule"
-              style="
-                left: 314px;
-                top: 17px;
-                position: absolute;
-                color: #333333;
-                font-size: 16px;
-                font-family: Outfit, sans-serif;
-                font-weight: 600;
-                word-wrap: break-word;
-              "
-            >
-              COS 330
+            <div class="myMessageName">User Name</div>
+
+            <div class="requestNoti">
+              <div class="requestNotiInner">
+                <div class="requestNotiTitle">Request Made:</div>
+                <div class="requestNotiModule">COS 330</div>
+                <div class="requestNotiText">
+                  This is the description of the problem I would like your
+                  assistance with.
+                </div>
+              </div>
             </div>
-            <div
-              class="requestNotiText"
-              style="
-                width: 304px;
-                left: 18px;
-                top: 62px;
-                position: absolute;
-                color: #333333;
-                font-size: 14px;
-                font-family: Outfit, sans-serif;
-                font-weight: 400;
-                word-wrap: break-word;
-              "
-            >
-              This is the description of the problem I would like your
-              assistance with.
+
+            <div class="myMessageTime">12/09/2023 09:23</div>
+          </div>
+
+          <div class="messageContainer2">
+            <div class="messageImg">
+              <img
+                class="userImg"
+                src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+              />
             </div>
+
+            <div class="messageName">User Name</div>
+            <div class="messageText">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac
+              metus vel justo sagittis tincidunt. Sed auctor tortor a justo
+              dignissim, eu suscipit purus dictum.
+            </div>
+            <div class="messageTime">12/09/2023 09:23</div>
+          </div>
+
+          <div class="myMessageContainer2">
+            <div class="myMessageImg">
+              <img
+                class="myUserImg"
+                src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+              />
+            </div>
+            <div class="myMessageName">User Name</div>
+            <div class="myMessageText">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac
+              metus vel justo sagittis tincidunt. Sed auctor tortor a justo
+              dignissim, eu suscipit purus dictum.
+            </div>
+            <div class="myMessageTime">12/09/2023 09:23</div>
           </div>
         </div>
       </div>
 
       <!-- message bar -->
 
-      <div
-        class="messageBar"
-        style="
-          width: 632px;
-          height: 33px;
-          bottom: 2.5%;
-          left: 25%;
-          position: absolute;
-        "
-      >
-        <div
-          class="messageBarInner"
-          style="
-            width: 632px;
-            height: 33px;
-            left: 0px;
-            top: 0px;
-            position: absolute;
-            background: #bfcdee;
-            border-radius: 50px;
-          "
-        ></div>
-        <div
-          class="messageIcons"
-          style="
-            width: 87px;
-            height: 33px;
-            left: 545px;
-            top: 0px;
-            position: absolute;
-          "
-        >
-          <div
-            class="messageIconInner"
-            style="
-              width: 87px;
-              height: 33px;
-              left: 0px;
-              top: 0px;
-              position: absolute;
-              background: #809fea;
-              border-radius: 50px;
-            "
-          ></div>
-          <div
-            class="messageIconContainer"
-            style="
-              width: 58px;
-              height: 19px;
-              left: 15px;
-              top: 7px;
-              position: absolute;
-            "
-          >
-            <div
-              class="messageIcon"
-              style="
-                width: 19px;
-                height: 19px;
-                left: 0px;
-                top: 0px;
-                position: absolute;
-                cursor: pointer;
-              "
-            >
-              <i
-                class="fas fa-plus-circle"
-                style="width: 19px; height: 19px; color: #00355c"
-              ></i>
-            </div>
-            <div
-              class="messageIcon"
-              style="
-                width: 19px;
-                height: 19px;
-                left: 39px;
-                top: 0px;
-                position: absolute;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-                display: inline-flex;
-                cursor: pointer;
-              "
-            >
-              <i
-                class="fas fa-paper-plane"
-                style="width: 16.62px; height: 16.62px; color: #00355c"
-              ></i>
-            </div>
-          </div>
-        </div>
-        <input
-          type="text"
-          class="messageInputText"
-          style="
-            left: 17.36px;
-            top: 7px;
-            position: absolute;
-            color: #4c7296;
-            font-size: 14px;
-            font-family: Inter, sans-serif;
-            font-weight: 600;
-            word-wrap: break-word;
-            border: none; /* Remove the default input border */
-            outline: none; /* Remove the input focus outline */
-            background: transparent; /* Make the input background transparent */
-            width: 80%; /* Make the input take up the entire container width */
-          "
-          placeholder="Message..."
-        />
-      </div>
+      
 
       <!-- user bar -->
     </div>

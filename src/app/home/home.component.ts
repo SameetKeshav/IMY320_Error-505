@@ -10,11 +10,11 @@ export class HomeComponent {
   modules=[1,2,3];
   days=[1,2,3,4];
   notifications = [1,2,3];
-  activityStream=true;
+  activityStream=false;
   myChats = false;
   mySchedule = false;
   modulePage = false;
-  tutorPage = false;
+  tutorPage = true;
   classPage=false;
   request=true;
   className = '';

@@ -31,7 +31,7 @@
   </div>
   <div class="content">
     <div class="headings">
-      <div class="Options">
+      <div class="Options" *ngIf="!modulePage && !tutorPage && !classPage">
         <div class="Option" (click)="isactivityStream()">
           <i
             (click)="isactivityStream()"
@@ -87,7 +87,37 @@
           <label *ngIf="mySchedule" style="color: #0572c0">My Schedule</label>
         </div>
       </div>
+
+      <div class="Options" *ngIf="modulePage">
+        <div class="moduleNameHeader">COS 333</div>
+        <div class="searchChatOuter">
+          <div class="searchChat">
+            <div class="searchChatContainer">
+              <div class="searchChatText">Search chat or category...</div>
+              <div class="searchChatIconContainer">
+                <div class="searchChatIcon">
+                    <i class="fas fa-search"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="Options" *ngIf="tutorPage">
+        <div class="tutorNameHeader">James Payne</div>
+        <div class="tutorHeaderIcon">
+            <i
+              class="fas fa-graduation-cap"
+              style="font-size: 20px; color: #c34ffd"
+            ></i>
+          </div>
+      </div>
     </div>
+
+
+
     <div class="scrollable">
       <div *ngIf="activityStream" class="Activity_container">
         <div class="TopicTitle"><b>Activity Stream</b></div>
@@ -260,25 +290,35 @@
               <div class="classHeader">Classmates</div>
 
               <div class="usersList">
-                <div class="userInfoContainer" (click)="openClass('Natasha Schwarts')">
-                  <div (click)="openClass('Natasha Schwarts')" class="userName">Natasha Schwarts</div>
-                  <img
+                <div
+                  class="userInfoContainer"
                   (click)="openClass('Natasha Schwarts')"
+                >
+                  <div (click)="openClass('Natasha Schwarts')" class="userName">
+                    Natasha Schwarts
+                  </div>
+                  <img
+                    (click)="openClass('Natasha Schwarts')"
                     class="userImg"
                     src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
                   />
                   <div class="line2"></div>
                 </div>
 
-                <div class="userInfoContainer" (click)="openClass('Natasha Schwarts')">
-                    <div (click)="openClass('Natasha Schwarts')" class="userName">Natasha Schwarts</div>
-                    <img
-                    (click)="openClass('Natasha Schwarts')"
-                      class="userImg"
-                      src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
-                    />
-                    <div class="line2"></div>
+                <div
+                  class="userInfoContainer"
+                  (click)="openClass('Natasha Schwarts')"
+                >
+                  <div (click)="openClass('Natasha Schwarts')" class="userName">
+                    Natasha Schwarts
                   </div>
+                  <img
+                    (click)="openClass('Natasha Schwarts')"
+                    class="userImg"
+                    src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+                  />
+                  <div class="line2"></div>
+                </div>
               </div>
             </div>
           </div>

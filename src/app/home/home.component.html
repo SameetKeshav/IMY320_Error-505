@@ -5,7 +5,7 @@
 
 <div class="container">
   <div class="menu">
-    <div class="title">
+    <div class="title" (click)="isactivityStream()">
       <img
         src="assets/logo.png"
         style="object-fit: cover"
@@ -20,7 +20,7 @@
         <i class="fa fa-search" aria-hidden="true"></i>
       </div>
     </div>
-    <div class="module" *ngFor="let module of modules">
+    <div class="module" *ngFor="let module of modules" (click)="openModule('COS 333')">
       <div class="moduleName"><b>COS333</b></div>
       <div class="moduleIcons">
         <i class="fa fa-bell" aria-hidden="true"></i>
@@ -31,7 +31,7 @@
   </div>
   <div class="content">
     <div class="headings">
-      <div class="Options">
+      <div class="Options" *ngIf="!modulePage && !tutorPage && !classPage">
         <div class="Option" (click)="isactivityStream()">
           <i
             (click)="isactivityStream()"
@@ -87,7 +87,55 @@
           <label *ngIf="mySchedule" style="color: #0572c0">My Schedule</label>
         </div>
       </div>
+
+      <div class="Options" *ngIf="modulePage">
+        <div class="moduleNameHeader">{{ moduleName }}</div>
+        <div class="searchChatOuter">
+            <div class="searchChat">
+              <div class="searchChatContainer">
+                <input
+                  type="text"
+                  class="searchChatInput"
+                  placeholder="Search chat or category..."
+                />
+                <div class="searchChatIconContainer">
+                  <div class="searchChatIcon">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+      </div>
+
+      <div class="Options" *ngIf="tutorPage">
+        <div class="tutorNameHeader">{{ tutorName }}</div>
+        <div class="tutorHeaderImg">
+          <img
+            class="tutorUserImg"
+            src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+          />
+        </div>
+        <div class="tutorHeaderIcon">
+          <i
+            class="fas fa-graduation-cap"
+            style="font-size: 16px; color: #c34ffd"
+          ></i>
+        </div>
+      </div>
+
+      <div class="Options" *ngIf="classPage">
+        <div class="classNameHeader">{{ className }}</div>
+        <div class="classImg">
+          <img
+            class="classUserImg"
+            src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+          />
+        </div>
+      </div>
     </div>
+
     <div class="scrollable">
       <div *ngIf="activityStream" class="Activity_container">
         <div class="TopicTitle"><b>Activity Stream</b></div>
@@ -310,12 +358,13 @@
                 <div class="tutorheaderText">Tutors</div>
               </div>
 
-              <div class="tutorContainer">
+              <div class="tutorContainer" (click)="openTutor('James Payne')">
                 <img
                   class="tutorImg"
+                  (click)="openTutor('James Payne')"
                   src="https://media.istockphoto.com/id/597958694/photo/young-adult-male-student-in-the-lobby-of-a-university.jpg?s=612x612&w=0&k=20&c=QaNEzmcKrLJzmwOcu2lgwm1B7rm3Ouq2McYYdmoMGpU="
                 />
-                <div class="tutorName">James Payne</div>
+                <div class="tutorName" (click)="openTutor('James Payne')">James Payne</div>
               </div>
 
               <div class="line1"></div>
@@ -323,18 +372,30 @@
               <div class="classHeader">Classmates</div>
 
               <div class="usersList">
-                <div class="userInfoContainer">
-                  <div class="userName">Natasha Schwarts</div>
+                <div
+                  class="userInfoContainer"
+                  (click)="openClass('Natasha Schwarts')"
+                >
+                  <div (click)="openClass('Natasha Schwarts')" class="userName">
+                    Natasha Schwarts
+                  </div>
                   <img
+                    (click)="openClass('Natasha Schwarts')"
                     class="userImg"
                     src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
                   />
                   <div class="line2"></div>
                 </div>
 
-                <div class="userInfoContainer">
-                  <div class="userName">Natasha Schwarts</div>
+                <div
+                  class="userInfoContainer"
+                  (click)="openClass('Natasha Schwarts')"
+                >
+                  <div (click)="openClass('Natasha Schwarts')" class="userName">
+                    Natasha Schwarts
+                  </div>
                   <img
+                    (click)="openClass('Natasha Schwarts')"
                     class="userImg"
                     src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
                   />
@@ -467,7 +528,7 @@
 
       <!-- ========================================classmate chat page====================================== -->
 
-      <div class="tutorPage" *ngIf="classmatePage">
+      <div class="tutorPage" *ngIf="classPage">
         <!-- //chat stuff -->
 
         <div class="messages">

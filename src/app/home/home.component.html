@@ -1,249 +1,427 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/>
 
-        <div class="container">
-            <div class="menu">
-                <div class="title">
-                    <img src="assets/logo.png" style="object-fit: cover;" width="50px" height="50px">
-                    <h1>OmniHub</h1>
-                </div>
-                <div class="search">
-                    <input type="text" class="input" placeholder="Search for a module...">
-                    <div class="searchIcon">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div class="module" *ngFor="let module of modules">
-                    <div class = "moduleName"><b>COS333</b></div>
-                    <div class = "moduleIcons">
-                        <i class="fa fa-bell" aria-hidden="true"></i>
-                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                        <i class="fa fa-cog" aria-hidden="true"></i>
-                    </div>
-                </div>
-                
-
-            </div>
-            <div class="content">
-                <div class = "headings">
-                    <div class = "Options">
-                        <div class="Option" (click)="isactivityStream()">
-                            <i (click)="isactivityStream()" *ngIf = "!activityStream" class="fa fa-clock" aria-hidden="true"></i>
-                            <label (click)="isactivityStream()" *ngIf = "!activityStream">Activity Stream</label>
-                            <i *ngIf = "activityStream" class="fa fa-clock" aria-hidden="true" style="color:#0572C0"></i>
-                            <label  *ngIf = "activityStream" style="color:#0572C0">Activity Stream</label>
-                        </div>
-                        <div class="Option" (click)="ismyChats()">
-                            <i (click)="ismyChats()" *ngIf = "!myChats" class="fa fa-comment" aria-hidden="true"></i>
-                            <label  (click)="ismyChats()" *ngIf = "!myChats">My Chats</label>
-                            <i  *ngIf = "myChats" class="fa fa-comment" aria-hidden="true" style="color:#0572C0"></i>
-                            <label *ngIf = "myChats" style="color:#0572C0">My Chats</label>
-                        </div>
-                        <div class="Option" (click)="ismySchedule()">
-                            <i (click)="ismySchedule()" *ngIf = "!mySchedule" class="fa fa-calendar" aria-hidden="true"></i>
-                            <label (click)="ismySchedule()" *ngIf = "!mySchedule">My Schedule</label>
-                            <i  *ngIf = "mySchedule" class="fa fa-calendar" aria-hidden="true" style="color:#0572C0"></i>
-                            <label *ngIf = "mySchedule" style="color:#0572C0">My Schedule</label>
-                        </div>
-
-                    </div>
-                </div>
-                <div class = "scrollable">
-                    <div *ngIf="activityStream" class="Activity_container">
-                        <div class = "TopicTitle"><b>Activity Stream</b></div>
-                        <div *ngFor="let day of days" >
-                            <div class="recordDay">
-                                <div class="icon">
-                                </div>
-                                <div class="border"></div>
-                                <div class="dayText">Today, 21/09
-                                    <div class="border2"></div>
-                                </div>
-                            </div>
-                            <div *ngFor="let note of notifications" class="record">
-                                <div class="icon">
-                                    <i class="fa fa-comments" aria-hidden="true"></i>
-                                    <label>52</label>
-                                </div>
-                                <div class="border"></div>
-                                <div class="recordText">
-                                    <b>Some guy</b> said some <b>real shit</b><br>
-                                    <label>2:45PM</label>
-                                </div>
-                            </div>
-                        </div>
-                      
-                    </div>
-                    <div *ngIf="myChats" class="Chat_container">
-                        <div class = "TopicTitle"><b>Chats</b></div>
-                        <div class="border3"></div>
-                        <div *ngFor="let chat of modules">
-                            <div class="chat">
-                                <div class="profile">
-                                    <img src="assets/p1.jpg" class="img">
-                                </div>
-                                <div class="details">
-                                    <div style="font-size: 16px; padding:5px;"><b>Ronin Brookes</b></div>
-                                    <div style="font-size: 16px;padding:5px;">This is a message from me</div>
-                                </div>
-                            </div>
-                            <div class="border4"></div>
-                        </div>
-                        
-
-                      
-                    </div>
-                    <div *ngIf="mySchedule" class="Schedule_container">
-                        <div class = "TopicTitle"><b>Schedule</b></div>
-                        <div class="border3"></div>
-                        <div class="Calander">
-                            <div class="Day"><Label>Monday</Label></div>
-                            <div class="Day"><Label>Tuesday</Label></div>
-                            <div class="Day"><Label>Wednesday</Label></div>
-                            <div class="Day"><Label>Thursday</Label></div>
-                            <div class="Day"><Label>Friday</Label></div>
-                        </div>
-                    </div>
-
-                    <div class="modulePage" *ngIf="modulePage">
-                        <div class="messages">
-                          <div class="messagesContainer">
-                            <div class="messageContainer2">
-                              <div class="messageImg">
-                                <img
-                                  class="userImg"
-                                  src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
-                                />
-                              </div>
-                  
-                              <div class="messageName">User Name</div>
-                              <div class="messageText">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac
-                                metus vel justo sagittis tincidunt. Sed auctor tortor a justo
-                                dignissim, eu suscipit purus dictum.
-                              </div>
-                              <div class="messageTime">12/09/2023 09:23</div>
-                            </div>
-                  
-                            <div class="messageContainer2">
-                              <div class="messageImg">
-                                <img
-                                  class="userImg"
-                                  src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
-                                />
-                              </div>
-                  
-                              <div class="messageName">User Name</div>
-                              <div class="messageText">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac
-                                metus vel justo sagittis tincidunt. Sed auctor tortor a justo
-                                dignissim, eu suscipit purus dictum.
-                              </div>
-                              <div class="messageTime">12/09/2023 09:23</div>
-                            </div>
-                  
-                            <div class="messageContainer2">
-                              <div class="messageImg">
-                                <img
-                                  class="userImg"
-                                  src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
-                                />
-                              </div>
-                  
-                              <div class="messageName">User Name</div>
-                              <div class="messageText">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac
-                                metus vel justo sagittis tincidunt. Sed auctor tortor a justo
-                                dignissim, eu suscipit purus dictum.
-                              </div>
-                              <div class="messageTime">12/09/2023 09:23</div>
-                            </div>
-                          </div>
-                        </div>
-                  
-                        <!-- message bar -->
-                  
-                        <div class="messageBar">
-                          <div class="messageBarInner"></div>
-                          <div class="messageIcons">
-                            <div class="messageIconInner"></div>
-                            <div class="messageIconContainer">
-                              <div class="messageIcon">
-                                <i
-                                  class="fas fa-plus-circle"
-                                  style="width: 19px; height: 19px; color: #00355c"
-                                ></i>
-                              </div>
-                              <div class="messageIcon">
-                                <i
-                                  class="fas fa-paper-plane"
-                                  style="width: 16.62px; height: 16.62px; color: #00355c"
-                                ></i>
-                              </div>
-                            </div>
-                          </div>
-                          <input type="text" class="messageInputText" placeholder="Message..." />
-                        </div>
-                  
-                        <!-- user bar -->
-                  
-                        <div class="usersContainer">
-                          <div class="usersContainerStyles">
-                            <div class="usersContainerInner">
-                              <div class="tutorheader">
-                                <div class="tutorheader2">
-                                  <i
-                                    class="fas fa-graduation-cap"
-                                    style="font-size: 20px; color: #c34ffd"
-                                  ></i>
-                                </div>
-                                <div class="tutorheaderText">Tutors</div>
-                              </div>
-                  
-                              <div class="tutorContainer">
-                                <img
-                                  class="tutorImg"
-                                  src="https://media.istockphoto.com/id/597958694/photo/young-adult-male-student-in-the-lobby-of-a-university.jpg?s=612x612&w=0&k=20&c=QaNEzmcKrLJzmwOcu2lgwm1B7rm3Ouq2McYYdmoMGpU="
-                                />
-                                <div class="tutorName">James Payne</div>
-                              </div>
-                  
-                              <div class="line1"></div>
-                  
-                              <div class="classHeader">Classmates</div>
-                  
-                              <div class="usersList">
-                                <div class="userInfoContainer">
-                                  <div class="userName">Natasha Schwarts</div>
-                                  <img
-                                    class="userImg"
-                                    src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
-                                  />
-                                  <div class="line2"></div>
-                                </div>
-                  
-                                <div class="userInfoContainer">
-                                  <div class="userName">Natasha Schwarts</div>
-                                  <img
-                                    class="userImg"
-                                    src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
-                                  />
-                                  <div class="line2"></div>
-                                </div>
-                              </div>
-                  
-                              
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-
-
-                      <!-- tutor chat page -->
-
-
-                      
-                </div>
-            </div>
+<div class="container">
+  <div class="menu">
+    <div class="title">
+      <img
+        src="assets/logo.png"
+        style="object-fit: cover"
+        width="50px"
+        height="50px"
+      />
+      <h1>OmniHub</h1>
+    </div>
+    <div class="search">
+      <input type="text" class="input" placeholder="Search for a module..." />
+      <div class="searchIcon">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="module" *ngFor="let module of modules">
+      <div class="moduleName"><b>COS333</b></div>
+      <div class="moduleIcons">
+        <i class="fa fa-bell" aria-hidden="true"></i>
+        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+        <i class="fa fa-cog" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="headings">
+      <div class="Options">
+        <div class="Option" (click)="isactivityStream()">
+          <i
+            (click)="isactivityStream()"
+            *ngIf="!activityStream"
+            class="fa fa-clock"
+            aria-hidden="true"
+          ></i>
+          <label (click)="isactivityStream()" *ngIf="!activityStream"
+            >Activity Stream</label
+          >
+          <i
+            *ngIf="activityStream"
+            class="fa fa-clock"
+            aria-hidden="true"
+            style="color: #0572c0"
+          ></i>
+          <label *ngIf="activityStream" style="color: #0572c0"
+            >Activity Stream</label
+          >
         </div>
-   
+        <div class="Option" (click)="ismyChats()">
+          <i
+            (click)="ismyChats()"
+            *ngIf="!myChats"
+            class="fa fa-comment"
+            aria-hidden="true"
+          ></i>
+          <label (click)="ismyChats()" *ngIf="!myChats">My Chats</label>
+          <i
+            *ngIf="myChats"
+            class="fa fa-comment"
+            aria-hidden="true"
+            style="color: #0572c0"
+          ></i>
+          <label *ngIf="myChats" style="color: #0572c0">My Chats</label>
+        </div>
+        <div class="Option" (click)="ismySchedule()">
+          <i
+            (click)="ismySchedule()"
+            *ngIf="!mySchedule"
+            class="fa fa-calendar"
+            aria-hidden="true"
+          ></i>
+          <label (click)="ismySchedule()" *ngIf="!mySchedule"
+            >My Schedule</label
+          >
+          <i
+            *ngIf="mySchedule"
+            class="fa fa-calendar"
+            aria-hidden="true"
+            style="color: #0572c0"
+          ></i>
+          <label *ngIf="mySchedule" style="color: #0572c0">My Schedule</label>
+        </div>
+      </div>
+    </div>
+    <div class="scrollable">
+      <div *ngIf="activityStream" class="Activity_container">
+        <div class="TopicTitle"><b>Activity Stream</b></div>
+        <div *ngFor="let day of days">
+          <div class="recordDay">
+            <div class="icon"></div>
+            <div class="border"></div>
+            <div class="dayText">
+              Today, 21/09
+              <div class="border2"></div>
+            </div>
+          </div>
+          <div *ngFor="let note of notifications" class="record">
+            <div class="icon">
+              <i class="fa fa-comments" aria-hidden="true"></i>
+              <label>52</label>
+            </div>
+            <div class="border"></div>
+            <div class="recordText">
+              <b>Some guy</b> said some <b>real shit</b><br />
+              <label>2:45PM</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="myChats" class="Chat_container">
+        <div class="TopicTitle"><b>Chats</b></div>
+        <div class="border3"></div>
+        <div *ngFor="let chat of modules">
+          <div class="chat">
+            <div class="profile">
+              <img src="assets/p1.jpg" class="img" />
+            </div>
+            <div class="details">
+              <div style="font-size: 16px; padding: 5px">
+                <b>Ronin Brookes</b>
+              </div>
+              <div style="font-size: 16px; padding: 5px">
+                This is a message from me
+              </div>
+            </div>
+          </div>
+          <div class="border4"></div>
+        </div>
+      </div>
+      <div *ngIf="mySchedule" class="Schedule_container">
+        <div class="TopicTitle"><b>Schedule</b></div>
+        <div class="border3"></div>
+        <div class="Calander">
+          <div class="Day"><Label>Monday</Label></div>
+          <div class="Day"><Label>Tuesday</Label></div>
+          <div class="Day"><Label>Wednesday</Label></div>
+          <div class="Day"><Label>Thursday</Label></div>
+          <div class="Day"><Label>Friday</Label></div>
+        </div>
+      </div>
+
+      <div class="modulePage" *ngIf="modulePage">
+        <div class="messages">
+          <div class="messagesContainer">
+            <div class="messageContainer2">
+              <div class="messageImg">
+                <img
+                  class="userImg"
+                  src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+                />
+              </div>
+
+              <div class="messageName">User Name</div>
+              <div class="messageText">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                ac metus vel justo sagittis tincidunt. Sed auctor tortor a justo
+                dignissim, eu suscipit purus dictum.
+              </div>
+              <div class="messageTime">12/09/2023 09:23</div>
+            </div>
+
+            <div class="messageContainer2">
+              <div class="messageImg">
+                <img
+                  class="userImg"
+                  src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+                />
+              </div>
+
+              <div class="messageName">User Name</div>
+              <div class="messageText">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                ac metus vel justo sagittis tincidunt. Sed auctor tortor a justo
+                dignissim, eu suscipit purus dictum.
+              </div>
+              <div class="messageTime">12/09/2023 09:23</div>
+            </div>
+
+            <div class="messageContainer2">
+              <div class="messageImg">
+                <img
+                  class="userImg"
+                  src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+                />
+              </div>
+
+              <div class="messageName">User Name</div>
+              <div class="messageText">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                ac metus vel justo sagittis tincidunt. Sed auctor tortor a justo
+                dignissim, eu suscipit purus dictum.
+              </div>
+              <div class="messageTime">12/09/2023 09:23</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- message bar -->
+
+        <div class="messageBar">
+          <div class="messageBarInner"></div>
+          <div class="messageIcons">
+            <div class="messageIconInner"></div>
+            <div class="messageIconContainer">
+              <div class="messageIcon">
+                <i
+                  class="fas fa-plus-circle"
+                  style="width: 19px; height: 19px; color: #00355c"
+                ></i>
+              </div>
+              <div class="messageIcon">
+                <i
+                  class="fas fa-paper-plane"
+                  style="width: 16.62px; height: 16.62px; color: #00355c"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <input
+            type="text"
+            class="messageInputText"
+            placeholder="Message..."
+          />
+        </div>
+
+        <!-- user bar -->
+
+        <div class="usersContainer">
+          <div class="usersContainerStyles">
+            <div class="usersContainerInner">
+              <div class="tutorheader">
+                <div class="tutorheader2">
+                  <i
+                    class="fas fa-graduation-cap"
+                    style="font-size: 20px; color: #c34ffd"
+                  ></i>
+                </div>
+                <div class="tutorheaderText">Tutors</div>
+              </div>
+
+              <div class="tutorContainer">
+                <img
+                  class="tutorImg"
+                  src="https://media.istockphoto.com/id/597958694/photo/young-adult-male-student-in-the-lobby-of-a-university.jpg?s=612x612&w=0&k=20&c=QaNEzmcKrLJzmwOcu2lgwm1B7rm3Ouq2McYYdmoMGpU="
+                />
+                <div class="tutorName">James Payne</div>
+              </div>
+
+              <div class="line1"></div>
+
+              <div class="classHeader">Classmates</div>
+
+              <div class="usersList">
+                <div class="userInfoContainer">
+                  <div class="userName">Natasha Schwarts</div>
+                  <img
+                    class="userImg"
+                    src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+                  />
+                  <div class="line2"></div>
+                </div>
+
+                <div class="userInfoContainer">
+                  <div class="userName">Natasha Schwarts</div>
+                  <img
+                    class="userImg"
+                    src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+                  />
+                  <div class="line2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================================================tutor chat page====================================== -->
+
+      <div class="tutorPage" style="display: flex">
+        <div class="requestContainer" *ngIf="request">
+          <div class="requestBack">
+            <div class="requestTitle">Request Tutor?</div>
+            <div class="requestText">
+              Name: James Payne<br />Module: COS 330
+            </div>
+
+            <div class="requestInput">
+              <textarea
+                type="text"
+                class="requestTextInput"
+                placeholder="Describe your request..."
+              ></textarea>
+            </div>
+
+            <button class="requestCancelBtn" (click)="requestChange()">
+              Cancel
+            </button>
+
+            <button class="requestAcceptBtn" (click)="requestChange()">
+              Request
+            </button>
+          </div>
+        </div>
+
+        <!-- //chat stuff -->
+
+        <div class="messages" *ngIf="!request">
+          <div class="messagesContainer">
+            <div class="messageContainerRequest">
+              <div class="myMessageImg">
+                <img
+                  class="myUserImg"
+                  src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+                />
+              </div>
+              <div class="myMessageName">User Name</div>
+
+              <div class="requestNoti">
+                <div class="requestNotiInner">
+                  <div class="requestNotiTitle">Request Made:</div>
+                  <div class="requestNotiModule">COS 330</div>
+                  <div class="requestNotiText">
+                    This is the description of the problem I would like your
+                    assistance with.
+                  </div>
+                </div>
+              </div>
+
+              <div class="myMessageTime">12/09/2023 09:23</div>
+            </div>
+
+            <div class="messageContainer2">
+              <div class="messageImg">
+                <img
+                  class="userImg"
+                  src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+                />
+              </div>
+
+              <div class="messageName">User Name</div>
+              <div class="messageText">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                ac metus vel justo sagittis tincidunt. Sed auctor tortor a justo
+                dignissim, eu suscipit purus dictum.
+              </div>
+              <div class="messageTime">12/09/2023 09:23</div>
+            </div>
+
+            <div class="myMessageContainer2">
+              <div class="myMessageImg">
+                <img
+                  class="myUserImg"
+                  src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+                />
+              </div>
+              <div class="myMessageName">User Name</div>
+              <div class="myMessageText">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                ac metus vel justo sagittis tincidunt. Sed auctor tortor a justo
+                dignissim, eu suscipit purus dictum.
+              </div>
+              <div class="myMessageTime">12/09/2023 09:23</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- message bar -->
+
+        <div class="messageBar">
+          <div class="messageBarInner"></div>
+          <div class="messageIcons">
+            <div class="messageIconInner"></div>
+            <div class="messageIconContainer">
+              <div class="messageIcon">
+                <i
+                  class="fas fa-plus-circle"
+                  style="width: 19px; height: 19px; color: #00355c"
+                ></i>
+              </div>
+              <div class="messageIcon">
+                <i
+                  class="fas fa-paper-plane"
+                  style="width: 16.62px; height: 16.62px; color: #00355c"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <input
+            type="text"
+            class="messageInputText"
+            placeholder="Message..."
+          />
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+      <!-- ========================================classmate chat page====================================== -->
+
+
+
+
+
+
+
+
+
+
+
+      
+    </div>
+  </div>
+</div>

@@ -1,171 +1,211 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/>
 
-        <div class="container">
-            <div class="menu">
-                <div class="title">
-                    <img src="assets/logo.png" style="object-fit: cover;" width="50px" height="50px">
-                    <h1>OmniHub</h1>
-                </div>
-                <div class="search">
-                    <input type="text" class="input" placeholder="Search for a module...">
-                    <div class="searchIcon">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div class="module" *ngFor="let module of modules">
-                    <div class = "moduleName"><b>COS333</b></div>
-                    <div class = "moduleIcons">
-                        <i class="fa fa-bell" aria-hidden="true"></i>
-                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                        <i class="fa fa-cog" aria-hidden="true"></i>
-                    </div>
-                </div>
-                
-
-            </div>
-            <div class="content">
-                <div class = "headings">
-                    <div class = "Options">
-                        <div class="Option" (click)="isactivityStream()">
-                            <i (click)="isactivityStream()" *ngIf = "!activityStream" class="fa fa-clock" aria-hidden="true"></i>
-                            <label (click)="isactivityStream()" *ngIf = "!activityStream">Activity Stream</label>
-                            <i *ngIf = "activityStream" class="fa fa-clock" aria-hidden="true" style="color:#0572C0"></i>
-                            <label  *ngIf = "activityStream" style="color:#0572C0">Activity Stream</label>
-                        </div>
-                        <div class="Option" (click)="ismyChats()">
-                            <i (click)="ismyChats()" *ngIf = "!myChats" class="fa fa-comment" aria-hidden="true"></i>
-                            <label  (click)="ismyChats()" *ngIf = "!myChats">My Chats</label>
-                            <i  *ngIf = "myChats" class="fa fa-comment" aria-hidden="true" style="color:#0572C0"></i>
-                            <label *ngIf = "myChats" style="color:#0572C0">My Chats</label>
-                        </div>
-                        <div class="Option" (click)="ismySchedule()">
-                            <i (click)="ismySchedule()" *ngIf = "!mySchedule" class="fa fa-calendar" aria-hidden="true"></i>
-                            <label (click)="ismySchedule()" *ngIf = "!mySchedule">My Schedule</label>
-                            <i  *ngIf = "mySchedule" class="fa fa-calendar" aria-hidden="true" style="color:#0572C0"></i>
-                            <label *ngIf = "mySchedule" style="color:#0572C0">My Schedule</label>
-                        </div>
-
-                    </div>
-                </div>
-                <div class = "scrollable">
-                    <div *ngIf="activityStream" class="Activity_container">
-                        <div class = "TopicTitle"><b>Activity Stream</b></div>
-                        <div *ngFor="let day of days" >
-                            <div class="recordDay">
-                                <div class="icon">
-                                </div>
-                                <div class="border"></div>
-                                <div class="dayText">Today, 21/09
-                                    <div class="border2"></div>
-                                </div>
-                            </div>
-                            <div *ngFor="let note of notifications" class="record">
-                                <div class="icon">
-                                    <i class="fa fa-comments" aria-hidden="true"></i>
-                                    <label>52</label>
-                                </div>
-                                <div class="border"></div>
-                                <div class="recordText">
-                                    <b>Some guy</b> said some <b>real shit</b><br>
-                                    <label>2:45PM</label>
-                                </div>
-                            </div>
-                        </div>
-                      
-                    </div>
-                    <div *ngIf="myChats" class="Chat_container">
-                        <div class = "TopicTitle"><b>Chats</b></div>
-                        <div class="border3"></div>
-                        <div *ngFor="let chat of modules">
-                            <div class="chat">
-                                <div class="profile">
-                                    <img src="assets/p1.jpg" class="img">
-                                </div>
-                                <div class="details">
-                                    <div style="font-size: 16px; padding:5px;"><b>Ronin Brookes</b></div>
-                                    <div style="font-size: 15px;padding:5px;">This is a message from me</div>
-                                </div>
-                            </div>
-                            <div class="border4"></div>
-                        </div>
-                        
-
-                      
-                    </div>
-                    <div *ngIf="mySchedule" class="Schedule_container">
-                        <div class = "TopicTitle2"><b>Schedule</b></div>
-                        <div class="border3"></div>
-                        <div class="days">
-                            <Label>Monday</Label>
-                            <Label>Tuesday</Label>
-                            <Label>Wednesday</Label>
-                            <Label>Thursday</Label>
-                            <Label>Friday</Label>
-                        </div>
-                        <div class="Calander">
-                            <div class="Day">
-                                <div class="class"></div>
-                                <div class="noclass"></div>
-                                <div class="noclass"></div>
-                                <div class="class"></div>
-                                <div class="noclass"></div>
-                                <div class="class"></div>
-                                <div class="class"></div>
-                                <div class="noclass"></div>
-                                <div class="noclass"></div>
-                                <div class="class"></div>
-                            </div>
-                            <div class="Day">
-                                <div class="class"></div>
-                                <div class="noclass"></div>
-                                <div class="noclass"></div>
-                                <div class="class"></div>
-                                <div class="noclass"></div>
-                                <div class="class"></div>
-                                <div class="class"></div>
-                                <div class="noclass"></div>
-                                <div class="noclass"></div>
-                                <div class="class"></div>
-                            </div>
-                            <div class="Day">
-                                <div class="class"></div>
-                                <div class="noclass"></div>
-                                <div class="noclass"></div>
-                                <div class="class"></div>
-                                <div class="noclass"></div>
-                                <div class="class"></div>
-                                <div class="class"></div>
-                                <div class="noclass"></div>
-                                <div class="noclass"></div>
-                                <div class="class"></div>
-                            </div>
-                            <div class="Day">
-                                <div class="class"></div>
-                                <div class="noclass"></div>
-                                <div class="noclass"></div>
-                                <div class="class"></div>
-                                <div class="noclass"></div>
-                                <div class="class"></div>
-                                <div class="class"></div>
-                                <div class="noclass"></div>
-                                <div class="noclass"></div>
-                                <div class="class"></div>
-                            </div>
-                            <div class="Day" style="border-right:none">
-                                <div class="class"></div>
-                                <div class="noclass"></div>
-                                <div class="noclass"></div>
-                                <div class="class"></div>
-                                <div class="noclass"></div>
-                                <div class="class"></div>
-                                <div class="class"></div>
-                                <div class="noclass"></div>
-                                <div class="noclass"></div>
-                                <div class="class"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="container">
+  <div class="menu">
+    <div class="title">
+      <img
+        src="assets/logo.png"
+        style="object-fit: cover"
+        width="50px"
+        height="50px"
+      />
+      <h1>OmniHub</h1>
+    </div>
+    <div class="search">
+      <input type="text" class="input" placeholder="Search for a module..." />
+      <div class="searchIcon">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="module" *ngFor="let module of modules">
+      <div class="moduleName"><b>COS333</b></div>
+      <div class="moduleIcons">
+        <i class="fa fa-bell" aria-hidden="true"></i>
+        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+        <i class="fa fa-cog" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="headings">
+      <div class="Options">
+        <div class="Option" (click)="isactivityStream()">
+          <i
+            (click)="isactivityStream()"
+            *ngIf="!activityStream"
+            class="fa fa-clock"
+            aria-hidden="true"
+          ></i>
+          <label (click)="isactivityStream()" *ngIf="!activityStream"
+            >Activity Stream</label
+          >
+          <i
+            *ngIf="activityStream"
+            class="fa fa-clock"
+            aria-hidden="true"
+            style="color: #0572c0"
+          ></i>
+          <label *ngIf="activityStream" style="color: #0572c0"
+            >Activity Stream</label
+          >
         </div>
-   
+        <div class="Option" (click)="ismyChats()">
+          <i
+            (click)="ismyChats()"
+            *ngIf="!myChats"
+            class="fa fa-comment"
+            aria-hidden="true"
+          ></i>
+          <label (click)="ismyChats()" *ngIf="!myChats">My Chats</label>
+          <i
+            *ngIf="myChats"
+            class="fa fa-comment"
+            aria-hidden="true"
+            style="color: #0572c0"
+          ></i>
+          <label *ngIf="myChats" style="color: #0572c0">My Chats</label>
+        </div>
+        <div class="Option" (click)="ismySchedule()">
+          <i
+            (click)="ismySchedule()"
+            *ngIf="!mySchedule"
+            class="fa fa-calendar"
+            aria-hidden="true"
+          ></i>
+          <label (click)="ismySchedule()" *ngIf="!mySchedule"
+            >My Schedule</label
+          >
+          <i
+            *ngIf="mySchedule"
+            class="fa fa-calendar"
+            aria-hidden="true"
+            style="color: #0572c0"
+          ></i>
+          <label *ngIf="mySchedule" style="color: #0572c0">My Schedule</label>
+        </div>
+      </div>
+    </div>
+    <div class="scrollable">
+      <div *ngIf="activityStream" class="Activity_container">
+        <div class="TopicTitle"><b>Activity Stream</b></div>
+        <div *ngFor="let day of days">
+          <div class="recordDay">
+            <div class="icon"></div>
+            <div class="border"></div>
+            <div class="dayText">
+              Today, 21/09
+              <div class="border2"></div>
+            </div>
+          </div>
+          <div *ngFor="let note of notifications" class="record">
+            <div class="icon">
+              <i class="fa fa-comments" aria-hidden="true"></i>
+              <label>52</label>
+            </div>
+            <div class="border"></div>
+            <div class="recordText">
+              <b>Some guy</b> said some <b>real shit</b><br />
+              <label>2:45PM</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="myChats" class="Chat_container">
+        <div class="TopicTitle"><b>Chats</b></div>
+        <div class="border3"></div>
+        <div *ngFor="let chat of modules">
+          <div class="chat">
+            <div class="profile">
+              <img src="assets/p1.jpg" class="img" />
+            </div>
+            <div class="details">
+              <div style="font-size: 16px; padding: 5px">
+                <b>Ronin Brookes</b>
+              </div>
+              <div style="font-size: 15px; padding: 5px">
+                This is a message from me
+              </div>
+            </div>
+          </div>
+          <div class="border4"></div>
+        </div>
+      </div>
+      <div *ngIf="mySchedule" class="Schedule_container">
+        <div class="TopicTitle2"><b>Schedule</b></div>
+        <div class="border3"></div>
+        <div class="days">
+          <Label>Monday</Label>
+          <Label>Tuesday</Label>
+          <Label>Wednesday</Label>
+          <Label>Thursday</Label>
+          <Label>Friday</Label>
+        </div>
+        <div class="Calander">
+          <div class="Day">
+            <div class="class"></div>
+            <div class="noclass"></div>
+            <div class="noclass"></div>
+            <div class="class"></div>
+            <div class="noclass"></div>
+            <div class="class"></div>
+            <div class="class"></div>
+            <div class="noclass"></div>
+            <div class="noclass"></div>
+            <div class="class"></div>
+          </div>
+          <div class="Day">
+            <div class="class"></div>
+            <div class="noclass"></div>
+            <div class="noclass"></div>
+            <div class="class"></div>
+            <div class="noclass"></div>
+            <div class="class"></div>
+            <div class="class"></div>
+            <div class="noclass"></div>
+            <div class="noclass"></div>
+            <div class="class"></div>
+          </div>
+          <div class="Day">
+            <div class="class"></div>
+            <div class="noclass"></div>
+            <div class="noclass"></div>
+            <div class="class"></div>
+            <div class="noclass"></div>
+            <div class="class"></div>
+            <div class="class"></div>
+            <div class="noclass"></div>
+            <div class="noclass"></div>
+            <div class="class"></div>
+          </div>
+          <div class="Day">
+            <div class="class"></div>
+            <div class="noclass"></div>
+            <div class="noclass"></div>
+            <div class="class"></div>
+            <div class="noclass"></div>
+            <div class="class"></div>
+            <div class="class"></div>
+            <div class="noclass"></div>
+            <div class="noclass"></div>
+            <div class="class"></div>
+          </div>
+          <div class="Day" style="border-right: none">
+            <div class="class"></div>
+            <div class="noclass"></div>
+            <div class="noclass"></div>
+            <div class="class"></div>
+            <div class="noclass"></div>
+            <div class="class"></div>
+            <div class="class"></div>
+            <div class="noclass"></div>
+            <div class="noclass"></div>
+            <div class="class"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

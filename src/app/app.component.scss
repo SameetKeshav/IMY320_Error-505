@@ -215,5 +215,106 @@
 }
 
 .classHeader {
-    
+  left: 0px;
+  top: 112px;
+  position: absolute;
+  color: #333333;
+  font-size: 22px;
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.tutorContainer {
+  width: 231px;
+  height: 34px;
+  left: 20px;
+  top: 38px;
+  position: absolute;
+}
+
+.tutorImg {
+  width: 34px;
+  height: 34px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+.tutorName {
+  left: 44px;
+  top: 8px;
+  position: absolute;
+  color: #333333;
+  font-size: 15px;
+  font-family: Outfit, sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.userInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: 150px;
+}
+
+.usersList {
+  width: 245px;
+  height: 34px;
+  left: 20px;
+  position: relative;
+  top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.userName {
+  margin-left: 43px;
+  //   //   top: 8px;
+  //   margin-top: 8px;
+  //   position: absolute;
+  color: #333333;
+  font-size: 15px;
+  font-family: Outfit, sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.userImg {
+  width: 34px;
+  height: 34px;
+  //   left: 0px;
+  //   //   top: 0px;
+  //   position: absolute;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+.line1 {
+  width: 224px;
+  height: 0px;
+  left: 244px;
+  top: 85px;
+  position: absolute;
+  transform: rotate(-180deg);
+  transform-origin: 0 0;
+  border: 1px #e5e5e5 solid;
+}
+
+.line2 {
+  width: 224.01px;
+  height: 0px;
+  left: 224px;
+  margin-top: 60px;
+  //   top: 201px;
+  position: absolute;
+  transform: rotate(180deg);
+  transform-origin: 0 0;
+  border: 1px #e5e5e5 solid;
 }

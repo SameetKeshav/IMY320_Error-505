@@ -13,6 +13,7 @@ export class HomeComponent {
   activityStream=true;
   myChats = false;
   mySchedule = false;
+  modulePage = false;
 
   isactivityStream(){
     this.activityStream=true;

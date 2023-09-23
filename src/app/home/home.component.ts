@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class HomeComponent {
 
   modules=[1,2,3];
-  days=[1,2];
+  days=[1,2,3,4];
   notifications = [1,2,3];
   activityStream=true;
   myChats = false;

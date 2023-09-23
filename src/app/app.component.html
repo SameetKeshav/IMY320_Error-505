@@ -10,8 +10,146 @@
     />
   </head>
   <body>
-    <div class="modulePage" style="display: flex">
+    <div class="tutorPage" style="display: flex">
       <div
+        class="requestContainer"
+        style="width: 70%; position: relative; left: 24%"
+      >
+        <div
+          class="requestBack"
+          style="
+            width: 632px;
+            height: 339px;
+            left: 632px;
+            top: 439px;
+            position: absolute;
+            transform: rotate(-180deg);
+            transform-origin: 0 0;
+            background: #aabfed;
+            border-radius: 10px;
+          "
+        ></div>
+        <div
+          class="requestInput"
+          style="
+            width: 570px;
+            height: 113px;
+            left: 602px;
+            top: 375px;
+            position: absolute;
+            transform: rotate(-180deg);
+            transform-origin: 0 0;
+            background: white;
+            border-radius: 10px;
+          "
+        ></div>
+        <div
+          class="requestTitle"
+          style="
+            left: 173px;
+            top: 124px;
+            position: absolute;
+            color: white;
+            font-size: 43px;
+            font-family: Outfit;
+            font-weight: 500;
+            word-wrap: break-word;
+          "
+        >
+          Request Tutor?
+        </div>
+        <div
+          class="requestText"
+          style="
+            left: 32px;
+            top: 192px;
+            position: absolute;
+            color: white;
+            font-size: 24px;
+            font-family: Outfit;
+            font-weight: 500;
+            word-wrap: break-word;
+          "
+        >
+          Name: James Payne<br />Module: COS 330
+        </div>
+        <div
+          class="requestTextInput"
+          style="
+            left: 47px;
+            top: 271px;
+            position: absolute;
+            color: #d1cbcb;
+            font-size: 19px;
+            font-family: Outfit;
+            font-weight: 500;
+            word-wrap: break-word;
+          "
+        >
+          Describe your request...
+        </div>
+
+        <div
+          class="requestCancelBtn"
+          style="
+            width: 87px;
+            height: 33px;
+            left: 213px;
+            top: 391px;
+            position: absolute;
+            background: #c34ffd;
+            border-radius: 50px;
+          "
+        ></div>
+
+        <div
+          class="requestCancelText"
+          style="
+            left: 232px;
+            top: 395px;
+            position: absolute;
+            color: white;
+            font-size: 19px;
+            font-family: Outfit;
+            font-weight: 500;
+            word-wrap: break-word;
+          "
+        >
+          Cancel
+        </div>
+
+        <div
+          class="requestAcceptBtn"
+          style="
+            width: 87px;
+            height: 33px;
+            left: 333px;
+            top: 391px;
+            position: absolute;
+            background: #c34ffd;
+            border-radius: 50px;
+          "
+        ></div>
+
+        <div
+          class="requestAcceptText"
+          style="
+            left: 342px;
+            top: 395px;
+            position: absolute;
+            color: white;
+            font-size: 19px;
+            font-family: Outfit;
+            font-weight: 500;
+            word-wrap: break-word;
+          "
+        >
+          Request
+        </div>
+      </div>
+
+      <!-- //chat stuff -->
+      <!-- <div
         class="messages"
         style="
           width: 60%;
@@ -614,7 +752,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- message bar -->
 
@@ -623,7 +761,7 @@
         style="
           width: 632px;
           height: 33px;
-          bottom: 0;
+          bottom: 2.5%;
           left: 25%;
           position: absolute;
         "
@@ -726,257 +864,6 @@
       </div>
 
       <!-- user bar -->
-
-      <div
-        class="usersContainer"
-        style="
-          width: 20%;
-          height: 80vh;
-          position: absolute;
-          right: 0px;
-          top: 0px;
-        "
-      >
-        <div
-          class="usersContainerStyles"
-          style="
-            width: 276px;
-            height: 120%;
-            right: 0px;
-            top: 0px;
-            position: absolute;
-            background: #f0f5ff;
-            border-bottom-left-radius: 70px;
-          "
-        ></div>
-        <div
-          class="usersContainerInner"
-          style="
-            width: 244px;
-            height: 265.75px;
-            right: 20px;
-            top: 6px;
-            position: absolute;
-          "
-        >
-          <div
-            class="tutorheader"
-            style="
-              width: 244px;
-              height: 28px;
-              left: 0px;
-              top: 0px;
-              position: absolute;
-            "
-          >
-            <div
-              class="tutorheader"
-              style="
-                width: 24px;
-                height: 24px;
-                left: 220px;
-                top: 4px;
-                position: absolute;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-                display: inline-flex;
-              "
-            >
-              <i
-                class="fas fa-graduation-cap"
-                style="font-size: 20px; color: #c34ffd"
-              ></i>
-            </div>
-            <div
-              class="tutorheaderText"
-              style="
-                left: 0px;
-                top: 0px;
-                position: absolute;
-                color: #333333;
-                font-size: 22px;
-                font-family: Outfit, sans-serif;
-                font-weight: 600;
-                word-wrap: break-word;
-              "
-            >
-              Tutors
-            </div>
-          </div>
-          <div
-            class="classHeader"
-            style="
-              left: 0px;
-              top: 112px;
-              position: absolute;
-              color: #333333;
-              font-size: 22px;
-              font-family: Outfit, sans-serif;
-              font-weight: 600;
-              word-wrap: break-word;
-            "
-          >
-            Classmates
-          </div>
-          <div
-            class="tutorContainer"
-            style="
-              width: 231px;
-              height: 34px;
-              left: 20px;
-              top: 38px;
-              position: absolute;
-            "
-          >
-            <img
-              class="tutorImg"
-              style="
-                width: 34px;
-                height: 34px;
-                left: 0px;
-                top: 0px;
-                position: absolute;
-                border-radius: 100px;
-                object-fit: cover;
-              "
-              src="https://media.istockphoto.com/id/597958694/photo/young-adult-male-student-in-the-lobby-of-a-university.jpg?s=612x612&w=0&k=20&c=QaNEzmcKrLJzmwOcu2lgwm1B7rm3Ouq2McYYdmoMGpU="
-            />
-            <div
-              class="tutorName"
-              style="
-                left: 44px;
-                top: 8px;
-                position: absolute;
-                color: #333333;
-                font-size: 15px;
-                font-family: Outfit, sans-serif;
-                font-weight: 700;
-                word-wrap: break-word;
-              "
-            >
-              James Payne
-            </div>
-          </div>
-          <div
-            class="usersContainer"
-            style="
-              width: 245px;
-              height: 34px;
-              left: 20px;
-              top: 153px;
-              position: absolute;
-            "
-          >
-            <div
-              class="userName"
-              style="
-                left: 43px;
-                top: 8px;
-                position: absolute;
-                color: #333333;
-                font-size: 15px;
-                font-family: Outfit, sans-serif;
-                font-weight: 700;
-                word-wrap: break-word;
-              "
-            >
-              Natasha Schwarts
-            </div>
-            <img
-              class="userImg"
-              style="
-                width: 34px;
-                height: 34px;
-                left: 0px;
-                top: 0px;
-                position: absolute;
-                border-radius: 100px;
-                object-fit: cover;
-              "
-              src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
-            />
-          </div>
-          <div
-            class="usersContainer"
-            style="
-              width: 245px;
-              height: 34px;
-              left: 20px;
-              top: 217px;
-              position: absolute;
-            "
-          >
-            <div
-              class="userName"
-              style="
-                left: 43px;
-                top: 8px;
-                position: absolute;
-                color: #333333;
-                font-size: 15px;
-                font-family: Outfit, sans-serif;
-                font-weight: 700;
-                word-wrap: break-word;
-              "
-            >
-              Kaden Bernard
-            </div>
-            <img
-              class="userImg"
-              style="
-                width: 34px;
-                height: 34px;
-                left: 0px;
-                top: 0px;
-                position: absolute;
-                border-radius: 100px;
-                object-fit: cover;
-              "
-              src="https://remembermephotography.com/wp-content/uploads/2016/04/BD008cc.jpg"
-            />
-          </div>
-          <div
-            class="line1"
-            style="
-              width: 224px;
-              height: 0px;
-              left: 244px;
-              top: 85px;
-              position: absolute;
-              transform: rotate(-180deg);
-              transform-origin: 0 0;
-              border: 1px #e5e5e5 solid;
-            "
-          ></div>
-          <div
-            class="line2"
-            style="
-              width: 224.01px;
-              height: 0px;
-              left: 244px;
-              top: 201px;
-              position: absolute;
-              transform: rotate(180deg);
-              transform-origin: 0 0;
-              border: 1px #e5e5e5 solid;
-            "
-          ></div>
-          <div
-            class="line3"
-            style="
-              width: 224px;
-              height: 0px;
-              left: 244px;
-              top: 265.75px;
-              position: absolute;
-              transform: rotate(180deg);
-              transform-origin: 0 0;
-              border: 1px #e5e5e5 solid;
-            "
-          ></div>
-        </div>
-      </div>
     </div>
   </body>
 </html>

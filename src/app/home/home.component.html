@@ -25,7 +25,6 @@
             </div>
             <div class="content">
                 <div class = "headings">
-
                     <div class = "Options">
                         <div class="Option" (click)="isactivityStream()">
                             <i (click)="isactivityStream()" *ngIf = "!activityStream" class="fa fa-clock" aria-hidden="true"></i>
@@ -49,8 +48,8 @@
                     </div>
                 </div>
                 <div class = "scrollable">
-                    <div class="Activity_container">
-                        <div class = "TopicTitle">Activity Stream</div>
+                    <div *ngIf="activityStream" class="Activity_container">
+                        <div class = "TopicTitle"><b>Activity Stream</b></div>
                         <div *ngFor="let day of days" class = "day">
                             <div class="recordDay">
                                 <div class="icon">
@@ -72,6 +71,25 @@
                                 </div>
                             </div>
                         </div>
+                      
+                    </div>
+                    <div *ngIf="myChats" class="Chat_container">
+                        <div class = "TopicTitle"><b>Chats</b></div>
+                        <div class="border3"></div>
+                        <div *ngFor="let chat of modules">
+                            <div class="chat">
+                                <div class="profile">
+                                    <img src="assets/p1.jpg" class="img">
+                                </div>
+                                <div class="details">
+                                    <div style="font-size: 16px; padding:5px;"><b>Ronin Brookes</b></div>
+                                    <div style="font-size: 16px;padding:5px;">This is a message from me</div>
+                                </div>
+                            </div>
+                            <div class="border4"></div>
+                        </div>
+                        
+
                       
                     </div>
 

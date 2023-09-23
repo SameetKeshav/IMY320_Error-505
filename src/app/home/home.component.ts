@@ -21,6 +21,7 @@ export class HomeComponent {
   mySchedule = false;
   modulePage = false;
   tutorPage = false;
+  classmatePage = false;
   request=true;
 
   constructor(){

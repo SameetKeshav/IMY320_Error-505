@@ -14,6 +14,7 @@ export class HomeComponent {
   myChats = false;
   mySchedule = false;
   modulePage = false;
+  tutorPage = false;
   request=true;
 
   isactivityStream(){

@@ -1248,6 +1248,16 @@ html {
   word-wrap: break-word;
 }
 
+.searchChatInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+  }
+
 .searchChatIconContainer {
   width: 20px;
   height: 20px;
@@ -1266,20 +1276,66 @@ html {
 }
 
 .tutorNameHeader {
-    font-size: 22px;
-    color: #0572c0;
-    font-weight: 700;
-    margin-top: 1.5%;
-    margin-right: 40px;
-    position: absolute;
-    right:0;
+  font-size: 22px;
+  color: #0572c0;
+  font-weight: 700;
+  margin-top: 1.5%;
+  margin-right: 70px;
+  position: absolute;
+  right: 0;
 }
 
 .tutorHeaderIcon {
-    width: 20px;
-    height: 20px;
-    right: 1%;
-    top: 1%;
-    position: absolute;
-    color: #00355c;
+  width: 20px;
+  height: 20px;
+  right: 0.5%;
+  top: 1%;
+  position: absolute;
+  color: #00355c;
+}
+
+.classNameHeader {
+  font-size: 22px;
+  color: #0572c0;
+  font-weight: 700;
+  margin-top: 1.5%;
+  margin-right: 65px;
+  position: absolute;
+  right: 0;
+}
+
+.classImg {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  overflow: hidden;
+  position: absolute;
+  right: 1%;
+  top: 2%;
+}
+
+.classUserImg {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+.tutorHeaderImg {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  overflow: hidden;
+  position: absolute;
+  right: 1.5%;
+  top: 2%;
+}
+
+.tutorUserImg {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border-radius: 100px;
+  object-fit: cover;
 }

@@ -10,14 +10,16 @@ export class HomeComponent {
   modules=[1,2,3];
   days=[1,2,3,4];
   notifications = [1,2,3];
-  activityStream=false;
+  activityStream=true;
   myChats = false;
   mySchedule = false;
   modulePage = false;
-  tutorPage = true;
+  tutorPage = false;
   classPage=false;
   request=true;
   className = '';
+  moduleName = '';
+  tutorName = '';
 
   isactivityStream(){
     this.activityStream=true;
@@ -48,22 +50,24 @@ export class HomeComponent {
     this.request=false;
   }
 
-  openModule(){
+  openModule(module : string){
     this.modulePage=true;
     this.tutorPage=false;
     this.classPage=false;
     this.myChats = false;
     this.mySchedule = false;
     this.activityStream=false;
+    this.moduleName = module;
   }
 
-  openTutor(){
+  openTutor(tutor : string){
     this.modulePage=false;
     this.tutorPage=true;
     this.classPage=false;
     this.myChats = false;
     this.mySchedule = false;
     this.activityStream=false;
+    this.tutorName = tutor;
   }
 
   openClass(name : string){

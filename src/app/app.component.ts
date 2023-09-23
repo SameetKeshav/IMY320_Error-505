@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'OmniHub';
+
+  request = false;
+
+  requestChange() {
+    this.request = false;
+  }
+
 }

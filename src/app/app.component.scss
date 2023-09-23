@@ -154,3 +154,66 @@
   background: transparent;
   width: 80%;
 }
+
+//===================================================userlist===============================
+
+.usersContainer {
+  width: 20%;
+  height: 80vh;
+  position: absolute;
+  right: 1px;
+  top: 0px;
+}
+
+.usersContainerStyles {
+  width: 276px;
+  height: 125%;
+  right: 0px;
+  top: 0px;
+  position: absolute;
+  background: #f0f5ff;
+  border-bottom-left-radius: 70px;
+}
+
+.usersContainerInner {
+  width: 244px;
+  height: 265.75px;
+  right: 20px;
+  top: 6px;
+  position: absolute;
+}
+
+.tutorheader {
+  width: 244px;
+  height: 28px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
+
+.tutorheader2 {
+  width: 24px;
+  height: 24px;
+  left: 220px;
+  top: 4px;
+  position: absolute;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: inline-flex;
+}
+
+.tutorheaderText {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  color: #333333;
+  font-size: 22px;
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.classHeader {
+    
+}

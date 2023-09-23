@@ -1,0 +1,254 @@
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #ffffff;
+    font-family: CustomFont;
+}
+
+.menu{
+    width: 25%;
+    height: 100vh;
+    background-color: #F0F5FF;
+    border-top-right-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    color: #00355C;
+    width: 90%;
+    height:50px;
+    margin-top: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    h1{
+        margin-left: 10px;
+    }
+    overflow: hidden;
+}
+
+.search{
+    width: 90%;
+    height:50px;
+    background-color: #BFCDEE;
+    margin-top: 15px;
+    margin-bottom: 45px;
+    border-radius: 10px;
+    display: flex;
+    align-self: center;
+}
+
+.input{
+    width: 85%;
+    height: 90%;
+    border: none;
+    background-color: #BFCDEE;
+    font-size: medium;
+    font-family: CustomFont;
+    margin-left: 20px;
+    color: #333333;
+
+}
+input::placeholder {
+    color: #00355C;
+}
+
+input:focus {
+    outline: none; /* Remove the default focus outline */
+    border: none;  /* Remove the border */
+}
+.searchIcon{
+    width: 15%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    color: #00355C; 
+    font-size: 20px;
+}
+
+.searchIcon:hover{
+    cursor: pointer;
+    color: #0572C0;
+}
+
+.module{
+    width: 90%;
+    height:50px;
+    background-color: #D5E2FF;
+    margin-top: 15px;
+    border-radius: 10px;
+    display: flex;
+    color: #333333;
+    font-size: 16px;
+}
+
+.moduleName{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.fa{
+    font-size: 25px;
+}
+
+.moduleIcons{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.moduleIcons i:hover{
+    cursor: pointer;
+    color: #0572C0;
+
+}
+
+
+
+.content{
+    width: 75%;
+    height: 100vh;
+}
+
+.headings{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: end;
+}
+
+.Options{
+    width: 70%;
+    height: 40%;
+    border-bottom-left-radius: 100px;
+    background-color: #F0F5FF;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Option{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+    font-size: 20px;    
+}
+
+.Option:hover{
+    cursor: pointer;
+    color: #0572C0;
+}
+
+.Option label{
+    padding-left: 10px;
+}
+
+.Option label:hover{
+cursor: pointer;
+color: #0572C0;
+}
+.scrollable{
+    width: 100%;
+    height: 70%;
+    overflow-y: scroll;
+}
+
+.Activity_container{
+    width: 75%;
+    margin-left: 25%;
+}
+
+.TopicTitle{
+    font-size: 30px;
+    color:#0572C0;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+
+
+.record{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: #333333;
+}
+
+.recordDay{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    color: #333333;
+}
+
+.icon{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.icon label{
+    font-size: 12px;
+    margin-top: 12px;
+}
+.border{
+    width: 4px;
+    height: 100%;
+    background-color: #0572C0;
+}
+
+.border2{
+    height: 2px;
+    width: 80%;
+    padding-left: 10px;
+    background-color: #E5E5E5;
+    margin-top: 20px;
+}
+
+.dayText{
+    font-size: larger;
+    color: #333333;
+    padding-left: 25px;
+    width: 90%;
+}
+
+.recordText{
+    font-size: larger;
+    color: #333333;
+    padding-left: 25px;
+    width: 90%;
+    font-size: 16px;
+}
+
+.recordText label{
+    font-size: 12px;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+/* Hide scrollbars in Firefox */
+/* Note: Firefox uses a different approach, and the following style is used to hide the scrollbars */
+html {
+    scrollbar-width: none;
+}

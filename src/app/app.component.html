@@ -11,145 +11,28 @@
   </head>
   <body>
     <div class="tutorPage" style="display: flex">
-      <div
-        class="requestContainer"
-        style="width: 70%; position: relative; left: 24%"
-        *ngIf="request"
-      >
-        <div
-          class="requestBack"
-          style="
-            width: 632px;
-            height: 339px;
-            left: 632px;
-            top: 439px;
-            position: absolute;
-            transform: rotate(-180deg);
-            transform-origin: 0 0;
-            background: #aabfed;
-            border-radius: 10px;
-          "
-        ></div>
+      <div class="requestContainer" *ngIf="request">
+        <div class="requestBack">
+          <div class="requestTitle">Request Tutor?</div>
+          <div class="requestText">Name: James Payne<br />Module: COS 330</div>
 
-        <div
-          class="requestTitle"
-          style="
-            left: 173px;
-            top: 124px;
-            position: absolute;
-            color: #ffffff;
-            font-size: 40px;
-            font-family: Outfit, sans-serif;
-            font-weight: 600;
-            word-wrap: break-word;
-          "
-        >
-          Request Tutor?
+          <div class="requestInput">
+            <textarea
+              type="text"
+              class="requestTextInput"
+              placeholder="Describe your request..."
+            ></textarea>
+          </div>
+
+          <button class="requestCancelBtn" (click)="requestChange()">
+            Cancel
+          </button>
+
+          <button class="requestAcceptBtn" (click)="requestChange()">
+            Request
+          </button>
         </div>
-        <div
-          class="requestText"
-          style="
-            left: 20px;
-            top: 192px;
-            position: absolute;
-            color: white;
-            font-size: 20px;
-            font-family: Outfit, sans-serif;
-            font-weight: 500;
-            word-wrap: break-word;
-          "
-        >
-          Name: James Payne<br />Module: COS 330
-        </div>
-
-        <div
-          class="requestInput"
-          style="
-            width: 570px;
-            height: 113px;
-            left: 22px;
-            top: 250px;
-            position: absolute;
-            background: white;
-            border-radius: 50px;
-          "
-        >
-          <textarea
-            type="text"
-            class="requestTextInput"
-            style="
-              width: 100%;
-              height: 100%;
-              padding: 10px;
-              border: none;
-              outline: none;
-              color: #d1cbcb;
-              font-size: 19px;
-              font-family: Outfit, sans-serif;
-              font-weight: 500;
-              word-wrap: break-word;
-              border-radius: 10px;
-            "
-            placeholder="Describe your request..."
-          ></textarea>
-        </div>
-
-        <button
-          class="requestCancelBtn"
-          (click)="requestChange()"
-          style="
-            width: 87px;
-            height: 33px;
-            left: 213px;
-            top: 391px;
-            position: absolute;
-            font-family: Outfit, sans-serif;
-            background: #868288;
-            border-radius: 50px;
-            border: none;
-            font-size: 16px;
-            color: white;
-            cursor: pointer;
-          "
-        >
-          Cancel
-        </button>
-
-        <div
-          class="requestAcceptBtn"
-          style="
-            width: 87px;
-            height: 33px;
-            left: 333px;
-            top: 391px;
-            position: absolute;
-            background: #c34ffd;
-            border-radius: 50px;
-          "
-        ></div>
-
-        <button
-          class="requestCancelBtn"
-          (click)="requestChange()"
-          style="
-            width: 87px;
-            height: 33px;
-            left: 333px;
-            top: 391px;
-            position: absolute;
-            background: #c34ffd;
-            border-radius: 50px;
-            font-family: Outfit, sans-serif;
-            border: none;
-            font-size: 16px;
-            color: white;
-            cursor: pointer;
-          "
-        >
-          Request
-        </button>
       </div>
-
 
       <!-- //chat stuff -->
 
@@ -215,7 +98,27 @@
 
       <!-- message bar -->
 
-      
+      <div class="messageBar">
+        <div class="messageBarInner"></div>
+        <div class="messageIcons">
+          <div class="messageIconInner"></div>
+          <div class="messageIconContainer">
+            <div class="messageIcon">
+              <i
+                class="fas fa-plus-circle"
+                style="width: 19px; height: 19px; color: #00355c"
+              ></i>
+            </div>
+            <div class="messageIcon">
+              <i
+                class="fas fa-paper-plane"
+                style="width: 16.62px; height: 16.62px; color: #00355c"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <input type="text" class="messageInputText" placeholder="Message..." />
+      </div>
 
       <!-- user bar -->
     </div>

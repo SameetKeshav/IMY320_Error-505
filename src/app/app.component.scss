@@ -272,4 +272,98 @@
   width: 80%;
 }
 
-//==================================requestmessage==================================
+//==================================requestmessagebox==================================
+
+.requestContainer {
+  position: absolute;
+  top: 80px;
+  width: 632px;
+  height: 339px;
+}
+
+.requestBack {
+  width: 632px;
+  height: 339px;
+  background: #aabfed;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.requestTitle {
+  margin-left: 160px;
+  top: 15px;
+  position: absolute;
+  color: #ffffff;
+  font-size: 40px;
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.requestText {
+  margin-left: 20px;
+  top: 80px;
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  font-family: Outfit, sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.requestInput {
+  width: 570px;
+  height: 113px;
+  margin-left: 20px;
+  top: 140px;
+  position: absolute;
+  background: white;
+  border-radius: 50px;
+}
+
+.requestTextInput {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  color: #d1cbcb;
+  font-size: 19px;
+  font-family: Outfit, sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+  border-radius: 10px;
+}
+
+.requestCancelBtn {
+  width: 87px;
+  height: 33px;
+  top: 290px;
+  margin-left: 200px;
+  position: absolute;
+  font-family: Outfit, sans-serif;
+  background: #868288;
+  border-radius: 50px;
+  border: none;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.requestAcceptBtn {
+  width: 87px;
+  height: 33px;
+  //   left: 333px;
+  margin-left: 320px;
+  top: 290px;
+  position: absolute;
+  background: #c34ffd;
+  border-radius: 50px;
+  font-family: Outfit, sans-serif;
+  border: none;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}

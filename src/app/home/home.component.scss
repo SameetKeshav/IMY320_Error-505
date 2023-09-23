@@ -146,6 +146,7 @@ input:focus {
   justify-content: center;
   color: #333333;
   font-size: 20px;
+  margin-left: 20px;
 }
 
 .Option:hover {
@@ -368,14 +369,6 @@ html {
   height: 33.41px;
   position: absolute;
   overflow: hidden;
-}
-
-.userImg {
-  width: 34.17px;
-  height: 33.41px;
-  position: absolute;
-  border-radius: 100px;
-  object-fit: cover;
 }
 
 .messageName {
@@ -669,26 +662,6 @@ html {
   justify-content: center;
   height: 90vh;
   width: 100%;
-}
-
-.messageContainer2 {
-  width: 597px;
-  height: 57px;
-}
-
-.messageImg {
-  width: 34.17px;
-  height: 33.41px;
-  position: absolute;
-  overflow: hidden;
-}
-
-.userImg {
-  width: 34.17px;
-  height: 33.41px;
-  position: absolute;
-  border-radius: 100px;
-  object-fit: cover;
 }
 
 .messageName {
@@ -1017,18 +990,6 @@ html {
   justify-content: center;
   height: 90vh;
   width: 100%;
-}
-
-.messageContainer2 {
-  width: 597px;
-  height: 57px;
-}
-
-.messageImg {
-  width: 34.17px;
-  height: 33.41px;
-  position: absolute;
-  overflow: hidden;
 }
 
 .userImg {

@@ -19,6 +19,9 @@ export class HomeComponent {
   activityStream=true;
   myChats = false;
   mySchedule = false;
+  modulePage = false;
+  tutorPage = false;
+  request=true;
 
   constructor(){
     this.activityStreamData = activityData;
@@ -40,6 +43,10 @@ export class HomeComponent {
     this.activityStream=false;
     this.myChats = false;
     this.mySchedule = true;
+  }
+
+  requestChange(){
+    this.request=false;
   }
 
 }

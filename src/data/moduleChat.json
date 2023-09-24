@@ -1,12 +1,12 @@
 {
   "module": "COS 330",
-  "tutors":[
+  "tutors": [
     {
       "name": "James Payne",
       "profilePicture": "https://media.istockphoto.com/id/597958694/photo/young-adult-male-student-in-the-lobby-of-a-university.jpg?s=612x612&w=0&k=20&c=QaNEzmcKrLJzmwOcu2lgwm1B7rm3Ouq2McYYdmoMGpU="
     }
   ],
-  "classmates":[
+  "classmates": [
     {
       "name": "Natasha Schwarts",
       "profilePicture": "https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
@@ -16,12 +16,12 @@
       "profilePicture": "https://remembermephotography.com/wp-content/uploads/2016/04/BD008cc.jpg"
     }
   ],
-  "messages":[
+  "messages": [
     {
       "from": "James Payne",
       "date": "2023/09/21 09:00",
       "profilePicture": "https://media.istockphoto.com/id/597958694/photo/young-adult-male-student-in-the-lobby-of-a-university.jpg?s=612x612&w=0&k=20&c=QaNEzmcKrLJzmwOcu2lgwm1B7rm3Ouq2McYYdmoMGpU=",
-      "message": "Welcome to the COS 330 module chat room! This is a place where you can ask questions and get help from your tutors and classmates. Please be respectful and keep the chat on topic. Please don't be afraid to contact me personally if you have any questions or concerns. Enjoy!"
+      "message": "Welcome to the module chat room! This is a place where you can ask questions and get help from your tutors and classmates. Please be respectful and keep the chat on topic. Please don't be afraid to contact me personally if you have any questions or concerns. Enjoy!"
     },
     {
       "from": "Julianna Venter",

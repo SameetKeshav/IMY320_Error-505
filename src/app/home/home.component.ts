@@ -3,7 +3,8 @@ import * as activityData from '../../data/activityStream.json'
 // import * as chatData from '../../data/chatList.json'
 import * as scheduleData from '../../data/scheduleData.json'
 import * as moduleChatData from '../../data/moduleChat.json'
-
+import * as tutorChatData from '../../data/tutorChat.json'
+import * as classChatData from '../../data/classmateChat.json'
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,8 @@ export class HomeComponent {
   activityStreamData: any[];
   // chatList: any[];
   moduleChat = moduleChatData;
+  tutorChat = tutorChatData;
+  classChat = classChatData;
   schedule: any[];
   notifications = [1,2,3];
   activityStream=false;

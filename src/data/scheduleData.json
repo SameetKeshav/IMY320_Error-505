@@ -1,0 +1,62 @@
+[
+  {
+    "day": "Monday",
+    "lectures": [
+      {
+        "module": "COS 333",
+        "venue": "IT 4-4",
+        "startTime": "09:30",
+        "endTime": "10:20",
+        "type": "Lecture 1"
+      }
+    ]
+  },
+  {
+    "day": "Tuesday",
+    "lectures": [
+      {
+        "module": "COS 333",
+        "venue": "IT 4-4",
+        "startTime": "08:30",
+        "endTime": "09:20",
+        "type": "Lecture 2"
+      },
+      {
+        "module": "COS 330",
+        "venue": "IT 4-4",
+        "startTime": "14:30",
+        "endTime": "15:20",
+        "type": "Lecture 1"
+      }
+    ]
+  },
+  {
+    "day": "Wednesday",
+    "lectures": [
+      {
+        "module": "COS 330",
+        "venue": "IT 4-4",
+        "startTime": "10:30",
+        "endTime": "11:20",
+        "type": "Lecture 2"
+      }
+    ]
+  },
+  {
+    "day": "Thursday",
+    "lectures": [
+      {
+        "module": "COS 333",
+        "venue": "IT 4-4",
+        "startTime": "09:30",
+        "endTime": "10:20",
+        "type": "Practical"
+      }
+    ]
+  },
+  {
+    "day": "Friday",
+    "lectures": [
+    ]
+  }
+]

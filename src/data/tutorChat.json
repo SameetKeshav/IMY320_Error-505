@@ -1,0 +1,35 @@
+{
+  "name": "James Payne",
+  "request": {
+    "from": "Julianna Venter",
+    "date": "2023/09/21 08:45",
+    "subject": "COS 330",
+    "description": "I am having trouble with the assignment. Please help me."
+  },
+  "messages": [
+    {
+      "from": "James Payne",
+      "date": "2023/09/21 09:00",
+      "profilePicture": "https://media.istockphoto.com/id/597958694/photo/young-adult-male-student-in-the-lobby-of-a-university.jpg?s=612x612&w=0&k=20&c=QaNEzmcKrLJzmwOcu2lgwm1B7rm3Ouq2McYYdmoMGpU=",
+      "message": "Good day Julianna. I will be able to help you with the assignment. Could you please send me the question and the problem you are having?"
+    },
+    {
+      "from": "Julianna Venter",
+      "date": "2023/09/21 09:05",
+      "profilePicture": "https://image.shutterstock.com/image-photo/image-young-asian-woman-company-260nw-2122700972.jpg",
+      "message": "Thank you, I am struggling with question 2. I think there might be a problem with the question as it makes no sense to me. Could you please clarify the question for me?"
+    },
+    {
+      "from": "James Payne",
+      "date": "2023/09/21 09:10",
+      "profilePicture": "https://media.istockphoto.com/id/597958694/photo/young-adult-male-student-in-the-lobby-of-a-university.jpg?s=612x612&w=0&k=20&c=QaNEzmcKrLJzmwOcu2lgwm1B7rm3Ouq2McYYdmoMGpU=",
+      "message": "I see what you are saying about the question. I will speak to the lecturer and get back to you as soon as possible."
+    },
+    {
+      "from": "Julianna Venter",
+      "date": "2023/09/21 09:30",
+      "profilePicture": "https://image.shutterstock.com/image-photo/image-young-asian-woman-company-260nw-2122700972.jpg",
+      "message": "Thank you, looking forward to hearing from you."
+    }
+  ]
+}

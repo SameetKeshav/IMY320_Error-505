@@ -15,10 +15,10 @@ export class HomeComponent {
   // chatList: any[];
   schedule: any[];
   notifications = [1,2,3];
-  activityStream=false;
+  activityStream=true;
   myChats = false;
   mySchedule = false;
-  modulePage = true;
+  modulePage = false;
   tutorPage = false;
   classPage=false;
   request=true;

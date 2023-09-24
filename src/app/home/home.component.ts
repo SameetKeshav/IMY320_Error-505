@@ -13,7 +13,6 @@ export class HomeComponent {
   activityStreamData: any[];
   chatList: any[];
   schedule: any[];
-  modules=[1,2,3];
   notifications = [1,2,3];
   activityStream=true;
   myChats = false;
@@ -21,20 +20,27 @@ export class HomeComponent {
   days: string[] = [];
   days2: number[] = [];
 
+  modules = [
+    "COS330",
+    "COS301",
+    "COS333",
+  ]
   activityData = [
     {
       "date": "22/09",	
       "name": ["Natasha Schwarts", "a Tutor (James Payne)", "You", "Kaden Bernard"],
       "category": ["message", "tutor", "notification", "message"],
       "time": ["3:30 PM", "2:00 PM", "1:00 PM", "11:00 AM"],
-      "message": ["sent you a private message", "replied to your request","were mentioned on COS 330","sent you a private message"]
+      "message": ["sent you a private message", "replied to your request","were mentioned on COS 330","sent you a private message"],
+      "module": ["none","COS333","COS330","none"]
     },
     {
       "date": "21/09",	
       "name": ["Natasha Schwarts", "a Tutor (James Payne)", "52", "James Payne", "Tutor (James Payne)"],
       "category": ["message", "tutor", "notification", "job", "material"],
       "time": ["5:00 PM", "4:00 PM", "11:30 AM", "10:00 AM", "9:00 AM"],
-      "message": ["sent you a private message", "replied to your request","new messages on COS 330","posted a new job","posted material for COS 330"]
+      "message": ["sent you a private message", "replied to your request","new messages on COS 330","posted a new job","posted material for COS 330"],
+      "module": ["none","COS333","COS330","none","COS330"]
     }
   ]
 
@@ -45,7 +51,11 @@ export class HomeComponent {
     console.log(this.activityStreamData);
     console.log(this.activityStreamData.length);
     console.log(this.activityStreamData[0].date);
-    
+
+    console.log(this.activityData[0].module);
+    if(this.activityData[0].module.includes("COS333")){
+      console.log("yes");
+    }
   }
 
   isactivityStream(){

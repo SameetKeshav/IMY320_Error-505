@@ -2,7 +2,7 @@
 ## Deployed Site:
 https://omnihub-a057d.web.app/
 
-Deployed via Render
+Hosting done via Firestore
 <br>
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
 

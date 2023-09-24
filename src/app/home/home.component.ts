@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import * as activityData from '../../data/activityStream.json'
-import * as chatData from '../../data/chatList.json'
+// import * as chatData from '../../data/chatList.json'
 import * as scheduleData from '../../data/scheduleData.json'
 
 @Component({

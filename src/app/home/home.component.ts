@@ -375,6 +375,10 @@ search(){
   this.showModules=!this.showModules;
 }
 
+searchClose(){
+  this.showModules=true;
+}
+
 add(m:any){
   this.modules.push(m);
   this.showModules=!this.showModules;

@@ -20,51 +20,79 @@
         type="text"
         class="input"
         placeholder="Search for a module..."
+        (click)="search()"
       />
-      <div class="searchIcon" (click)="search()">
+      <div class="searchIcon">
         <i
           class="fa fa-search"
           aria-hidden="true"
           style="font-size: 20px; margin-left: 10px"
+          *ngIf="showModules"
+        ></i>
+        <i
+        style="font-size: 20px; margin-left: 10px"
+          class="fas fa-times"
+          (click)="searchClose()"
+          *ngIf="!showModules"
         ></i>
       </div>
     </div>
-    <div *ngIf="showModules" style="width: 100%; display:flex;flex-direction: column; align-items: center;">
-        <div class="module" *ngFor="let module of modules">
-            <div class="moduleName">
-              <b (click)="openModule(module)" style="cursor: pointer">{{ module }}</b>
-            </div>
-            <div class="moduleIcons">
-              <i
-                *ngIf="activityData[0].module.includes(module)"
-                class="fa fa-bell"
-                aria-hidden="true"
-                style="color: #c34ffd"
-              ></i>
-              <i
-                *ngIf="!activityData[0].module.includes(module)"
-                class="fa fa-bell"
-                aria-hidden="true"
-              ></i>
-              <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-              <i
-                class="fa fa-cog"
-                aria-hidden="true"
-                (click)="setButtonOpacityToOne()"
-              ></i>
-            </div>
-          </div>
+    <div
+      *ngIf="showModules"
+      style="
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      "
+    >
+      <div class="module" *ngFor="let module of modules">
+        <div class="moduleName">
+          <b (click)="openModule(module)" style="cursor: pointer">{{
+            module
+          }}</b>
+        </div>
+        <div class="moduleIcons">
+          <i
+            *ngIf="activityData[0].module.includes(module)"
+            class="fa fa-bell"
+            aria-hidden="true"
+            style="color: #c34ffd"
+          ></i>
+          <i
+            *ngIf="!activityData[0].module.includes(module)"
+            class="fa fa-bell"
+            aria-hidden="true"
+          ></i>
+          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+          <i
+            class="fa fa-cog"
+            aria-hidden="true"
+            (click)="setButtonOpacityToOne()"
+          ></i>
+        </div>
+      </div>
     </div>
 
-    <div *ngIf="!showModules" style="width: 90%; margin-top: 15px; display:flex;flex-direction: column; align-items: center; background-color: #d5e2ff;">
-        <div *ngFor="let module of options" class="OptionalModule">
-                <div class="OptionName">{{module}}<br>Semester 2</div>
-                <div class="add" (click)="add(module)">
-                <i class="fa fa-plus-square" aria-hidden="true" ></i>
-                </div>
-            </div>
+    <div
+      *ngIf="!showModules"
+      style="
+        width: 90%;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #d5e2ff;
+      "
+    >
+      <div *ngFor="let module of options" class="OptionalModule">
+        <div class="OptionName">{{ module }}<br />Semester 2</div>
+        <div class="add" (click)="add(module)">
+          <i class="fa fa-plus-square" aria-hidden="true"></i>
+        </div>
+      </div>
     </div>
-    
+
     <!-- <button class="removeBtn" id="removeBtn">Remove</button> -->
   </div>
   <div class="content">

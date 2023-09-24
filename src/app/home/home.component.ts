@@ -36,6 +36,9 @@ export class HomeComponent {
   showMaterial = false;
   days: string[] = [];
   days2: number[] = [];
+  showModules = true;
+  options=["COS341","COS332","COS310"];
+
   monday = [
     {},
     {},
@@ -365,5 +368,17 @@ export class HomeComponent {
         message: message,
       })
     }
-  }
+  
+}
+
+search(){
+  this.showModules=!this.showModules;
+}
+
+add(m:any){
+  this.modules.push(m);
+  this.showModules=!this.showModules;
+  this.options = this.options.filter(item => item !== m);
+
+}
 }

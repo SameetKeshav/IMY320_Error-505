@@ -3,6 +3,7 @@ import * as activityData from '../../data/activityStream.json'
 // import * as chatData from '../../data/chatList.json'
 import * as scheduleData from '../../data/scheduleData.json'
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -14,16 +15,19 @@ export class HomeComponent {
   // chatList: any[];
   schedule: any[];
   notifications = [1,2,3];
-  activityStream=true;
+  activityStream=false;
   myChats = false;
   mySchedule = false;
-  modulePage = false;
+  modulePage = true;
   tutorPage = false;
   classPage=false;
   request=true;
   className = '';
   moduleName = '';
   tutorName = '';
+  showSearch=false;
+  showJob=false;
+  showMaterial=false;
   days: string[] = [];
   days2: number[] = [];
   monday = [
@@ -206,6 +210,44 @@ export class HomeComponent {
     this.mySchedule = false;
     this.activityStream=false;
     this.className = name;
+  }
+
+  openSearch(){
+    this.showSearch=true;
+    this.showJob=false;
+    this.showMaterial=false;
+  }
+
+  closeSearch(){
+    this.showSearch=false;
+    this.showJob=false;
+    this.showMaterial=false;
+  }
+
+  openJob(){
+    this.showJob=true;
+    this.showMaterial=false;
+    this.showSearch=false;
+  }
+
+  openMaterial(){
+    this.showJob=false;
+    this.showMaterial=true;
+    this.showSearch=false;
+  }
+
+  setButtonOpacityToOne() {
+    var button = document.getElementById("removeBtn");
+    if (button) {
+      button.style.opacity = '1';
+    }
+  }
+
+  setButtonOpacityToZero() {
+    var button = document.getElementById("removeBtn");
+    if (button) {
+      button.style.opacity = '0';
+    }
   }
 
 }

@@ -99,15 +99,15 @@ input:focus {
   margin-left: 20px;
 }
 
-.Remove{
-    border-radius: 10px;
-    width: 30%;
-    height: 100%;
-    opacity: 0;
+.Remove {
+  border-radius: 10px;
+  width: 30%;
+  height: 100%;
+  opacity: 0;
 }
 
-.fa{
-    font-size: 25px;
+.fa {
+  font-size: 25px;
 }
 
 .moduleIcons {
@@ -119,10 +119,9 @@ input:focus {
   margin-right: 20px;
 }
 
-.moduleIcons .fa-cog:hover{
-    cursor: pointer;
-    color: #0572C0;
-
+.moduleIcons .fa-cog:hover {
+  cursor: pointer;
+  color: #0572c0;
 }
 
 .content {
@@ -186,10 +185,10 @@ input:focus {
   margin-left: 20%;
 }
 
-.Schedule_container{
-    width: 80%;
-    margin-left: 10%;
-    height: 100%;
+.Schedule_container {
+  width: 80%;
+  margin-left: 10%;
+  height: 100%;
 }
 
 .TopicTitle {
@@ -199,21 +198,18 @@ input:focus {
   margin-bottom: 20px;
 }
 
-.TopicTitle2{
-    font-size: 30px;
-    color:#0572C0;
-    margin-bottom: 20px;
+.TopicTitle2 {
+  font-size: 30px;
+  color: #0572c0;
+  margin-bottom: 20px;
 }
 
-
-
-
-.record{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    color: #333333;
+.record {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: #333333;
 }
 
 .recordDay {
@@ -267,12 +263,11 @@ input:focus {
   background-color: #e5e5e5;
 }
 
-
-.dayText{
-    font-size: larger;
-    color: #333333;
-    padding-left: 25px;
-    width: 90%;
+.dayText {
+  font-size: larger;
+  color: #333333;
+  padding-left: 25px;
+  width: 90%;
 }
 
 .recordText {
@@ -320,11 +315,11 @@ html {
   align-items: center;
 }
 
-.img{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
+.img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .Calander {
@@ -1230,14 +1225,14 @@ html {
 }
 
 .searchChatInput {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    background: transparent;
-    border: none;
-  }
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+}
 
 .searchChatIconContainer {
   width: 20px;
@@ -1325,39 +1320,94 @@ html {
 // padding-bottom: 10px;
 // }
 
-.Day{
-width: 20%;
-border-right: #E5E5E5 solid 2px;
-display: flex;
-flex-direction: column;
-align-items: center;
+.Day {
+  width: 20%;
+  border-right: #e5e5e5 solid 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.Day Label{
-font-size: 20px;
-
+.Day Label {
+  font-size: 20px;
 }
 
-.days{
-width: 100%;
-display: flex;
-justify-content:space-around;
-font-size: 20px;
-padding: 5px;
+.days {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  padding: 5px;
 }
 
-.class{
-width: 90%;
-height: 80px;
-background-color: #F0F5FF;
-border-radius: 10px;
-margin-bottom: 5px;
+.class {
+  width: 90%;
+  height: 80px;
+  background-color: #f0f5ff;
+  border-radius: 10px;
+  margin-bottom: 5px;
 }
 
-.noclass{
-width: 90%;
-height: 80px;
-background-color: #ffffff;
-border-radius: 10px;
-margin-bottom: 5px;
+.noclass {
+  width: 90%;
+  height: 80px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.searchOptions {
+  height: 100px;
+  width: 387px;
+  background-color: #aabfed;
+  z-index: 3;
+  position: absolute;
+  top: 110%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.searchOptionsContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.searchFilter {
+  border: 2px solid #0572c0;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 13px;
+  padding: 0px 10px;
+  color: #00355c;
+  font-weight: 700;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.searchFilter:hover {
+  background-color: #0572c0;
+  color: #ffffff;
+}
+
+
+.searchLine {
+  width: 387px;
+  height: 0px;
+  border: 1px #e5e5e5 solid;
+  
+}
+
+.removeBtn {
+    position: absolute;
+    left: 280px;
+    top: 185px;
+    background-color: #BFCDEE;
+    color: #00355c;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-weight: 700;
+    opacity: 0;
 }

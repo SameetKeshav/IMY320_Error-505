@@ -21,6 +21,23 @@ export class HomeComponent {
   days: string[] = [];
   days2: number[] = [];
 
+  activityData = [
+    {
+      "date": "22/09",	
+      "name": ["Natasha Schwarts", "a Tutor (James Payne)", "You", "Kaden Bernard"],
+      "category": ["message", "tutor", "notification", "message"],
+      "time": ["3:30 PM", "2:00 PM", "1:00 PM", "11:00 AM"],
+      "message": ["sent you a private message", "replied to your request","were mentioned on COS 330","sent you a private message"]
+    },
+    {
+      "date": "21/09",	
+      "name": ["Natasha Schwarts", "a Tutor (James Payne)", "52", "James Payne", "Tutor (James Payne)"],
+      "category": ["message", "tutor", "notification", "job", "material"],
+      "time": ["5:00 PM", "4:00 PM", "11:30 AM", "10:00 AM", "9:00 AM"],
+      "message": ["sent you a private message", "replied to your request","new messages on COS 330","posted a new job","posted material for COS 330"]
+    }
+  ]
+
   constructor(){
     this.activityStreamData = activityData;
     this.chatList = chatData;

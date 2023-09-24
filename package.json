@@ -2,7 +2,7 @@
   "name": "omni-hub",
   "version": "0.0.0",
   "scripts": {
-    "ng": "node --max_old_space_size=16000 ./node_modules/.bin/ng",
+    "ng": "node --max_old_space_size=500 ./node_modules/.bin/ng",
     "serve": "node ng serve",
     "build": "node ng build",
     "watch": "ng build --watch --configuration development",

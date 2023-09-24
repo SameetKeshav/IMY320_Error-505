@@ -15,9 +15,9 @@
       <h1>OmniHub</h1>
     </div>
     <div class="search">
-      <input type="text" class="input" placeholder="Search for a module..." />
+      <input style="margin-top: 3px;" type="text" class="input" placeholder="Search for a module..." />
       <div class="searchIcon">
-        <i class="fa fa-search" aria-hidden="true"></i>
+        <i class="fa fa-search" aria-hidden="true" style="font-size: 20px; margin-left: 10px;"></i>
       </div>
     </div>
     <div class="module" *ngFor="let module of modules">
@@ -116,7 +116,7 @@
               />
               <div class="searchChatIconContainer">
                 <div class="searchChatIcon">
-                  <i class="fas fa-search" *ngIf="!showSearch"></i>
+                  <i class="fas fa-search" *ngIf="!showSearch" ></i>
                   <i class="fas fa-times" (click)="closeSearch()" *ngIf="showSearch"></i>
                 </div>
               </div>

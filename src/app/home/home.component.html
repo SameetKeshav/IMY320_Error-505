@@ -18,7 +18,8 @@
                         <i *ngIf="activityData[0].module.includes(module)"class="fa fa-bell" aria-hidden="true" style="color:#C34FFD"></i>
                         <i *ngIf="!activityData[0].module.includes(module)" class="fa fa-bell" aria-hidden="true"></i>
                         <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                        <i class="fa fa-cog" aria-hidden="true"></i>
+                        <i class="fa fa-cog" aria-hidden="true"(click)="showRemoveButton = true"></i>
+                        <button *ngIf="showRemoveButton" (click)="removeModule(module)">Remove</button>
                     </div>
                 </div>
                 

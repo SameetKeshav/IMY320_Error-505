@@ -317,9 +317,10 @@
       <!-- ==========================================module page====================================== -->
 
       <div class="modulePage" *ngIf="modulePage">
-        <div class="messages"  *ngFor="let chat of moduleChat.messages">
+        <div class="messages">
           <div class="messagesContainer">
-            <div class="messageContainer2" *ngIf="!showJob && !showMaterial">
+            <div *ngFor="let chat of moduleChat.messages">
+            <div class="messageContainer2" *ngIf="!showJob && !showMaterial" >
               <div>
                 <div class="messageImg">
                   <img
@@ -335,6 +336,9 @@
                 <div class="messageTime">{{chat.message}}</div>
               </div>
             </div>
+        </div>
+
+
 
             <div class="messageContainer2" *ngIf="!showSearch && showJob">
               <div class="messageImg">

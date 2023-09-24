@@ -102,6 +102,13 @@ input:focus {
     margin-left: 20px;
 }
 
+.Remove{
+    border-radius: 10px;
+    width: 30%;
+    height: 100%;
+    opacity: 0;
+}
+
 .fa{
     font-size: 25px;
 }
@@ -115,7 +122,7 @@ input:focus {
     margin-right: 20px;
 }
 
-.moduleIcons i:hover{
+.moduleIcons .fa-cog:hover{
     cursor: pointer;
     color: #0572C0;
 
@@ -264,6 +271,8 @@ color: #0572C0;
     height: 2px;
     background-color: #E5E5E5;
 }
+
+
 .dayText{
     font-size: larger;
     color: #333333;

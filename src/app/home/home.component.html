@@ -326,10 +326,11 @@
                   <img
                     class="userImg"
                     src={{chat.profilePicture}}
+                    (click)="openClass(chat.from, chat.profilePicture)"
                   />
                 </div>
 
-                <div class="messageName">{{ chat.from }}</div>
+                <div style="cursor: pointer;" class="messageName" (click)="openClass(chat.from, chat.profilePicture)">{{ chat.from }}</div>
                 <div class="messageText">
                   {{ chat.message }}
                 </div>
@@ -529,7 +530,7 @@
                   src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
                 />
               </div>
-              <div class="myMessageName">User Name</div>
+              <div class="myMessageName">Julianna Venter</div>
 
               <div class="requestNoti">
                 <div class="requestNotiInner">
@@ -543,7 +544,7 @@
                 </div>
               </div>
 
-              <div class="myMessageTime">12/09/2023 09:23</div>
+              <div class="myMessageTime" style="margin-top: 3px;">12/09/2023 09:23</div>
             </div>
 
             <div class="messageContainer2">
@@ -554,7 +555,7 @@
                 />
               </div>
 
-              <div class="messageName">User Name</div>
+              <div class="messageName"></div>
               <div class="messageText">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
                 ac metus vel justo sagittis tincidunt. Sed auctor tortor a justo
@@ -578,6 +579,8 @@
               </div>
               <div class="myMessageTime">12/09/2023 09:23</div>
             </div>
+
+            
           </div>
         </div>
 

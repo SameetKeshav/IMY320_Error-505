@@ -127,11 +127,11 @@
               />
               <div class="searchChatIconContainer">
                 <div class="searchChatIcon">
-                  <i class="fas fa-search" *ngIf="!showSearch"></i>
+                  <i class="fas fa-search" *ngIf="!showSearch && !showJob && !showMaterial"></i>
                   <i
                     class="fas fa-times"
                     (click)="closeSearch()"
-                    *ngIf="showSearch"
+                    *ngIf="showSearch || showJob || showMaterial"
                   ></i>
                 </div>
               </div>
@@ -319,7 +319,61 @@
       <div class="modulePage" *ngIf="modulePage">
         <div class="messages">
           <div class="messagesContainer">
+            <div class="messageContainer2" *ngIf="!showSearch && showJob">
+                <div class="messageImg">
+                  <img
+                    class="userImg"
+                    src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+                  />
+                </div>
+  
+                <div class="messageName">Natasha Schwarts</div>
+                <div class="messageText">
+                  <div class="jobOpps">
+                    <a style="color: #0572c0; font-weight: 700"
+                      >Job Opportunity:</a
+                    >
+                    SkyWard Software looking for new graduates for internships.
+                    Apply at: https://skyward.com/grad-ops
+                  </div>
+                </div>
+                <div class="messageTime" style="margin-left: 50px">
+                  21/09/2023 10:17
+                </div>
+              </div>
+  
+              <div class="messageContainer2" *ngIf="!showSearch && showMaterial">
+                <div class="messageImg">
+                  <img
+                    class="userImg"
+                    src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+                  />
+                </div>
+  
+                <div class="messageName">Natasha Schwarts</div>
+                <div class="messageText">
+                  <div class="jobOpps">
+                    <a style="color: #0572c0; font-weight: 700"
+                      >Material Posted:</a
+                    >
+                    2023 ST1 Past Papers
+                  </div>
+                  <i
+                    style="
+                      font-size: 26px;
+                      color: #11507e;
+                      cursor: pointer;
+                      margin-top: 5px;
+                    "
+                    class="fas fa-file-alt"
+                  ></i>
+                </div>
+                <div class="messageTime" style="margin-left: 50px">
+                  12/09/2023 14:43
+                </div>
+              </div>
             <div *ngFor="let chat of moduleChat.messages">
+                
             <div class="messageContainer2" *ngIf="!showJob && !showMaterial" >
               <div>
                 <div class="messageImg">
@@ -341,59 +395,7 @@
 
 
 
-            <div class="messageContainer2" *ngIf="!showSearch && showJob">
-              <div class="messageImg">
-                <img
-                  class="userImg"
-                  src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
-                />
-              </div>
-
-              <div class="messageName">Natasha Schwarts</div>
-              <div class="messageText">
-                <div class="jobOpps">
-                  <a style="color: #0572c0; font-weight: 700"
-                    >Job Opportunity:</a
-                  >
-                  SkyWard Software looking for new graduates for internships.
-                  Apply at: https://skyward.com/grad-ops
-                </div>
-              </div>
-              <div class="messageTime" style="margin-left: 50px">
-                21/09/2023 10:17
-              </div>
-            </div>
-
-            <div class="messageContainer2" *ngIf="!showSearch && showMaterial">
-              <div class="messageImg">
-                <img
-                  class="userImg"
-                  src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
-                />
-              </div>
-
-              <div class="messageName">Natasha Schwarts</div>
-              <div class="messageText">
-                <div class="jobOpps">
-                  <a style="color: #0572c0; font-weight: 700"
-                    >Material Posted:</a
-                  >
-                  2023 ST1 Past Papers
-                </div>
-                <i
-                  style="
-                    font-size: 26px;
-                    color: #11507e;
-                    cursor: pointer;
-                    margin-top: 5px;
-                  "
-                  class="fas fa-file-alt"
-                ></i>
-              </div>
-              <div class="messageTime" style="margin-left: 50px">
-                12/09/2023 14:43
-              </div>
-            </div>
+            
           </div>
         </div>
 
@@ -505,7 +507,7 @@
               <textarea
                 type="text"
                 class="requestTextInput"
-                placeholder="I'm busy with practical 5, I don't understand how the decoding works, and I wanted to go over the techniquess for the exam."
+                placeholder="{{tutorChat.request.description}}"
               ></textarea>
             </div>
 

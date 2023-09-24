@@ -11,7 +11,7 @@ import * as scheduleData from '../../data/scheduleData.json'
 export class HomeComponent {
 
   activityStreamData: any[];
-  chatList: any[];
+  // chatList: any[];
   schedule: any[];
   notifications = [1,2,3];
   activityStream=true;
@@ -117,9 +117,27 @@ export class HomeComponent {
     }
   ]
 
+  chatList =[
+    {
+      "name": "James Payne",
+      "profilePicture": "https://media.istockphoto.com/id/597958694/photo/young-adult-male-student-in-the-lobby-of-a-university.jpg?s=612x612&w=0&k=20&c=QaNEzmcKrLJzmwOcu2lgwm1B7rm3Ouq2McYYdmoMGpU=",
+      "message": "Hi, I am the tutor"
+    },
+    {
+      "name": "Natasha Schwarts",
+      "profilePicture": "https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg",
+      "message": "Hey Julianna, nice to see you here."
+    },
+    {
+      "name": "Kaden Bernard",
+      "profilePicture": "https://remembermephotography.com/wp-content/uploads/2016/04/BD008cc.jpg",
+      "message": "Hey Julianna, how are you?"
+    }
+  ]
+
   constructor(){
     this.activityStreamData = activityData;
-    this.chatList = chatData;
+    // this.chatList = chatData;
     this.schedule = scheduleData;
     console.log(this.activityStreamData);
     console.log(this.activityStreamData.length);

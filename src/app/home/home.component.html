@@ -326,10 +326,11 @@
                   <img
                     class="userImg"
                     src={{chat.profilePicture}}
+                    (click)="openClass(chat.from, chat.profilePicture)"
                   />
                 </div>
 
-                <div class="messageName">{{ chat.from }}</div>
+                <div style="cursor: pointer;" class="messageName" (click)="openClass(chat.from, chat.profilePicture)">{{ chat.from }}</div>
                 <div class="messageText">
                   {{ chat.message }}
                 </div>
@@ -541,7 +542,7 @@
                 </div>
               </div>
 
-              <div class="myMessageTime">{{tutorChat.request.date}}</div>
+              <div class="myMessageTime" style="margin-top: 3px;">{{tutorChat.request.date}}</div>
             </div>
             <div *ngFor="let chat of tutorChat.messages">
             <div class="messageContainer2" *ngIf="chat.from !== 'Julianna Venter'">
@@ -573,6 +574,8 @@
               <div class="myMessageTime">{{chat.date}}</div>
             </div>
             </div>
+
+            
           </div>
         </div>
 

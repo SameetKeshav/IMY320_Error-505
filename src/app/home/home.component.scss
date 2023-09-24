@@ -727,14 +727,16 @@ html {
 }
 
 .myMessageName {
-  left: 458px;
+  left: 350px;
   //   top: 5px;
+  width: 200px;
   position: absolute;
   color: black;
   font-size: 16px;
   font-family: Inter, sans-serif;
   font-weight: 600;
   word-wrap: break-word;
+  text-align: right;
 }
 
 .myMessageText {
@@ -752,7 +754,7 @@ html {
 }
 
 .myMessageTime {
-  left: 340px;
+  left: 300px;
   //   top: 8px;
   position: absolute;
   color: rgba(0, 0, 0, 0.6);
@@ -1048,17 +1050,6 @@ html {
   position: absolute;
   border-radius: 100px;
   object-fit: cover;
-}
-
-.myMessageName {
-  left: 458px;
-  //   top: 5px;
-  position: absolute;
-  color: black;
-  font-size: 16px;
-  font-family: Inter, sans-serif;
-  font-weight: 600;
-  word-wrap: break-word;
 }
 
 .myMessageText {

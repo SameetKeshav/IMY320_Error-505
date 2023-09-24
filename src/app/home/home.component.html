@@ -416,11 +416,13 @@
                 <i
                   class="fas fa-paper-plane"
                   style="width: 16.62px; height: 16.62px; color: #00355c"
+                  (click)="sendModuleMessage()"
                 ></i>
               </div>
             </div>
           </div>
           <input
+            id="moduleMessage"
             type="text"
             class="messageInputText"
             placeholder="Message..."
@@ -598,11 +600,13 @@
                 <i
                   class="fas fa-paper-plane"
                   style="width: 16.62px; height: 16.62px; color: #00355c"
+                  (click)="sendTutorMessage()"
                 ></i>
               </div>
             </div>
           </div>
           <input
+            id="tutorMessage"
             type="text"
             class="messageInputText"
             placeholder="Message..."
@@ -666,11 +670,13 @@
                 <i
                   class="fas fa-paper-plane"
                   style="width: 16.62px; height: 16.62px; color: #00355c"
+                  (click)="sendClassMessage()"
                 ></i>
               </div>
             </div>
           </div>
           <input
+            id="classMessage"
             type="text"
             class="messageInputText"
             placeholder="Message..."

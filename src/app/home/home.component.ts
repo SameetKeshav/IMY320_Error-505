@@ -284,4 +284,65 @@ export class HomeComponent {
       button.style.opacity = '0';
     }
   }
+
+  formatCurrentDate() {
+    const date = new Date();
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Note: Month is zero-based
+    const year = date.getFullYear();
+    const hours = date.getHours().toString().padStart(2, '0');
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+
+    return `${day}/${month}/${year} ${hours}:${minutes}`;
+  }
+
+  sendTutorMessage(){
+
+    const message = (<HTMLInputElement>document.getElementById('tutorMessage')).value;
+    (<HTMLInputElement>document.getElementById('tutorMessage')).value = '';
+    console.log(message);
+
+    if(message !== ''){
+      this.tutorChat.messages.push({
+        from: 'Julianna Venter',
+        date: this.formatCurrentDate(),
+        profilePicture: 'https://image.shutterstock.com/image-photo/image-young-asian-woman-company-260nw-2122700972.jpg',
+        message: message,
+      })
+    }
+   
+  }
+
+  sendModuleMessage(){
+
+    const message = (<HTMLInputElement>document.getElementById('moduleMessage')).value;
+    (<HTMLInputElement>document.getElementById('moduleMessage')).value = '';
+    console.log(message);
+
+    if(message !== ''){
+      this.moduleChat.messages.push({
+        from: 'Julianna Venter',
+        date: this.formatCurrentDate(),
+        profilePicture: 'https://image.shutterstock.com/image-photo/image-young-asian-woman-company-260nw-2122700972.jpg',
+        message: message,
+      })
+    }
+   
+  }
+
+  sendClassMessage(){
+
+    const message = (<HTMLInputElement>document.getElementById('classMessage')).value;
+    (<HTMLInputElement>document.getElementById('classMessage')).value = '';
+    console.log(message);
+
+    if(message !== ''){
+      this.classChat.messages.push({
+        from: 'Julianna Venter',
+        date: this.formatCurrentDate(),
+        profilePicture: 'https://image.shutterstock.com/image-photo/image-young-asian-woman-company-260nw-2122700972.jpg',
+        message: message,
+      })
+    }
+  }
 }

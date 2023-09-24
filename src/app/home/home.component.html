@@ -5,7 +5,7 @@
 
 <div class="container">
   <div class="menu">
-    <div class="title" (click)="isactivityStream()">
+    <div class="title" (click)="isactivityStream()" style="cursor: pointer;">
       <img
         src="assets/logo.png"
         style="object-fit: cover"
@@ -224,7 +224,7 @@
         <div class="TopicTitle"><b>Chats</b></div>
         <div class="border3"></div>
         <div *ngFor="let chat of chatList">
-          <div class="chat">
+          <div class="chat" (click)="openClass(chat.name, chat.profilePicture)">
             <div class="profile">
               <img src="{{ chat.profilePicture }}" class="img" />
             </div>

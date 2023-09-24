@@ -95,14 +95,14 @@
                     <div *ngIf="myChats" class="Chat_container">
                         <div class = "TopicTitle"><b>Chats</b></div>
                         <div class="border3"></div>
-                        <div *ngFor="let chat of modules">
+                        <div *ngFor="let chat of chatList">
                             <div class="chat">
                                 <div class="profile">
-                                    <img src="assets/p1.jpg" class="img">
+                                    <img src={{chat.profilePicture}} class="img">
                                 </div>
                                 <div class="details">
-                                    <div style="font-size: 16px; padding:5px;"><b>Ronin Brookes</b></div>
-                                    <div style="font-size: 15px;padding:5px;">This is a message from me</div>
+                                    <div style="font-size: 16px; padding:5px;"><b>{{chat.name}}</b></div>
+                                    <div style="font-size: 15px;padding:5px;">{{chat.message}}</div>
                                 </div>
                             </div>
                             <div class="border4"></div>

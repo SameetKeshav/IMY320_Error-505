@@ -155,7 +155,7 @@
         <div class="tutorHeaderImg">
           <img
             class="tutorUserImg"
-            src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+            src="{{ tutorUrl }}"
           />
         </div>
         <div class="tutorHeaderIcon">
@@ -171,7 +171,7 @@
         <div class="classImg">
           <img
             class="classUserImg"
-            src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+            src="{{ classUrl }}"
           />
         </div>
       </div>
@@ -439,14 +439,14 @@
                 <div class="tutorheaderText">Tutors</div>
               </div>
 
-              <div class="tutorContainer" (click)="openTutor('James Payne')">
+              <div class="tutorContainer" (click)="openTutor(chatList[0].name, chatList[0].profilePicture)">
                 <img
                   class="tutorImg"
-                  (click)="openTutor('James Payne')"
-                  src="https://media.istockphoto.com/id/597958694/photo/young-adult-male-student-in-the-lobby-of-a-university.jpg?s=612x612&w=0&k=20&c=QaNEzmcKrLJzmwOcu2lgwm1B7rm3Ouq2McYYdmoMGpU="
+                  (click)="openTutor(chatList[0].name, chatList[0].profilePicture)"
+                  src="{{ chatList[0].profilePicture }}"
                 />
-                <div class="tutorName" (click)="openTutor('James Payne')">
-                  James Payne
+                <div class="tutorName" (click)="openTutor(chatList[0].name, chatList[0].profilePicture)">
+                  {{ chatList[0].name }}
                 </div>
               </div>
 
@@ -457,30 +457,30 @@
               <div class="usersList">
                 <div
                   class="userInfoContainer"
-                  (click)="openClass('Natasha Schwarts')"
+                  (click)="openClass(chatList[1].name, chatList[1].profilePicture)"
                 >
-                  <div (click)="openClass('Natasha Schwarts')" class="userName">
-                    Natasha Schwarts
+                  <div (click)="openClass(chatList[1].name, chatList[1].profilePicture)" class="userName">
+                    {{chatList[1].name}}
                   </div>
                   <img
-                    (click)="openClass('Natasha Schwarts')"
+                    (click)="openClass(chatList[1].name, chatList[1].profilePicture)"
                     class="userImg"
-                    src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+                    src="{{ chatList[1].profilePicture }}"
                   />
                   <div class="line2"></div>
                 </div>
 
                 <div
                   class="userInfoContainer"
-                  (click)="openClass('Natasha Schwarts')"
+                  (click)="openClass(chatList[2].name, chatList[2].profilePicture)"
                 >
-                  <div (click)="openClass('Natasha Schwarts')" class="userName">
-                    Natasha Schwarts
+                  <div (click)="openClass(chatList[2].name, chatList[2].profilePicture)" class="userName">
+                    {{chatList[2].name}}
                   </div>
                   <img
-                    (click)="openClass('Natasha Schwarts')"
+                    (click)="openClass(chatList[2].name, chatList[2].profilePicture)"
                     class="userImg"
-                    src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+                    src="{{ chatList[2].profilePicture }}"
                   />
                   <div class="line2"></div>
                 </div>

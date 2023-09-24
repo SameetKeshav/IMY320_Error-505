@@ -17,16 +17,18 @@ export class HomeComponent {
   moduleChat = moduleChatData;
   schedule: any[];
   notifications = [1,2,3];
-  activityStream=true;
+  activityStream=false;
   myChats = false;
   mySchedule = false;
-  modulePage = false;
+  modulePage = true;
   tutorPage = false;
   classPage=false;
   request=true;
   className = '';
   moduleName = '';
   tutorName = '';
+  tutorUrl = '';
+  classUrl = '';
   showSearch=false;
   showJob=false;
   showMaterial=false;
@@ -194,7 +196,7 @@ export class HomeComponent {
     this.moduleName = module;
   }
 
-  openTutor(tutor : string){
+  openTutor(tutor : string, url : string){
     this.modulePage=false;
     this.tutorPage=true;
     this.classPage=false;
@@ -202,9 +204,10 @@ export class HomeComponent {
     this.mySchedule = false;
     this.activityStream=false;
     this.tutorName = tutor;
+    this.tutorUrl = url;
   }
 
-  openClass(name : string){
+  openClass(name : string, url : string){
     this.modulePage=false;
     this.tutorPage=false;
     this.classPage=true;
@@ -212,6 +215,7 @@ export class HomeComponent {
     this.mySchedule = false;
     this.activityStream=false;
     this.className = name;
+    this.classUrl = url;
   }
 
   openSearch(){

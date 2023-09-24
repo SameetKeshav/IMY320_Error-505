@@ -69,6 +69,7 @@ input:focus {
   margin-right: 20px;
   color: #00355c;
   font-size: 20px;
+  z-index: 3;
 }
 
 .searchIcon:hover {
@@ -87,7 +88,37 @@ input:focus {
   font-size: 16px;
   transition: 0.3s;
 }
+.OptionalModule{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    color: #333333;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     margin-bottom: 7.5px;
+     margin-top: 7.5px;
+    border-bottom: #ffffff solid 1px;
 
+    
+    align-items: center;
+}
+
+.add{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.add:hover{
+    color: #0572c0;
+    cursor: pointer;
+}
+
+.OptionName{
+    margin-left: 20px;
+}
 .module:hover {
   transform: translateY(-5px);
 }

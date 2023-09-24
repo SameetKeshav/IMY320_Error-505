@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import * as activityData from '../../data/activityStream.json'
 // import * as chatData from '../../data/chatList.json'
 import * as scheduleData from '../../data/scheduleData.json'
+import * as moduleChatData from '../../data/moduleChat.json'
 
 
 @Component({
@@ -13,6 +14,7 @@ export class HomeComponent {
 
   activityStreamData: any[];
   // chatList: any[];
+  moduleChat = moduleChatData;
   schedule: any[];
   notifications = [1,2,3];
   activityStream=true;

@@ -5,7 +5,7 @@
 
 <div class="container">
   <div class="menu">
-    <div class="title" (click)="isactivityStream()" style="cursor: pointer;">
+    <div class="title" (click)="isactivityStream()" style="cursor: pointer">
       <img
         src="assets/logo.png"
         style="object-fit: cover"
@@ -127,7 +127,10 @@
               />
               <div class="searchChatIconContainer">
                 <div class="searchChatIcon">
-                  <i class="fas fa-search" *ngIf="!showSearch && !showJob && !showMaterial"></i>
+                  <i
+                    class="fas fa-search"
+                    *ngIf="!showSearch && !showJob && !showMaterial"
+                  ></i>
                   <i
                     class="fas fa-times"
                     (click)="closeSearch()"
@@ -153,10 +156,7 @@
       <div class="Options" *ngIf="tutorPage">
         <div class="tutorNameHeader">{{ tutorName }}</div>
         <div class="tutorHeaderImg">
-          <img
-            class="tutorUserImg"
-            src="{{ tutorUrl }}"
-          />
+          <img class="tutorUserImg" src="{{ tutorUrl }}" />
         </div>
         <div class="tutorHeaderIcon">
           <i
@@ -169,10 +169,7 @@
       <div class="Options" *ngIf="classPage">
         <div class="classNameHeader">{{ className }}</div>
         <div class="classImg">
-          <img
-            class="classUserImg"
-            src="{{ classUrl }}"
-          />
+          <img class="classUserImg" src="{{ classUrl }}" />
         </div>
       </div>
     </div>
@@ -252,64 +249,99 @@
         </div>
         <div class="Calander">
           <div class="Day">
-            <div class="class"></div>
-            <div class="noclass"></div>
-            <div class="noclass"></div>
-            <div class="class"></div>
-            <div class="noclass"></div>
-            <div class="class"></div>
-            <div class="class"></div>
-            <div class="noclass"></div>
-            <div class="noclass"></div>
-            <div class="class"></div>
+            <div *ngFor="let class of monday">
+              <div class="class" *ngIf="class.module !== undefined">
+                <div class="scheduleContainer">
+                  <div class="scheduleInner">
+                    <div class="scheduleClassName">{{ class.module }}</div>
+                    <div class="scheduleClassTitle">{{ class.type }}</div>
+                    <div class="scheduleClassLocation">{{ class.venue }}</div>
+                    <div class="scheduleClassStartTime">
+                      {{ class.startTime }}
+                    </div>
+                    <div class="scheduleClassEndTime">{{ class.endTime }}</div>
+                    <div class="scheduleLine"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="noclass" *ngIf="class.module === undefined"></div>
+            </div>
           </div>
           <div class="Day">
-            <div class="class"></div>
-            <div class="noclass"></div>
-            <div class="noclass"></div>
-            <div class="class"></div>
-            <div class="noclass"></div>
-            <div class="class"></div>
-            <div class="class"></div>
-            <div class="noclass"></div>
-            <div class="noclass"></div>
-            <div class="class"></div>
+            <div *ngFor="let class of tuesday">
+              <div class="class" *ngIf="class.module !== undefined">
+                <div class="scheduleContainer">
+                  <div class="scheduleInner">
+                    <div class="scheduleClassName">{{ class.module }}</div>
+                    <div class="scheduleClassTitle">{{ class.type }}</div>
+                    <div class="scheduleClassLocation">{{ class.venue }}</div>
+                    <div class="scheduleClassStartTime">
+                      {{ class.startTime }}
+                    </div>
+                    <div class="scheduleClassEndTime">{{ class.endTime }}</div>
+                    <div class="scheduleLine"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="noclass" *ngIf="class.module === undefined"></div>
+            </div>
           </div>
           <div class="Day">
-            <div class="class"></div>
-            <div class="noclass"></div>
-            <div class="noclass"></div>
-            <div class="class"></div>
-            <div class="noclass"></div>
-            <div class="class"></div>
-            <div class="class"></div>
-            <div class="noclass"></div>
-            <div class="noclass"></div>
-            <div class="class"></div>
+            <div *ngFor="let class of wednesday">
+              <div class="class" *ngIf="class.module !== undefined">
+                <div class="scheduleContainer">
+                  <div class="scheduleInner">
+                    <div class="scheduleClassName">{{ class.module }}</div>
+                    <div class="scheduleClassTitle">{{ class.type }}</div>
+                    <div class="scheduleClassLocation">{{ class.venue }}</div>
+                    <div class="scheduleClassStartTime">
+                      {{ class.startTime }}
+                    </div>
+                    <div class="scheduleClassEndTime">{{ class.endTime }}</div>
+                    <div class="scheduleLine"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="noclass" *ngIf="class.module === undefined"></div>
+            </div>
           </div>
           <div class="Day">
-            <div class="class"></div>
-            <div class="noclass"></div>
-            <div class="noclass"></div>
-            <div class="class"></div>
-            <div class="noclass"></div>
-            <div class="class"></div>
-            <div class="class"></div>
-            <div class="noclass"></div>
-            <div class="noclass"></div>
-            <div class="class"></div>
+            <div *ngFor="let class of thursday">
+              <div class="class" *ngIf="class.module !== undefined">
+                <div class="scheduleContainer">
+                  <div class="scheduleInner">
+                    <div class="scheduleClassName">{{ class.module }}</div>
+                    <div class="scheduleClassTitle">{{ class.type }}</div>
+                    <div class="scheduleClassLocation">{{ class.venue }}</div>
+                    <div class="scheduleClassStartTime">
+                      {{ class.startTime }}
+                    </div>
+                    <div class="scheduleClassEndTime">{{ class.endTime }}</div>
+                    <div class="scheduleLine"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="noclass" *ngIf="class.module === undefined"></div>
+            </div>
           </div>
           <div class="Day" style="border-right: none">
-            <div class="class"></div>
-            <div class="noclass"></div>
-            <div class="noclass"></div>
-            <div class="class"></div>
-            <div class="noclass"></div>
-            <div class="class"></div>
-            <div class="class"></div>
-            <div class="noclass"></div>
-            <div class="noclass"></div>
-            <div class="class"></div>
+            <div *ngFor="let class of friday">
+              <div class="class" *ngIf="class.module !== undefined">
+                <div class="scheduleContainer">
+                  <div class="scheduleInner">
+                    <div class="scheduleClassName">{{ class.module }}</div>
+                    <div class="scheduleClassTitle">{{ class.type }}</div>
+                    <div class="scheduleClassLocation">{{ class.venue }}</div>
+                    <div class="scheduleClassStartTime">
+                      {{ class.startTime }}
+                    </div>
+                    <div class="scheduleClassEndTime">{{ class.endTime }}</div>
+                    <div class="scheduleLine"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="noclass" *ngIf="class.module === undefined"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -320,82 +352,83 @@
         <div class="messages">
           <div class="messagesContainer">
             <div class="messageContainer2" *ngIf="!showSearch && showJob">
-                <div class="messageImg">
-                  <img
-                    class="userImg"
-                    src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
-                  />
-                </div>
-  
-                <div class="messageName">Natasha Schwarts</div>
-                <div class="messageText">
-                  <div class="jobOpps">
-                    <a style="color: #0572c0; font-weight: 700"
-                      >Job Opportunity:</a
-                    >
-                    SkyWard Software looking for new graduates for internships.
-                    Apply at: https://skyward.com/grad-ops
-                  </div>
-                </div>
-                <div class="messageTime" style="margin-left: 50px">
-                  21/09/2023 10:17
-                </div>
+              <div class="messageImg">
+                <img
+                  class="userImg"
+                  src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+                />
               </div>
-  
-              <div class="messageContainer2" *ngIf="!showSearch && showMaterial">
-                <div class="messageImg">
-                  <img
-                    class="userImg"
-                    src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
-                  />
-                </div>
-  
-                <div class="messageName">Natasha Schwarts</div>
-                <div class="messageText">
-                  <div class="jobOpps">
-                    <a style="color: #0572c0; font-weight: 700"
-                      >Material Posted:</a
-                    >
-                    2023 ST1 Past Papers
-                  </div>
-                  <i
-                    style="
-                      font-size: 26px;
-                      color: #11507e;
-                      cursor: pointer;
-                      margin-top: 5px;
-                    "
-                    class="fas fa-file-alt"
-                  ></i>
-                </div>
-                <div class="messageTime" style="margin-left: 50px">
-                  12/09/2023 14:43
-                </div>
-              </div>
-            <div *ngFor="let chat of moduleChat.messages">
-                
-            <div class="messageContainer2" *ngIf="!showJob && !showMaterial" >
-              <div>
-                <div class="messageImg">
-                  <img
-                    class="userImg"
-                    src={{chat.profilePicture}}
-                    (click)="openClass(chat.from, chat.profilePicture)"
-                  />
-                </div>
 
-                <div style="cursor: pointer;" class="messageName" (click)="openClass(chat.from, chat.profilePicture)">{{ chat.from }}</div>
-                <div class="messageText">
-                  {{ chat.message }}
+              <div class="messageName">Natasha Schwarts</div>
+              <div class="messageText">
+                <div class="jobOpps">
+                  <a style="color: #0572c0; font-weight: 700"
+                    >Job Opportunity:</a
+                  >
+                  SkyWard Software looking for new graduates for internships.
+                  Apply at: https://skyward.com/grad-ops
                 </div>
-                <div class="messageTime">{{chat.date}}</div>
+              </div>
+              <div class="messageTime" style="margin-left: 50px">
+                21/09/2023 10:17
               </div>
             </div>
-        </div>
 
+            <div class="messageContainer2" *ngIf="!showSearch && showMaterial">
+              <div class="messageImg">
+                <img
+                  class="userImg"
+                  src="https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg"
+                />
+              </div>
 
+              <div class="messageName">Natasha Schwarts</div>
+              <div class="messageText">
+                <div class="jobOpps">
+                  <a style="color: #0572c0; font-weight: 700"
+                    >Material Posted:</a
+                  >
+                  2023 ST1 Past Papers
+                </div>
+                <i
+                  style="
+                    font-size: 26px;
+                    color: #11507e;
+                    cursor: pointer;
+                    margin-top: 5px;
+                  "
+                  class="fas fa-file-alt"
+                ></i>
+              </div>
+              <div class="messageTime" style="margin-left: 50px">
+                12/09/2023 14:43
+              </div>
+            </div>
+            <div *ngFor="let chat of moduleChat.messages">
+              <div class="messageContainer2" *ngIf="!showJob && !showMaterial">
+                <div>
+                  <div class="messageImg">
+                    <img
+                      class="userImg"
+                      src="{{ chat.profilePicture }}"
+                      (click)="openClass(chat.from, chat.profilePicture)"
+                    />
+                  </div>
 
-            
+                  <div
+                    style="cursor: pointer"
+                    class="messageName"
+                    (click)="openClass(chat.from, chat.profilePicture)"
+                  >
+                    {{ chat.from }}
+                  </div>
+                  <div class="messageText">
+                    {{ chat.message }}
+                  </div>
+                  <div class="messageTime">{{ chat.date }}</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -444,13 +477,25 @@
                 <div class="tutorheaderText">Tutors</div>
               </div>
 
-              <div class="tutorContainer" (click)="openTutor(chatList[0].name, chatList[0].profilePicture)">
+              <div
+                class="tutorContainer"
+                (click)="
+                  openTutor(chatList[0].name, chatList[0].profilePicture)
+                "
+              >
                 <img
                   class="tutorImg"
-                  (click)="openTutor(chatList[0].name, chatList[0].profilePicture)"
+                  (click)="
+                    openTutor(chatList[0].name, chatList[0].profilePicture)
+                  "
                   src="{{ chatList[0].profilePicture }}"
                 />
-                <div class="tutorName" (click)="openTutor(chatList[0].name, chatList[0].profilePicture)">
+                <div
+                  class="tutorName"
+                  (click)="
+                    openTutor(chatList[0].name, chatList[0].profilePicture)
+                  "
+                >
                   {{ chatList[0].name }}
                 </div>
               </div>
@@ -462,13 +507,22 @@
               <div class="usersList">
                 <div
                   class="userInfoContainer"
-                  (click)="openClass(chatList[1].name, chatList[1].profilePicture)"
+                  (click)="
+                    openClass(chatList[1].name, chatList[1].profilePicture)
+                  "
                 >
-                  <div (click)="openClass(chatList[1].name, chatList[1].profilePicture)" class="userName">
-                    {{chatList[1].name}}
+                  <div
+                    (click)="
+                      openClass(chatList[1].name, chatList[1].profilePicture)
+                    "
+                    class="userName"
+                  >
+                    {{ chatList[1].name }}
                   </div>
                   <img
-                    (click)="openClass(chatList[1].name, chatList[1].profilePicture)"
+                    (click)="
+                      openClass(chatList[1].name, chatList[1].profilePicture)
+                    "
                     class="userImg"
                     src="{{ chatList[1].profilePicture }}"
                   />
@@ -477,13 +531,22 @@
 
                 <div
                   class="userInfoContainer"
-                  (click)="openClass(chatList[2].name, chatList[2].profilePicture)"
+                  (click)="
+                    openClass(chatList[2].name, chatList[2].profilePicture)
+                  "
                 >
-                  <div (click)="openClass(chatList[2].name, chatList[2].profilePicture)" class="userName">
-                    {{chatList[2].name}}
+                  <div
+                    (click)="
+                      openClass(chatList[2].name, chatList[2].profilePicture)
+                    "
+                    class="userName"
+                  >
+                    {{ chatList[2].name }}
                   </div>
                   <img
-                    (click)="openClass(chatList[2].name, chatList[2].profilePicture)"
+                    (click)="
+                      openClass(chatList[2].name, chatList[2].profilePicture)
+                    "
                     class="userImg"
                     src="{{ chatList[2].profilePicture }}"
                   />
@@ -509,7 +572,7 @@
               <textarea
                 type="text"
                 class="requestTextInput"
-                placeholder="{{tutorChat.request.description}}"
+                placeholder="{{ tutorChat.request.description }}"
               ></textarea>
             </div>
 
@@ -534,52 +597,52 @@
                   src="{{ tutorChat.request.profilePicture }}"
                 />
               </div>
-              <div class="myMessageName">{{tutorChat.request.from}}</div>
+              <div class="myMessageName">{{ tutorChat.request.from }}</div>
 
               <div class="requestNoti">
                 <div class="requestNotiInner">
                   <div class="requestNotiTitle">Request Made:</div>
                   <div class="requestNotiModule">COS 330</div>
                   <div class="requestNotiText">
-                    {{tutorChat.request.description}}
+                    {{ tutorChat.request.description }}
                   </div>
                 </div>
               </div>
 
-              <div class="myMessageTime" style="margin-top: 3px;">{{tutorChat.request.date}}</div>
+              <div class="myMessageTime" style="margin-top: 3px">
+                {{ tutorChat.request.date }}
+              </div>
             </div>
             <div *ngFor="let chat of tutorChat.messages">
-            <div class="messageContainer2" *ngIf="chat.from !== 'Julianna Venter'">
-              <div class="messageImg">
-                <img
-                  class="userImg"
-                  src="{{ chat.profilePicture }}"
-                />
+              <div
+                class="messageContainer2"
+                *ngIf="chat.from !== 'Julianna Venter'"
+              >
+                <div class="messageImg">
+                  <img class="userImg" src="{{ chat.profilePicture }}" />
+                </div>
+
+                <div class="messageName">{{ chat.from }}</div>
+                <div class="messageText">
+                  {{ chat.message }}
+                </div>
+                <div class="messageTime">{{ chat.date }}</div>
               </div>
 
-              <div class="messageName">{{chat.from}}</div>
-              <div class="messageText">
-               {{chat.message}}
+              <div
+                class="myMessageContainer2"
+                *ngIf="chat.from === 'Julianna Venter'"
+              >
+                <div class="myMessageImg">
+                  <img class="myUserImg" src="{{ chat.profilePicture }}" />
+                </div>
+                <div class="myMessageName">{{ chat.from }}</div>
+                <div class="myMessageText">
+                  {{ chat.message }}
+                </div>
+                <div class="myMessageTime">{{ chat.date }}</div>
               </div>
-              <div class="messageTime">{{chat.date}}</div>
             </div>
-
-            <div class="myMessageContainer2" *ngIf="chat.from === 'Julianna Venter'">
-              <div class="myMessageImg">
-                <img
-                  class="myUserImg"
-                  src="{{chat.profilePicture}}"
-                />
-              </div>
-              <div class="myMessageName">{{chat.from}}</div>
-              <div class="myMessageText">
-                {{chat.message}}
-              </div>
-              <div class="myMessageTime">{{chat.date}}</div>
-            </div>
-            </div>
-
-            
           </div>
         </div>
 
@@ -622,34 +685,34 @@
         <div class="messages">
           <div class="messagesContainer">
             <div *ngFor="let chat of classChat.messages">
-            <div class="messageContainer2" *ngIf="chat.from !== 'Julianna Venter'">
-              <div class="messageImg">
-                <img
-                  class="userImg"
-                  src="{{classUrl}}"
-                />
+              <div
+                class="messageContainer2"
+                *ngIf="chat.from !== 'Julianna Venter'"
+              >
+                <div class="messageImg">
+                  <img class="userImg" src="{{ classUrl }}" />
+                </div>
+
+                <div class="messageName">{{ className }}</div>
+                <div class="messageText">
+                  {{ chat.message }}
+                </div>
+                <div class="messageTime">{{ chat.date }}</div>
               </div>
 
-              <div class="messageName">{{className}}</div>
-              <div class="messageText">
-                {{chat.message}}
+              <div
+                class="myMessageContainer2"
+                *ngIf="chat.from === 'Julianna Venter'"
+              >
+                <div class="myMessageImg">
+                  <img class="myUserImg" src="{{ chat.profilePicture }}" />
+                </div>
+                <div class="myMessageName">{{ chat.from }}</div>
+                <div class="myMessageText">
+                  {{ chat.message }}
+                </div>
+                <div class="myMessageTime">{{ chat.date }}</div>
               </div>
-              <div class="messageTime">{{chat.date}}</div>
-            </div>
-
-            <div class="myMessageContainer2" *ngIf="chat.from === 'Julianna Venter'">
-              <div class="myMessageImg">
-                <img
-                  class="myUserImg"
-                  src="{{ chat.profilePicture }}"
-                />
-              </div>
-              <div class="myMessageName">{{chat.from}}</div>
-              <div class="myMessageText">
-                {{ chat.message }}
-              </div>
-              <div class="myMessageTime">{{chat.date}}</div>
-            </div>
             </div>
           </div>
         </div>

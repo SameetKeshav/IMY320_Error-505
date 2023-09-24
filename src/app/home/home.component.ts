@@ -37,6 +37,8 @@ export class HomeComponent {
   days: string[] = [];
   days2: number[] = [];
   monday = [
+    {},
+    {},
     {
       module: 'COS 333',
       venue: 'IT 4-4',
@@ -53,6 +55,7 @@ export class HomeComponent {
     },
   ];
   tuesday = [
+    {},
     {
       module: 'COS 333',
       venue: 'IT 4-4',
@@ -60,6 +63,10 @@ export class HomeComponent {
       endTime: '09:20',
       type: 'Lecture 2',
     },
+    {},
+    {},
+    {},
+    {},
     {
       module: 'COS 330',
       venue: 'IT 4-4',
@@ -69,6 +76,9 @@ export class HomeComponent {
     },
   ];
   wednesday = [
+    {},
+    {},
+    {},
     {
       module: 'COS 330',
       venue: 'IT 4-4',
@@ -78,6 +88,8 @@ export class HomeComponent {
     },
   ];
   thursday = [
+    {},
+    {},
     {
       module: 'COS 333',
       venue: 'IT 4-4',
@@ -85,6 +97,7 @@ export class HomeComponent {
       endTime: '10:20',
       type: 'Practical',
     },
+    {},
     {
       module: 'COS 333',
       venue: 'IT 42-27',
@@ -94,6 +107,12 @@ export class HomeComponent {
     },
   ];
   friday = [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
     {
       module: 'COS 301',
       venue: 'IT 2-26',
@@ -178,6 +197,7 @@ export class HomeComponent {
     if (this.activityData[0].module.includes('COS333')) {
       console.log('yes');
     }
+
   }
 
   isactivityStream() {

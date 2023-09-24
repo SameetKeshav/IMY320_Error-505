@@ -324,7 +324,7 @@ html {
 
 .Calander {
   width: 100%;
-  height: 100%;
+  height: 140%;
   display: flex;
 }
 
@@ -333,6 +333,7 @@ html {
   border-right: #e5e5e5 solid 2px;
   display: flex;
   justify-content: center;
+  padding-left: 15px;
 }
 
 .Day Label {
@@ -737,7 +738,6 @@ html {
   font-weight: 600;
   word-wrap: break-word;
   text-align: right;
-  
 }
 
 .myMessageText {
@@ -1293,8 +1293,8 @@ html {
   width: 20%;
   border-right: #e5e5e5 solid 2px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+    flex-direction: column;
+    justify-content: left;
 }
 
 .Day Label {
@@ -1360,23 +1360,101 @@ html {
   color: #ffffff;
 }
 
-
 .searchLine {
   width: 387px;
   height: 0px;
   border: 1px #e5e5e5 solid;
-  
 }
 
 .removeBtn {
-    position: absolute;
-    left: 280px;
-    top: 185px;
-    background-color: #BFCDEE;
-    color: #00355c;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 15px;
-    font-weight: 700;
-    opacity: 0;
+  position: absolute;
+  left: 280px;
+  top: 185px;
+  background-color: #bfcdee;
+  color: #00355c;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-weight: 700;
+  opacity: 0;
+}
+
+.scheduleContainer {
+  width: 144px;
+  height: 66px;
+  position: relative;
+}
+
+.scheduleInner {
+  width: 129px;
+  height: 44px;
+  left: 7px;
+  top: 11px;
+  position: absolute;
+}
+
+.scheduleClassName {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  color: #333333;
+  font-size: 13px;
+  font-family: Outfit, sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.scheduleClassTitle {
+  left: 1px;
+  top: 18px;
+  position: absolute;
+  color: rgba(51.25, 51.25, 51.25, 0.8);
+  font-size: 10px;
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.scheduleClassLocation {
+  left: 1px;
+  top: 31px;
+  position: absolute;
+  color: rgba(51.25, 51.25, 51.25, 0.8);
+  font-size: 10px;
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.scheduleClassStartTime {
+  left: 90px;
+  top: 2px;
+  position: absolute;
+  color: #333333;
+  font-size: 10px;
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.scheduleClassEndTime {
+  left: 90px;
+  top: 18px;
+  position: absolute;
+  color: #333333;
+  font-size: 10px;
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.scheduleLine {
+  width: 125px;
+  height: 0px;
+  left: 121px;
+  top: 16.5px;
+  position: absolute;
+  transform: rotate(180deg);
+  transform-origin: 0 0;
+  border: 1px #e5e5e5 solid;
 }

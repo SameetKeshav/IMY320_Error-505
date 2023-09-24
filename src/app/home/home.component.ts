@@ -19,6 +19,7 @@ export class HomeComponent {
   mySchedule = false;
   days: string[] = [];
   days2: number[] = [];
+  showRemoveButton = false;
 
   modules = [
     "COS330",
@@ -74,4 +75,7 @@ export class HomeComponent {
     this.mySchedule = true;
   }
 
+  removeModule(m:any){
+    return;
+  }
 }

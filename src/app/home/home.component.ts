@@ -17,6 +17,13 @@ export class HomeComponent {
   activityStream=true;
   myChats = false;
   mySchedule = false;
+  modulePage = false;
+  tutorPage = false;
+  classPage=false;
+  request=true;
+  className = '';
+  moduleName = '';
+  tutorName = '';
   days: string[] = [];
   days2: number[] = [];
   monday = [
@@ -93,7 +100,7 @@ export class HomeComponent {
   ]
   activityData = [
     {
-      "date": "22/09",	
+      "date": "22/09",
       "name": ["Natasha Schwarts", "a Tutor (James Payne)", "You", "Kaden Bernard"],
       "category": ["message", "tutor", "notification", "message"],
       "time": ["3:30 PM", "2:00 PM", "1:00 PM", "11:00 AM"],
@@ -101,7 +108,7 @@ export class HomeComponent {
       "module": ["none","COS333","COS330","none"]
     },
     {
-      "date": "21/09",	
+      "date": "21/09",
       "name": ["Natasha Schwarts", "a Tutor (James Payne)", "52", "James Payne", "Tutor (James Payne)"],
       "category": ["message", "tutor", "notification", "job", "material"],
       "time": ["5:00 PM", "4:00 PM", "11:30 AM", "10:00 AM", "9:00 AM"],
@@ -146,16 +153,59 @@ export class HomeComponent {
     this.activityStream=true;
     this.myChats = false;
     this.mySchedule = false;
+    this.modulePage=false;
+    this.tutorPage=false;
+    this.classPage=false;
   }
   ismyChats(){
     this.activityStream=false;
     this.myChats = true;
     this.mySchedule = false;
+    this.modulePage=false;
+    this.tutorPage=false;
+    this.classPage=false;
   }
   ismySchedule(){
     this.activityStream=false;
     this.myChats = false;
     this.mySchedule = true;
+    this.modulePage=false;
+    this.tutorPage=false;
+    this.classPage=false;
+  }
+
+  requestChange(){
+    this.request=false;
+  }
+
+  openModule(module : string){
+    this.modulePage=true;
+    this.tutorPage=false;
+    this.classPage=false;
+    this.myChats = false;
+    this.mySchedule = false;
+    this.activityStream=false;
+    this.moduleName = module;
+  }
+
+  openTutor(tutor : string){
+    this.modulePage=false;
+    this.tutorPage=true;
+    this.classPage=false;
+    this.myChats = false;
+    this.mySchedule = false;
+    this.activityStream=false;
+    this.tutorName = tutor;
+  }
+
+  openClass(name : string){
+    this.modulePage=false;
+    this.tutorPage=false;
+    this.classPage=true;
+    this.myChats = false;
+    this.mySchedule = false;
+    this.activityStream=false;
+    this.className = name;
   }
 
 }

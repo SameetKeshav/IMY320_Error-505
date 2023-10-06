@@ -5,6 +5,7 @@ import * as scheduleData from '../../data/scheduleData.json'
 import * as moduleChatData from '../../data/moduleChat.json'
 import * as tutorChatData from '../../data/tutorChat.json'
 import * as classChatData from '../../data/classmateChat.json'
+import * as cos330ChatList from '../../data/cos330ChatList.json'
 
 @Component({
   selector: 'app-home',
@@ -40,6 +41,72 @@ export class HomeComponent {
   showModules = true;
   allOptions=["COS341","COS332","COS310", "IMY310", "IMY320", "COS326", "COS333", "COS330", "COS301"];
   options=["COS341","COS332","COS310", "IMY310", "IMY320", "COS326"];
+
+  chatrooms = [
+    {
+      "id": "1",
+      "name": "Semester Test 1 Papers",
+      "description": "Past papers for semester test 1",
+      "filename": "semester_test_1.zip",
+      "memo": true
+    },
+    {
+      "id": "2",
+      "name": "Semester Test 2 Papers",
+      "description": "Past papers for semester test 2",
+      "filename": "semester_test_2.zip",
+      "memo": true
+    },
+    {
+      "id": "3",
+      "name": "Exam Papers",
+      "description": "Past papers for exams",
+      "filename": "exams.zip",
+      "memo": true
+    },
+    {
+      "id":"4",
+      "name": "Assignment 1",
+      "description": "Previous assignment 1 papers",
+      "filename": "assignment_1.pdf",
+      "memo": false
+    },
+    {
+      "id":"5",
+      "name": "Assignment 2",
+      "description": "Previous assignment 2 papers",
+      "filename": "assignment_2.pdf",
+      "memo": false
+    },
+    {
+      "id":"6",
+      "name": "Assignment 3",
+      "description": "Previous assignment 3 papers",
+      "filename": "assignment_3.pdf",
+      "memo": true
+    },
+    {
+      "id": "7",
+      "name": "Assignment 4",
+      "description": "Previous assignment 4 papers",
+      "filename": "assignment_4.pdf",
+      "memo": false
+    },
+    {
+      "id": "7",
+      "name": "Tutorial 1",
+      "description": "Tutorial 1 Prep Questions",
+      "filename": "tut1.pdf",
+      "memo": false
+    },
+    {
+      "id": "7",
+      "name": "Chapter 4 Notes",
+      "description": "Detailed textbook notes on chapter 4",
+      "filename": "Ch4.pdf",
+      "memo": false
+    }
+  ]
 
   monday = [
     {},
@@ -194,11 +261,11 @@ export class HomeComponent {
     this.activityStreamData = activityData;
     // this.chatList = chatData;
     this.schedule = scheduleData;
-    console.log(this.activityStreamData);
-    console.log(this.activityStreamData.length);
-    console.log(this.activityStreamData[0].date);
+    // console.log(this.activityStreamData);
+    // console.log(this.activityStreamData.length);
+    // console.log(this.activityStreamData[0].date);
 
-    console.log(this.activityData[0].module);
+    // console.log(this.activityData[0].module);
     if (this.activityData[0].module.includes('COS333')) {
       console.log('yes');
     }

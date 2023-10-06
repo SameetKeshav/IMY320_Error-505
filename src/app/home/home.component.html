@@ -31,7 +31,7 @@
           *ngIf="showModules"
         ></i>
         <i
-        style="font-size: 20px; margin-left: 10px"
+          style="font-size: 20px; margin-left: 10px"
           class="fas fa-times"
           (click)="searchClose()"
           *ngIf="!showModules"
@@ -154,7 +154,7 @@
           <label *ngIf="mySchedule" style="color: #0572c0">My Schedule</label>
         </div>
       </div>
-<!-- 
+      <!-- 
       <div class="Options" *ngIf="modulePage">
         <div class="moduleNameHeader">{{ moduleName }}</div>
         <div class="searchChatOuter">
@@ -506,27 +506,29 @@
         <!-- module chat rooms -->
 
         <div class="chatroomContainer">
-          <div class="modulechatroom" >
-            <div class="scheduleContainerModule">
-              <div class="scheduleInnerModule">
-                <div class="scheduleClassNameModule">Title</div>
-                <div class="scheduleClassLocationModule">Desc2</div>
-                <div class="scheduleLineModule"></div>
+          <div *ngFor="let moduleRoom of chatrooms">
+            <div class="modulechatroom">
+              <div class="scheduleContainerModule">
+                <div class="scheduleInnerModule">
+                  <div class="scheduleClassNameModule">{{moduleRoom.name}}</div>
+                  <!-- <div class="scheduleClassLocationModule">{{moduleRoom.description}}</div> -->
+                  <i
+                  style="
+                    font-size: 26px;
+                    color: #11507e;
+                    cursor: pointer;
+                    margin-top: 5px;
+                  "
+                  class="fas fa-file-alt fileIcon"
+                ></i>
+                  <button *ngIf="moduleRoom.memo" class="scheduleLineModule">Memo</button>
+                </div>
+                <div class="scheduleInnerModuleDesc">
+                  <div class="scheduleClassNameModuleDesc">{{moduleRoom.description}}</div>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="modulechatroom" >
-            <div class="scheduleContainerModule">
-              <div class="scheduleInnerModule">
-                <div class="scheduleClassNameModule">Title</div>
-                <div class="scheduleClassLocationModule">Desc2</div>
-                <div class="scheduleLineModule"></div>
-              </div>
-            </div>
-          </div>
-
-          
         </div>
 
         <!-- user bar -->

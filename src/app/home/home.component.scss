@@ -355,17 +355,11 @@ html {
 
 .Calander {
   width: 100%;
-  height: 140%;
+  height: 120%;
   display: flex;
 }
 
-.Day {
-  width: 20%;
-  border-right: #e5e5e5 solid 2px;
-  display: flex;
-  justify-content: center;
-  padding-left: 15px;
-}
+
 
 .Day Label {
   font-size: 20px;
@@ -1322,14 +1316,18 @@ html {
 
 .Day {
   width: 20%;
-  border-right: #e5e5e5 solid 2px;
   display: flex;
-    flex-direction: column;
-    justify-content: left;
+  flex-direction: column;
 }
 
 .Day Label {
   font-size: 20px;
+}
+
+.weekday{
+  display: flex; flex-direction: column; align-items: center;
+  border-right: #e5e5e5 solid 2px;
+
 }
 
 .days {
@@ -1338,6 +1336,11 @@ html {
   justify-content: space-around;
   font-size: 20px;
   padding: 5px;
+}
+
+.days label{
+  width: 20%;
+  text-align: center;
 }
 
 .class {

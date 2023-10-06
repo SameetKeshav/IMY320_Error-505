@@ -26,13 +26,13 @@ export class HomeComponent {
   modulePage = true;
   tutorPage = false;
   classPage = false;
-  chatRoom = true;
-  roomsPage = false;
+  chatRoom = false;
+  roomsPage = true;
   request = true;
   roomId : number = 0;
-  className = '';
+  className = 'TempName';
   moduleName = '';
-  tutorName = '';
+  tutorName = 'TutorTempName';
   tutorUrl = '';
   classUrl = '';
   searchText = '';

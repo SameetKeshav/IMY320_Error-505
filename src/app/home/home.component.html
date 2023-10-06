@@ -403,9 +403,9 @@
                 class="fas fa-file-alt roomFileIcon"
               ></i>
               <div class="roomtext">
-              <div class="roomTitle">{{chatrooms[roomId].name}}</div>
-              <div class="roomFilename">{{chatrooms[roomId].filename}}</div>
-            </div>
+                <div class="roomTitle">{{ chatrooms[roomId].name }}</div>
+                <div class="roomFilename">{{ chatrooms[roomId].filename }}</div>
+              </div>
             </div>
             <div class="loadIconsContainer">
               <i class="fas fa-download loadBtns" (click)="download()"></i>
@@ -504,12 +504,12 @@
           <div class="messageIcons">
             <div class="messageIconInner"></div>
             <div class="messageIconContainer">
-              <div class="messageIcon">
+              <!-- <div class="messageIcon">
                 <i
                   class="fas fa-plus-circle"
                   style="width: 19px; height: 19px; color: #00355c"
                 ></i>
-              </div>
+              </div> -->
               <div class="messageIcon">
                 <i
                   class="fas fa-paper-plane"
@@ -531,10 +531,7 @@
 
         <div class="chatroomContainer" *ngIf="roomsPage">
           <div *ngFor="let moduleRoom of chatrooms">
-            <div
-              class="modulechatroom"
-              (click)="openChatRoom(moduleRoom.id)"
-            >
+            <div class="modulechatroom" (click)="openChatRoom(moduleRoom.id)">
               <div class="scheduleContainerModule">
                 <div class="scheduleInnerModule">
                   <div class="scheduleClassNameModule">
@@ -689,8 +686,16 @@
         </div>
 
         <!-- //chat stuff -->
+        <div class="roomHeader" *ngIf="!request">
+          <div class="headerInfoContainer">
+            <div class="fileContainer">
+              <div class="roomTitle">{{ tutorName }}</div>
+            </div>
+          </div>
+          <div class="headerline"></div>
+        </div>
 
-        <div class="messages" *ngIf="!request">
+        <div class="messagesDM" *ngIf="!request">
           <div class="messagesContainer">
             <div class="messageContainerRequest">
               <div class="myMessageImg">
@@ -755,12 +760,12 @@
           <div class="messageIcons">
             <div class="messageIconInner"></div>
             <div class="messageIconContainer">
-              <div class="messageIcon">
+              <!-- <div class="messageIcon">
                 <i
                   class="fas fa-plus-circle"
                   style="width: 19px; height: 19px; color: #00355c"
                 ></i>
-              </div>
+              </div> -->
               <div class="messageIcon">
                 <i
                   class="fas fa-paper-plane"
@@ -783,8 +788,16 @@
 
       <div class="tutorPage" *ngIf="classPage">
         <!-- //chat stuff -->
+        <div class="roomHeader">
+          <div class="headerInfoContainer">
+            <div class="fileContainer">
+              <div class="roomTitle">{{ className }}</div>
+            </div>
+          </div>
+          <div class="headerline"></div>
+        </div>
 
-        <div class="messages">
+        <div class="messagesDM">
           <div class="messagesContainer">
             <div *ngFor="let chat of classChat.messages">
               <div
@@ -825,12 +838,12 @@
           <div class="messageIcons">
             <div class="messageIconInner"></div>
             <div class="messageIconContainer">
-              <div class="messageIcon">
+              <!-- <div class="messageIcon">
                 <i
                   class="fas fa-plus-circle"
                   style="width: 19px; height: 19px; color: #00355c"
                 ></i>
-              </div>
+              </div> -->
               <div class="messageIcon">
                 <i
                   class="fas fa-paper-plane"

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "name": "Semester Test 1 Papers",
+    "description": "Past papers for semester test 1"
+  },
+  {
+    "id": "2",
+    "name": "Semester Test 2 Papers",
+    "description": "Past papers for semester test 2"
+  },
+  {
+    "id": "3",
+    "name": "Exam Papers",
+    "description": "Past papers for exams"
+  },
+  {
+    "id":"4",
+    "name": "Assignment 1",
+    "description": "Previous assignment 1 papers"
+  },
+  {
+    "id":"5",
+    "name": "Assignment 2",
+    "description": "Previous assignment 2 papers"  
+  },
+  {
+    "id":"6",
+    "name": "Assignment 3",
+    "description": "Previous assignment 3 papers"
+  },
+  {
+    "id": "7",
+    "name": "Assignment 4",
+    "description": "Previous assignment 4 papers"  
+  }
+]

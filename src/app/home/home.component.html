@@ -19,8 +19,9 @@
         style="margin-top: 3px"
         type="text"
         class="input"
+        [(ngModel)]="searchText"
         placeholder="Search for a module..."
-        (click)="search()"
+        (input)="search()"
       />
       <div class="searchIcon">
         <i

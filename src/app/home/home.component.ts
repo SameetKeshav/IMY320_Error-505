@@ -31,13 +31,15 @@ export class HomeComponent {
   tutorName = '';
   tutorUrl = '';
   classUrl = '';
+  searchText = ''
   showSearch = false;
   showJob = false;
   showMaterial = false;
   days: string[] = [];
   days2: number[] = [];
   showModules = true;
-  options=["COS341","COS332","COS310"];
+  allOptions=["COS341","COS332","COS310", "IMY310", "IMY320", "COS326", "COS333", "COS330", "COS301"];
+  options=["COS341","COS332","COS310", "IMY310", "IMY320", "COS326"];
 
   monday = [
     {},
@@ -372,7 +374,15 @@ export class HomeComponent {
 }
 
 search(){
-  this.showModules=!this.showModules;
+  let filterModules = [...this.allOptions];
+
+  filterModules = this.allOptions.filter((item) => {
+    return item.toLowerCase().includes(this.searchText.toLowerCase());
+  })
+
+  this.options = filterModules;
+
+  this.showModules = false;
 }
 
 searchClose(){

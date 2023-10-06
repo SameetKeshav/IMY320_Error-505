@@ -6,11 +6,6 @@ import * as tutorChatData from '../../data/tutorChat.json';
 import * as classChatData from '../../data/classmateChat.json';
 import {Component, Inject} from '@angular/core';
 
-export interface DialogData {
-  animal: string;
-  name: string;
-}
-
 
 @Component({
   selector: 'app-home',

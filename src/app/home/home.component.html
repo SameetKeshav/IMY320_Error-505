@@ -390,7 +390,7 @@
       <!-- ==========================================module page====================================== -->
 
       <div class="modulePage" *ngIf="modulePage">
-        <!-- <div class="messages">
+        <div class="messages" *ngIf="chatRoom">
           <div class="messagesContainer">
             <div class="messageContainer2" *ngIf="!showSearch && showJob">
               <div class="messageImg">
@@ -471,11 +471,11 @@
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
 
         <!-- message bar -->
 
-        <!-- <div class="messageBar">
+        <div class="messageBar" *ngIf="chatRoom">
           <div class="messageBarInner"></div>
           <div class="messageIcons">
             <div class="messageIconInner"></div>
@@ -501,13 +501,13 @@
             class="messageInputText"
             placeholder="Message..."
           />
-        </div> -->
+        </div>
 
         <!-- module chat rooms -->
 
-        <div class="chatroomContainer">
+        <div class="chatroomContainer" *ngIf="roomsPage">
           <div *ngFor="let moduleRoom of chatrooms">
-            <div class="modulechatroom">
+            <div class="modulechatroom"  (click)="openChatRoom('moduleRoom.name')">
               <div class="scheduleContainerModule">
                 <div class="scheduleInnerModule">
                   <div class="scheduleClassNameModule">{{moduleRoom.name}}</div>

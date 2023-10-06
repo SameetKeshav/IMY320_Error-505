@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import * as activityData from '../../data/activityStream.json';
 // import * as chatData from '../../data/chatList.json'
-import * as scheduleData from '../../data/scheduleData.json'
-import * as moduleChatData from '../../data/moduleChat.json'
-import * as tutorChatData from '../../data/tutorChat.json'
-import * as classChatData from '../../data/classmateChat.json'
-import * as cos330ChatList from '../../data/cos330ChatList.json'
+import * as scheduleData from '../../data/scheduleData.json';
+import * as moduleChatData from '../../data/moduleChat.json';
+import * as tutorChatData from '../../data/tutorChat.json';
+import * as classChatData from '../../data/classmateChat.json';
+import * as cos330ChatList from '../../data/cos330ChatList.json';
 
 @Component({
   selector: 'app-home',
@@ -20,93 +20,105 @@ export class HomeComponent {
   classChat = classChatData;
   schedule: any[];
   notifications = [1, 2, 3];
-  activityStream = false;
+  activityStream = true;
   myChats = false;
   mySchedule = false;
-  modulePage = true;
+  modulePage = false;
   tutorPage = false;
   classPage = false;
+  chatRoom = false;
+  roomsPage = true;
   request = true;
   className = '';
   moduleName = '';
   tutorName = '';
   tutorUrl = '';
   classUrl = '';
-  searchText = ''
+  searchText = '';
   showSearch = false;
   showJob = false;
   showMaterial = false;
   days: string[] = [];
   days2: number[] = [];
   showModules = true;
-  allOptions=["COS341","COS332","COS310", "IMY310", "IMY320", "COS326", "COS333", "COS330", "COS301"];
-  options=["COS341","COS332","COS310", "IMY310", "IMY320", "COS326"];
+  allOptions = [
+    'COS341',
+    'COS332',
+    'COS310',
+    'IMY310',
+    'IMY320',
+    'COS326',
+    'COS333',
+    'COS330',
+    'COS301',
+  ];
+  options = ['COS341', 'COS332', 'COS310', 'IMY310', 'IMY320', 'COS326'];
 
   chatrooms = [
     {
-      "id": "1",
-      "name": "Semester Test 1 Papers",
-      "description": "Past papers for semester test 1",
-      "filename": "semester_test_1.zip",
-      "memo": true
+      id: '1',
+      name: 'Semester Test 1 Papers',
+      description: 'Past papers for semester test 1',
+      filename: 'semester_test_1.zip',
+      memo: true,
     },
     {
-      "id": "2",
-      "name": "Semester Test 2 Papers",
-      "description": "Past papers for semester test 2",
-      "filename": "semester_test_2.zip",
-      "memo": true
+      id: '2',
+      name: 'Semester Test 2 Papers',
+      description: 'Past papers for semester test 2',
+      filename: 'semester_test_2.zip',
+      memo: true,
     },
     {
-      "id": "3",
-      "name": "Exam Papers",
-      "description": "Past papers for exams",
-      "filename": "exams.zip",
-      "memo": true
+      id: '3',
+      name: 'Exam Papers',
+      description: 'Past papers for exams',
+      filename: 'exams.zip',
+      memo: true,
     },
     {
-      "id":"4",
-      "name": "Assignment 1",
-      "description": "Previous assignment 1 papers",
-      "filename": "assignment_1.pdf",
-      "memo": false
+      id: '4',
+      name: 'Assignment 1',
+      description: 'Previous assignment 1 papers',
+      filename: 'assignment_1.pdf',
+      memo: false,
     },
     {
-      "id":"5",
-      "name": "Assignment 2",
-      "description": "Previous assignment 2 papers",
-      "filename": "assignment_2.pdf",
-      "memo": false
+      id: '5',
+      name: 'Assignment 2',
+      description: 'Previous assignment 2 papers',
+      filename: 'assignment_2.pdf',
+      memo: false,
     },
     {
-      "id":"6",
-      "name": "Assignment 3",
-      "description": "Previous assignment 3 papers",
-      "filename": "assignment_3.pdf",
-      "memo": true
+      id: '6',
+      name: 'Assignment 3',
+      description: 'Previous assignment 3 papers',
+      filename: 'assignment_3.pdf',
+      memo: true,
     },
     {
-      "id": "7",
-      "name": "Assignment 4",
-      "description": "Previous assignment 4 papers",
-      "filename": "assignment_4.pdf",
-      "memo": false
+      id: '7',
+      name: 'Assignment 4',
+      description: 'Previous assignment 4 papers',
+      filename: 'assignment_4.pdf',
+      memo: false,
     },
     {
-      "id": "7",
-      "name": "Tutorial 1",
-      "description": "Tutorial 1 Prep Questions",
-      "filename": "tut1.pdf",
-      "memo": false
+      id: '7',
+      name: 'Tutorial 1',
+      description: 'Tutorial 1 Prep Questions',
+      filename: 'tut1.pdf',
+      memo: false,
     },
     {
-      "id": "7",
-      "name": "Chapter 4 Notes",
-      "description": "Detailed textbook notes on chapter 4",
-      "filename": "Ch4.pdf",
-      "memo": false
-    }
-  ]
+      id: '7',
+      name: 'Chapter 4 Notes',
+      description: 'Detailed textbook notes on chapter 4',
+      filename: 'Ch4.pdf',
+      memo: false,
+    },
+  ];
 
   monday = [
     {},
@@ -269,7 +281,6 @@ export class HomeComponent {
     if (this.activityData[0].module.includes('COS333')) {
       console.log('yes');
     }
-
   }
 
   isactivityStream() {
@@ -309,6 +320,8 @@ export class HomeComponent {
     this.mySchedule = false;
     this.activityStream = false;
     this.moduleName = module;
+    this.chatRoom = false;
+    this.roomsPage = true;
   }
 
   openTutor(tutor: string, url: string) {
@@ -362,6 +375,7 @@ export class HomeComponent {
     this.showJob = false;
     this.showMaterial = true;
     this.showSearch = false;
+   
   }
 
   setButtonOpacityToOne() {
@@ -389,77 +403,81 @@ export class HomeComponent {
     return `${day}/${month}/${year} ${hours}:${minutes}`;
   }
 
-  sendTutorMessage(){
-
-    const message = (<HTMLInputElement>document.getElementById('tutorMessage')).value;
+  sendTutorMessage() {
+    const message = (<HTMLInputElement>document.getElementById('tutorMessage'))
+      .value;
     (<HTMLInputElement>document.getElementById('tutorMessage')).value = '';
     console.log(message);
 
-    if(message !== ''){
+    if (message !== '') {
       this.tutorChat.messages.push({
         from: 'Julianna Venter',
         date: this.formatCurrentDate(),
-        profilePicture: 'https://image.shutterstock.com/image-photo/image-young-asian-woman-company-260nw-2122700972.jpg',
+        profilePicture:
+          'https://image.shutterstock.com/image-photo/image-young-asian-woman-company-260nw-2122700972.jpg',
         message: message,
-      })
+      });
     }
-   
   }
 
-  sendModuleMessage(){
-
-    const message = (<HTMLInputElement>document.getElementById('moduleMessage')).value;
+  sendModuleMessage() {
+    const message = (<HTMLInputElement>document.getElementById('moduleMessage'))
+      .value;
     (<HTMLInputElement>document.getElementById('moduleMessage')).value = '';
     console.log(message);
 
-    if(message !== ''){
+    if (message !== '') {
       this.moduleChat.messages.push({
         from: 'Julianna Venter',
         date: this.formatCurrentDate(),
-        profilePicture: 'https://image.shutterstock.com/image-photo/image-young-asian-woman-company-260nw-2122700972.jpg',
+        profilePicture:
+          'https://image.shutterstock.com/image-photo/image-young-asian-woman-company-260nw-2122700972.jpg',
         message: message,
-      })
+      });
     }
-   
   }
 
-  sendClassMessage(){
-
-    const message = (<HTMLInputElement>document.getElementById('classMessage')).value;
+  sendClassMessage() {
+    const message = (<HTMLInputElement>document.getElementById('classMessage'))
+      .value;
     (<HTMLInputElement>document.getElementById('classMessage')).value = '';
     console.log(message);
 
-    if(message !== ''){
+    if (message !== '') {
       this.classChat.messages.push({
         from: 'Julianna Venter',
         date: this.formatCurrentDate(),
-        profilePicture: 'https://image.shutterstock.com/image-photo/image-young-asian-woman-company-260nw-2122700972.jpg',
+        profilePicture:
+          'https://image.shutterstock.com/image-photo/image-young-asian-woman-company-260nw-2122700972.jpg',
         message: message,
-      })
+      });
     }
-  
-}
+  }
 
-search(){
-  let filterModules = [...this.allOptions];
+  search() {
+    let filterModules = [...this.allOptions];
 
-  filterModules = this.allOptions.filter((item) => {
-    return item.toLowerCase().includes(this.searchText.toLowerCase());
-  })
+    filterModules = this.allOptions.filter((item) => {
+      return item.toLowerCase().includes(this.searchText.toLowerCase());
+    });
 
-  this.options = filterModules;
+    this.options = filterModules;
 
-  this.showModules = false;
-}
+    this.showModules = false;
+  }
 
-searchClose(){
-  this.showModules=true;
-}
+  searchClose() {
+    this.showModules = true;
+  }
 
-add(m:any){
-  this.modules.push(m);
-  this.showModules=!this.showModules;
-  this.options = this.options.filter(item => item !== m);
+  add(m: any) {
+    this.modules.push(m);
+    this.showModules = !this.showModules;
+    this.options = this.options.filter((item) => item !== m);
+  }
 
-}
+  openChatRoom(roomName : string) {
+    this.chatRoom = true;
+    this.roomsPage = false;
+  }
 }

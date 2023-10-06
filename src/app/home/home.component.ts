@@ -37,7 +37,7 @@ export class HomeComponent {
   days: string[] = [];
   days2: number[] = [];
   showModules = true;
-  options=["COS341","COS332","COS310"];
+  options=["COS341","COS332","COS310","IMY320","IMY310","STK320","STK330","WST300"];
 
   monday = [
     {},
@@ -56,6 +56,12 @@ export class HomeComponent {
       endTime: '11:20',
       type: 'Lecture 1',
     },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
   ];
   tuesday = [
     {},
@@ -70,6 +76,7 @@ export class HomeComponent {
     {},
     {},
     {},
+    {},
     {
       module: 'COS 330',
       venue: 'IT 4-4',
@@ -77,6 +84,8 @@ export class HomeComponent {
       endTime: '15:20',
       type: 'Lecture 1',
     },
+    {},
+    {}
   ];
   wednesday = [
     {},
@@ -89,6 +98,12 @@ export class HomeComponent {
       endTime: '11:20',
       type: 'Lecture 2',
     },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
   ];
   thursday = [
     {},
@@ -108,8 +123,14 @@ export class HomeComponent {
       endTime: '12:20',
       type: 'Tutorial',
     },
+    {},
+    {},
+    {},
+    {},
+    {}
   ];
   friday = [
+    {},
     {},
     {},
     {},
@@ -123,6 +144,9 @@ export class HomeComponent {
       endTime: '15:20',
       type: 'Lecture 2',
     },
+    {},
+    {},
+    
   ];
 
   modules = ['COS330', 'COS301', 'COS333'];
@@ -384,5 +408,443 @@ add(m:any){
   this.showModules=!this.showModules;
   this.options = this.options.filter(item => item !== m);
 
+  if(m=="COS301"){
+    this.monday[3]= {
+      module: 'COS 301',
+      venue: 'IT 2-26',
+      startTime: '10:30',
+      endTime: '11:20',
+      type: 'Lecture 1',
+    };
+    this.friday[7]= {
+      module: 'COS 301',
+      venue: 'IT 2-26',
+      startTime: '14:30',
+      endTime: '15:20',
+      type: 'Lecture 2',
+    };
+    return;
+  }
+  if(m=="COS330"){
+    this.tuesday[7]={
+      module: 'COS 330',
+      venue: 'IT 4-4',
+      startTime: '14:30',
+      endTime: '15:20',
+      type: 'Lecture 1',
+    };
+    this.wednesday[3]={
+      module: 'COS 330',
+      venue: 'IT 4-4',
+      startTime: '10:30',
+      endTime: '11:20',
+      type: 'Lecture 2',
+    };
+
+    return;
+  }
+  if(m=="COS333"){
+    this.monday[2]= {
+      module: 'COS 333',
+      venue: 'IT 4-4',
+      startTime: '09:30',
+      endTime: '10:20',
+      type: 'Lecture 1',
+    }
+    this.tuesday[1]= {
+      module: 'COS 333',
+      venue: 'IT 4-4',
+      startTime: '08:30',
+      endTime: '09:20',
+      type: 'Lecture 2',
+    }
+    this.thursday[2]= {
+      module: 'COS 333',
+      venue: 'IT 4-4',
+      startTime: '09:30',
+      endTime: '10:20',
+      type: 'Practical',
+    }
+    this.thursday[4]={
+      module: 'IMY 320',
+      venue: 'IT 4-2',
+      startTime: '11:30',
+      endTime: '12:20',
+      type: 'Practical',
+    };
+   
+
+    return;
+  }
+  if(m=="COS341"){
+    this.monday[0]= {
+      module: 'COS 341',
+      venue: 'IT 2-26',
+      startTime: '07:30',
+      endTime: '08:20',
+      type: 'Lecture 1',
+    };
+    this.tuesday[5]={
+      module: 'COS 341',
+      venue: 'IT 2-26',
+      startTime: '12:30',
+      endTime: '13:20',
+      type: 'Practical',
+    };
+    this.tuesday[6]={
+      module: 'COS 341',
+      venue: 'IT 2-26',
+      startTime: '13:30',
+      endTime: '14:20',
+      type: 'Practical',
+    };
+    this.tuesday[9]={
+      module: 'COS 341',
+      venue: 'IT 2-26',
+      startTime: '16:30',
+      endTime: '17:20',
+      type: 'Tutorial',
+    };
+    this.wednesday[6]={
+      module: 'COS 341',
+      venue: 'IT 2-26',
+      startTime: '13:30',
+      endTime: '14:20',
+      type: 'Lecture 2',
+    };
+    return;
+  }
+  if(m=="COS332"){
+    this.monday[1]= {
+      module: 'COS 332',
+      venue: 'IT 2-27',
+      startTime: '08:30',
+      endTime: '09:20',
+      type: 'Lecture 1',
+    };
+    this.monday[6]= {
+      module: 'COS 332',
+      venue: 'IT 2-27',
+      startTime: '13:30',
+      endTime: '14:20',
+      type: 'Tutorial',
+    };
+    this.monday[7]= {
+      module: 'COS 332',
+      venue: 'IT 2-27',
+      startTime: '14:30',
+      endTime: '15:20',
+      type: 'Tutorial',
+    };
+    this.wednesday[1]= {
+      module: 'COS 332',
+      venue: 'IT 2-27',
+      startTime: '08:30',
+      endTime: '09:20',
+      type: 'Lecture 2',
+    };
+    return;
+  }
+  if(m=="IMY320"){
+    this.monday[5]={
+      module: 'IMY 320',
+      venue: 'IT 4-2',
+      startTime: '12:30',
+      endTime: '13:20',
+      type: 'Lecture 1',
+    };
+    this.thursday[0]={
+      module: 'IMY 320',
+      venue: 'IT 4-2',
+      startTime: '07:30',
+      endTime: '08:20',
+      type: 'Lecture 2',
+    };
+    this.thursday[1]={
+      module: 'IMY 320',
+      venue: 'IT 4-2',
+      startTime: '08:30',
+      endTime: '09:20',
+      type: 'Lecture 3',
+    };
+    this.thursday[3]={
+      module: 'IMY 320',
+      venue: 'IT 4-2',
+      startTime: '10:30',
+      endTime: '11:20',
+      type: 'Practical',
+    };
+    
+    this.friday[8]={
+      module: 'IMY 320',
+      venue: 'IT 4-2',
+      startTime: '15:30',
+      endTime: '16:20',
+      type: 'Tutorial',
+    };
+    return;
+  }
+  if(m=="IMY310"){
+    this.monday[4]= {
+      module: 'IMY 310',
+      venue: 'IT 4-4',
+      startTime: '11:30',
+      endTime: '12:20',
+      type: 'Lecture 1',
+    };
+    this.wednesday[8]={
+      module: 'IMY 310',
+      venue: 'IT 4-4',
+      startTime: '15:30',
+      endTime: '16:20',
+      type: 'Practical',
+    };
+    this.wednesday[9]={
+      module: 'IMY 310',
+      venue: 'IT 4-4',
+      startTime: '16:30',
+      endTime: '17:20',
+      type: 'Practical',
+    };
+    this.friday[4]={
+      module: 'IMY 310',
+      venue: 'IT 4-4',
+      startTime: '11:30',
+      endTime: '12:20',
+      type: 'Tutorial',
+    };
+    this.friday[5]={
+      module: 'IMY 310',
+      venue: 'IT 4-4',
+      startTime: '12:30',
+      endTime: '13:20',
+      type: 'Tutorial',
+    };
+    
+    return;
+
+    }
+
+  if(m=="COS310"){
+    this.tuesday[8]={
+      module: 'COS 310',
+      venue: 'IT 4-5',
+      startTime: '15:30',
+      endTime: '16:20',
+      type: 'Lecture 1',
+    };
+    this.wednesday[4]={
+      module: 'COS 310',
+      venue: 'IT 4-5',
+      startTime: '11:30',
+      endTime: '12:20',
+      type: 'Practical',
+    };
+    this.wednesday[5]={
+      module: 'COS 310',
+      venue: 'IT 4-5',
+      startTime: '12:30',
+      endTime: '13:20',
+      type: 'Practical',
+    };
+    this.thursday[6]={
+      module: 'COS 310',
+      venue: 'IT 4-5',
+      startTime: '13:30',
+      endTime: '14:20',
+      type: 'Lecture 2',
+    };
+    this.thursday[7]={
+      module: 'COS 310',
+      venue: 'IT 4-5',
+      startTime: '14:30',
+      endTime: '15:20',
+      type: 'Lecture 3',
+    };
+    this.friday[0]={
+      module: 'COS 310',
+      venue: 'IT 4-5',
+      startTime: '07:30',
+      endTime: '08:20',
+      type: 'Lecture 4',
+    };
+
+    return;
+  }
+  if(m=="STK320"){
+    this.monday[8]={
+      module: 'STK 320',
+      venue: 'IT 4-3',
+      startTime: '15:30',
+      endTime: '16:20',
+      type: 'Lecture 1',
+    };
+    this.tuesday[2]={
+      module: 'STK 320',
+      venue: 'IT 4-3',
+      startTime: '09:30',
+      endTime: '10:20',
+      type: 'Lecture 2',
+    };
+    this.wednesday[0]={
+      module: 'STK 320',
+      venue: 'IT 4-3',
+      startTime: '07:30',
+      endTime: '08:20',
+      type: 'Lecture 3',
+    };
+    this.wednesday[7]={
+      module: 'STK 320',
+      venue: 'IT 4-3',
+      startTime: '14:30',
+      endTime: '15:20',
+      type: 'Practical',
+    };
+    this.friday[6]={
+      module: 'STK 320',
+      venue: 'IT 4-3',
+      startTime: '13:30',
+      endTime: '14:20',
+      type: 'Tutorial',
+    };
+    return;
+  }
+  if(m=="STK330"){
+    return;
+  }
+  if(m=="WST300"){
+    this.monday[9]={
+      module: 'WST 300',
+      venue: 'IT 4-1',
+      startTime: '16:30',
+      endTime: '17:20',
+      type: 'Lecture 1',
+    };
+    this.tuesday[0]={
+      module: 'WST 300',
+      venue: 'IT 4-1',
+      startTime: '07:30',
+      endTime: '08:20',
+      type: 'Lecture 2',
+    };
+    this.wednesday[2]={
+      module: 'WST 300',
+      venue: 'IT 4-1',
+      startTime: '09:30',
+      endTime: '10:20',
+      type: 'Practical',
+    };
+    this.thursday[5]={
+      module: 'WST 300',
+      venue: 'IT 4-1',
+      startTime: '12:30',
+      endTime: '13:20',
+      type: 'Tutorial',
+    };
+    this.friday[2]={
+      module: 'WST 300',
+      venue: 'IT 4-1',
+      startTime: '09:30',
+      endTime: '10:20',
+      type: 'Tutorial',
+    };
+    this.friday[3]={
+      module: 'WST 300',
+      venue: 'IT 4-1',
+      startTime: '10:30',
+      endTime: '11:20',
+      type: 'Tutorial',
+
+    }
+    return;
+  }
+
+
+
+}
+remove(m:any){
+  this.modules = this.modules.filter(item=>item!==m);
+  this.options.push(m);
+  if(m=="COS301"){
+    this.monday[3]= {};
+    this.friday[7]= {};
+    return;
+  }
+  if(m=="COS330"){
+    this.tuesday[7]={};
+    this.wednesday[3]={};
+    return;
+  }
+  if(m=="COS333"){
+    this.monday[2]= {}
+    this.tuesday[1]= {}
+    this.thursday[2]= {}
+    this.thursday[4]={};
+    return;
+  }
+  if(m=="COS341"){
+    this.monday[0]= {};
+    this.tuesday[5]={};
+    this.tuesday[6]={};
+    this.tuesday[9]={};
+    this.wednesday[6]={};
+    return;
+  }
+  if(m=="COS332"){
+    this.monday[1]= {};
+    this.monday[6]= {};
+    this.monday[7]= {};
+    this.wednesday[1]= {};
+    return;
+  }
+  if(m=="COS310"){
+    this.tuesday[8]={};
+    this.wednesday[4]={};
+    this.wednesday[5]={};
+    this.thursday[6]={};
+    this.thursday[7]={};
+    this.friday[0]={};
+    return;
+  }
+  if(m=="IMY320"){
+    this.monday[5]={};
+    this.thursday[0]={};
+    this.thursday[1]={};
+    this.thursday[3]={};
+    this.thursday[4]={};
+    this.friday[8]={};
+    return;
+  }
+  if(m=="IMY310"){
+    this.monday[4]= {};
+    this.wednesday[8]={};
+    this.wednesday[9]={};
+    this.friday[4]={};
+    this.friday[5]={};
+    return;
+  }
+  if(m=="COS310"){
+    return;
+  }
+  if(m=="STK320"){ 
+    this.monday[8]={};
+    this.tuesday[2]={};
+    this.wednesday[0]={};
+    this.wednesday[7]={};
+    this.friday[6]={};
+    return;
+  }
+  if(m=="STK330"){
+    return;
+  }
+  if(m=="WST300"){
+    this.monday[9]={};
+    this.tuesday[0]={};
+    this.wednesday[2]={};
+    this.thursday[5]={};
+    this.friday[2]={};
+    this.friday[3]={}
+    return;
+  }
 }
 }

@@ -231,7 +231,7 @@
               <div class="border2"></div>
             </div>
           </div>
-          <div *ngFor="let note of day.message; let k = index" class="record">
+          <div *ngFor="let note of day.message;let k = index" class="record" (click)="notificationClick(day.route[k], day.url[k])">
             <div class="icon">
               <div *ngIf="day.category[k] == 'notification'">
                 <i class="fa fa-bell" aria-hidden="true"></i>

@@ -146,6 +146,13 @@ export class HomeComponent {
         'sent you a private message',
       ],
       module: ['none', 'COS333', 'COS330', 'none'],
+      route: ['Natasha Schwarts', 'James Payne', 'cos330', 'Kaden Bernard'],
+      url:[
+        'https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg',
+        'https://media.istockphoto.com/id/597958694/photo/young-adult-male-student-in-the-lobby-of-a-university.jpg?s=612x612&w=0&k=20&c=QaNEzmcKrLJzmwOcu2lgwm1B7rm3Ouq2McYYdmoMGpU=',
+        'none',
+        'https://remembermephotography.com/wp-content/uploads/2016/04/BD008cc.jpg'
+      ]
     },
     {
       date: '21/09',
@@ -153,7 +160,7 @@ export class HomeComponent {
         'Natasha Schwarts',
         'a Tutor (James Payne)',
         '52',
-        'James Payne',
+        'Natasha Schwarts',
         'Tutor (James Payne)',
       ],
       category: ['message', 'tutor', 'notification', 'job', 'material'],
@@ -166,6 +173,14 @@ export class HomeComponent {
         'posted material for COS 330',
       ],
       module: ['none', 'COS333', 'COS330', 'none', 'COS330'],
+      route:['Natasha Schwarts', 'James Payne', 'cos330', 'job', 'cos330'],
+      url:[
+        'https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg',
+        'https://media.istockphoto.com/id/597958694/photo/young-adult-male-student-in-the-lobby-of-a-university.jpg?s=612x612&w=0&k=20&c=QaNEzmcKrLJzmwOcu2lgwm1B7rm3Ouq2McYYdmoMGpU=',
+        'none',
+        'none',
+        'none'
+      ]
     },
   ];
 
@@ -232,6 +247,25 @@ export class HomeComponent {
 
   requestChange() {
     this.request = false;
+  }
+
+  notificationClick(route: string, url: string) {
+    if(route == 'James Payne' || route == 'Kaden Bernard' || route == 'Natasha Schwarts'){
+      this.openClass(route, url);
+    }
+
+    else if(route == 'cos330'){
+      this.openModule('COS 330');
+    }
+
+    else if(route == 'job'){
+      this.openModule('COS 330');
+      this.openJob();
+    }
+
+    else{
+      return;
+    }
   }
 
   openModule(module: string) {

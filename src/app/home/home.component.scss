@@ -154,9 +154,14 @@ input:focus {
   margin-right: 20px;
 }
 
-.moduleIcons .fa-cog:hover {
+.moduleIcons .fa-minus-circle:hover {
   cursor: pointer;
-  color: #0572c0;
+  color: #007bff;
+}
+
+.removeTooltip {
+  background-color: transparent;
+  border: none;
 }
 
 .content {
@@ -1550,8 +1555,8 @@ html {
 
 .removeBtn {
   position: absolute;
-  left: 280px;
-  top: 185px;
+  left: 330px;
+  margin-top: 5px;
   background-color: #bfcdee;
   color: #00355c;
   border: none;
@@ -1559,6 +1564,51 @@ html {
   padding: 10px 15px;
   font-weight: 700;
   opacity: 0;
+}
+
+.removeHover:hover + .removeBtn {
+  opacity: 1;
+}
+
+.updateBtn {
+  position: absolute;
+  left: 110px;
+  margin-top: 5px;
+  // top: 185px;
+  background-color: #bfcdee;
+  color: #00355c;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-weight: 700;
+  opacity: 0;
+}
+
+.removeHover:hover + .updateBtn {
+  opacity: 1;
+}
+
+.newBtn {
+  position: absolute;
+  left: 10px;
+  margin-top: 5px;
+  // top: 185px;
+  background-color: #bfcdee;
+  color: #00355c;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-weight: 700;
+  opacity: 0;
+}
+
+.removeHover:hover + .newBtn {
+  opacity: 1;
+}
+
+.removeHover {
+  background-color: transparent;
+  border: none;
 }
 
 .scheduleContainer {

@@ -48,33 +48,32 @@
         margin-top: 20px;
       "
     >
-      <div class="module" *ngFor="let module of modules">
-        <div class="moduleName">
-          <b (click)="openModule(module)" style="cursor: pointer">{{
-            module
-          }}</b>
-        </div>
-        <div class="moduleIcons">
-          <i
-            *ngIf="activityData[0].module.includes(module)"
-            class="fa fa-bell"
-            aria-hidden="true"
-            style="color: #c34ffd"
-          ></i>
-          <i
-            *ngIf="!activityData[0].module.includes(module)"
-            class="fa fa-bell"
-            aria-hidden="true"
-          ></i>
-          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-          <i
-            class="fa fa-cog"
-            aria-hidden="true"
-            (click)="setButtonOpacityToOne()"
-          ></i>
-        </div>
+    <div class="module" *ngFor="let module of modules">
+      <div class="moduleName">
+        <b (click)="openModule(module)" style="cursor: pointer">{{ module }}</b>
+      </div>
+      <div class="moduleIcons">
+        <i
+          *ngIf="activityData[0].module.includes(module)"
+          class="fa fa-bell"
+          aria-hidden="true"
+          style="color: #c34ffd"
+        ></i>
+        <i
+          *ngIf="!activityData[0].module.includes(module)"
+          class="fa fa-bell"
+          aria-hidden="true"
+        ></i>
+        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+        <button class="removeHover">
+          <i class="fa fa-minus-circle" aria-hidden="true"></i>
+        </button>
+        <button class="removeBtn">Remove</button>
       </div>
     </div>
+    
+    </div>
+    
 
     <!-- <div
       *ngIf="!showModules"
@@ -108,7 +107,7 @@
 </div>
 
 
-    <!-- <button class="removeBtn" id="removeBtn">Remove</button> -->
+    
   </div>
   <div class="content">
     <div class="headings">

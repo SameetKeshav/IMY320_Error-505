@@ -550,6 +550,22 @@ export class HomeComponent {
     }
   }
   
+  onSubmit(){
+    const roomName = (<HTMLInputElement>document.getElementById('roomName')).value;
+    const roomDescription = (<HTMLInputElement>document.getElementById('roomDescription')).value;
+
+    const newRoom = {
+      id: this.chatrooms.length + 1,
+      name: roomName,
+      description: roomDescription,
+      filename: this.selectedFileName,
+      memo: this.hasMemo
+    }
+
+    this.chatrooms.push(newRoom);
+    this.showPopup = false;
+    this.moduleChat.messages.push([]);
+  }
 }
 
 

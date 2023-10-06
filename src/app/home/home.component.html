@@ -575,11 +575,13 @@
                     class="custom-input"
                     type="text"
                     placeholder="Room Name"
+                    id="roomName"
                   />
                   <input
                     class="custom-input"
                     type="text"
                     placeholder="Room Description"
+                    id="roomDescription"
                   />
 
                   <div class="file-input-container">
@@ -611,7 +613,7 @@
                     >
                       Close
                     </button>
-                    <button class="closeBtn" (click)="showPopup = false">
+                    <button class="closeBtn" (click)="onSubmit()">
                       Submit
                     </button>
                   </div>

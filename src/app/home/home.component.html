@@ -45,6 +45,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 20px;
       "
     >
       <div class="module" *ngFor="let module of modules">
@@ -75,7 +76,7 @@
       </div>
     </div>
 
-    <div
+    <!-- <div
       *ngIf="!showModules"
       style="
         width: 90%;
@@ -92,7 +93,20 @@
           <i class="fa fa-plus-square" aria-hidden="true"></i>
         </div>
       </div>
-    </div>
+    </div> -->
+
+   
+<div *ngIf="!showModules" class="scrollable-list">
+  <ul class="options-list">
+    <li *ngFor="let module of options" class="OptionalModule">
+      <span class="optionName">{{ module }}<br /> Semester 2</span>
+      <div class="add" (click)="add(module)">
+        <i class="fa fa-plus-square" aria-hidden="true"></i>
+      </div>
+    </li>
+  </ul>
+</div>
+
 
     <!-- <button class="removeBtn" id="removeBtn">Remove</button> -->
   </div>

@@ -68,7 +68,7 @@
           <i
             class="fa fa-cog"
             aria-hidden="true"
-            (click)="setButtonOpacityToOne()"
+            (click)="remove(module)"
           ></i>
         </div>
       </div>
@@ -289,7 +289,7 @@
         </div>
         <div class="Calander">
           <div class="Day">
-            <div *ngFor="let class of monday">
+            <div *ngFor="let class of monday" class="weekday" >
               <div class="class" *ngIf="class.module !== undefined">
                 <div class="scheduleContainer">
                   <div class="scheduleInner">
@@ -308,7 +308,7 @@
             </div>
           </div>
           <div class="Day">
-            <div *ngFor="let class of tuesday">
+            <div *ngFor="let class of tuesday" class="weekday">
               <div class="class" *ngIf="class.module !== undefined">
                 <div class="scheduleContainer">
                   <div class="scheduleInner">
@@ -327,7 +327,7 @@
             </div>
           </div>
           <div class="Day">
-            <div *ngFor="let class of wednesday">
+            <div *ngFor="let class of wednesday" class="weekday">
               <div class="class" *ngIf="class.module !== undefined">
                 <div class="scheduleContainer">
                   <div class="scheduleInner">
@@ -346,7 +346,7 @@
             </div>
           </div>
           <div class="Day">
-            <div *ngFor="let class of thursday">
+            <div *ngFor="let class of thursday" class="weekday">
               <div class="class" *ngIf="class.module !== undefined">
                 <div class="scheduleContainer">
                   <div class="scheduleInner">
@@ -365,7 +365,7 @@
             </div>
           </div>
           <div class="Day" style="border-right: none">
-            <div *ngFor="let class of friday">
+            <div *ngFor="let class of friday" class="weekday">
               <div class="class" *ngIf="class.module !== undefined">
                 <div class="scheduleContainer">
                   <div class="scheduleInner">

@@ -19,10 +19,10 @@ export class HomeComponent {
   classChat = classChatData;
   schedule: any[];
   notifications = [1, 2, 3];
-  activityStream = true;
+  activityStream = false;
   myChats = false;
   mySchedule = false;
-  modulePage = false;
+  modulePage = true;
   tutorPage = false;
   classPage = false;
   request = true;

@@ -98,7 +98,7 @@
   </div>
   <div class="content">
     <div class="headings">
-      <div class="Options" *ngIf="!modulePage && !tutorPage && !classPage">
+      <div class="Options">
         <div class="Option" (click)="isactivityStream()">
           <i
             (click)="isactivityStream()"
@@ -154,7 +154,7 @@
           <label *ngIf="mySchedule" style="color: #0572c0">My Schedule</label>
         </div>
       </div>
-
+<!-- 
       <div class="Options" *ngIf="modulePage">
         <div class="moduleNameHeader">{{ moduleName }}</div>
         <div class="searchChatOuter">
@@ -192,9 +192,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div class="Options" *ngIf="tutorPage">
+      <!-- <div class="Options" *ngIf="tutorPage">
         <div class="tutorNameHeader">{{ tutorName }}</div>
         <div class="tutorHeaderImg">
           <img class="tutorUserImg" src="{{ tutorUrl }}" />
@@ -205,14 +205,14 @@
             style="font-size: 16px; color: #c34ffd"
           ></i>
         </div>
-      </div>
+      </div> -->
 
-      <div class="Options" *ngIf="classPage">
+      <!-- <div class="Options" *ngIf="classPage">
         <div class="classNameHeader">{{ className }}</div>
         <div class="classImg">
           <img class="classUserImg" src="{{ classUrl }}" />
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="scrollable" (click)="setButtonOpacityToZero()">
@@ -390,7 +390,7 @@
       <!-- ==========================================module page====================================== -->
 
       <div class="modulePage" *ngIf="modulePage">
-        <div class="messages">
+        <!-- <div class="messages">
           <div class="messagesContainer">
             <div class="messageContainer2" *ngIf="!showSearch && showJob">
               <div class="messageImg">
@@ -471,11 +471,11 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- message bar -->
 
-        <div class="messageBar">
+        <!-- <div class="messageBar">
           <div class="messageBarInner"></div>
           <div class="messageIcons">
             <div class="messageIconInner"></div>
@@ -501,6 +501,32 @@
             class="messageInputText"
             placeholder="Message..."
           />
+        </div> -->
+
+        <!-- module chat rooms -->
+
+        <div class="chatroomContainer">
+          <div class="modulechatroom" >
+            <div class="scheduleContainerModule">
+              <div class="scheduleInnerModule">
+                <div class="scheduleClassNameModule">Title</div>
+                <div class="scheduleClassLocationModule">Desc2</div>
+                <div class="scheduleLineModule"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modulechatroom" >
+            <div class="scheduleContainerModule">
+              <div class="scheduleInnerModule">
+                <div class="scheduleClassNameModule">Title</div>
+                <div class="scheduleClassLocationModule">Desc2</div>
+                <div class="scheduleLineModule"></div>
+              </div>
+            </div>
+          </div>
+
+          
         </div>
 
         <!-- user bar -->

@@ -313,10 +313,10 @@ input:focus {
   font-size: 12px;
 }
 
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
+// ::-webkit-scrollbar {
+//   width: 0;
+//   height: 0;
+// }
 
 /* Hide scrollbars in Firefox */
 /* Note: Firefox uses a different approach, and the following style is used to hide the scrollbars */
@@ -373,17 +373,80 @@ html {
 
 //============================module page============================
 
-::-webkit-scrollbar {
-  width: 0px;
+// ::-webkit-scrollbar {
+//   width: 0px;
+// }
+
+.chatroomContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.scheduleLineModule {
+  width: 140px;
+  height: 0px;
+  left: -3px;
+  top: 20px;
+  position: absolute;
+  // transform: rotate(180deg);
+  // transform-origin: 0 0;
+  border: 1px #e5e5e5 solid;
+}
+
+
+.scheduleContainerModule {
+  width: 144px;
+  height: 66px;
+  position: relative;
+}
+
+.scheduleInnerModule {
+  width: 129px;
+  height: 44px;
+  left: 7px;
+  top: 11px;
+  position: absolute;
+}
+
+.scheduleClassNameModule {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  color: #333333;
+  font-size: 13px;
+  font-family: Outfit, sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.scheduleClassLocationModule {
+  left: 1px;
+  top: 31px;
+  position: absolute;
+  color: rgba(51.25, 51.25, 51.25, 0.8);
+  font-size: 10px;
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.modulechatroom {
+  width: 150px;
+  height: 80px;
+  background-color: #f0f5ff;
+  border-radius: 10px;
+  margin-bottom: 5px;
 }
 
 .modulePage {
   display: flex;
   // flex-direction: column;
-  justify-content: left;
-  margin-left: 25px;
-  height: 90vh;
-  width: 100%;
+  justify-content: center;
+  // margin-left: 8%;
+  height: 70vh;
+  width: 75%;
 }
 
 .messages {
@@ -534,20 +597,25 @@ html {
 }
 
 .usersContainerStyles {
-  width: 276px;
-  height: 123%;
+  width: 100%;
+  height: 125%;
   right: 0px;
   top: 0px;
   position: absolute;
   background: #f0f5ff;
   border-bottom-left-radius: 70px;
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  // padding-top: 10px;
 }
 
 .usersContainerInner {
+  margin-top: 20px;
   width: 244px;
   height: 265.75px;
-  right: 20px;
-  top: 16px;
+  // right: 20px;
+  // top: 16px;
   position: absolute;
 }
 
@@ -695,9 +763,9 @@ html {
   border: 1px #e5e5e5 solid;
 }
 
-::-webkit-scrollbar {
-  width: 0px; /* Adjust the width to make it thinner */
-}
+// ::-webkit-scrollbar {
+//   width: 0px; /* Adjust the width to make it thinner */
+// }
 
 ::-webkit-scrollbar {
   width: 0px;
@@ -1018,9 +1086,9 @@ html {
 
 //   =========================================class chat==========================================
 
-::-webkit-scrollbar {
-  width: 0px;
-}
+// ::-webkit-scrollbar {
+//   width: 0px;
+// }
 
 .tutorPage {
   display: flex;

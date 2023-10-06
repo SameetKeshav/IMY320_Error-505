@@ -2,36 +2,43 @@
   {
     "id": "1",
     "name": "Semester Test 1 Papers",
-    "description": "Past papers for semester test 1"
+    "description": "Past papers for semester test 1",
+    "filename": "semester_test_1.zip"
   },
   {
     "id": "2",
     "name": "Semester Test 2 Papers",
-    "description": "Past papers for semester test 2"
+    "description": "Past papers for semester test 2",
+    "filename": "semester_test_2.zip"
   },
   {
     "id": "3",
     "name": "Exam Papers",
-    "description": "Past papers for exams"
+    "description": "Past papers for exams",
+    "filename": "exams.zip"
   },
   {
     "id":"4",
     "name": "Assignment 1",
-    "description": "Previous assignment 1 papers"
+    "description": "Previous assignment 1 papers",
+    "filename": "assignment_1.pdf"
   },
   {
     "id":"5",
     "name": "Assignment 2",
-    "description": "Previous assignment 2 papers"  
+    "description": "Previous assignment 2 papers",
+    "filename": "assignment_2.pdf"
   },
   {
     "id":"6",
     "name": "Assignment 3",
-    "description": "Previous assignment 3 papers"
+    "description": "Previous assignment 3 papers",
+    "filename": "assignment_3.pdf"
   },
   {
     "id": "7",
     "name": "Assignment 4",
-    "description": "Previous assignment 4 papers"  
+    "description": "Previous assignment 4 papers",
+    "filename": "assignment_4.pdf"
   }
 ]

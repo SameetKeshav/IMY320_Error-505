@@ -53,7 +53,9 @@
         <b (click)="openModule(module)" style="cursor: pointer">{{ module }}</b>
       </div>
       <div class="moduleIcons">
-        <i
+ 
+        <button class="newHover">
+          <i
           *ngIf="activityData[0].module.includes(module)"
           class="fa fa-bell"
           aria-hidden="true"
@@ -64,11 +66,19 @@
           class="fa fa-bell"
           aria-hidden="true"
         ></i>
-        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+        </button>
+
+        <button class="updateHover">
+          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+        </button>
+
         <button class="removeHover">
           <i class="fa fa-minus-circle" aria-hidden="true"></i>
         </button>
+
         <button class="removeBtn">Remove</button>
+        <button class="updateBtn">Tutor Updates</button>
+        <button class="newBtn">New Chatrooms</button>
       </div>
     </div>
     

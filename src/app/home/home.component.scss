@@ -1555,7 +1555,7 @@ html {
 
 .removeBtn {
   position: absolute;
-  left: 330px;
+  left: 300px;
   margin-top: 5px;
   background-color: #bfcdee;
   color: #00355c;
@@ -1563,50 +1563,60 @@ html {
   border-radius: 10px;
   padding: 10px 15px;
   font-weight: 700;
-  opacity: 0;
+  display: none;
 }
 
 .removeHover:hover + .removeBtn {
-  opacity: 1;
+  display: block;
 }
 
 .updateBtn {
   position: absolute;
-  left: 110px;
+  left: 250px;
   margin-top: 5px;
-  // top: 185px;
   background-color: #bfcdee;
   color: #00355c;
   border: none;
   border-radius: 10px;
   padding: 10px 15px;
   font-weight: 700;
-  opacity: 0;
+  display: none;
 }
 
-.removeHover:hover + .updateBtn {
-  opacity: 1;
+.updateHover:hover + .updateBtn {
+  display: block;
 }
 
 .newBtn {
   position: absolute;
-  left: 10px;
+  left: 200px;
   margin-top: 5px;
-  // top: 185px;
   background-color: #bfcdee;
   color: #00355c;
   border: none;
   border-radius: 10px;
   padding: 10px 15px;
   font-weight: 700;
-  opacity: 0;
+  display: none;
 }
 
-.removeHover:hover + .newBtn {
-  opacity: 1;
+.newHover:hover + .newBtn {
+  display: block;
+  background-color: #0572c0;
 }
+
 
 .removeHover {
+  background-color: transparent;
+  border: none;
+}
+
+.newHover {
+  background-color: transparent;
+  border: none;
+}
+
+.updateHover {
   background-color: transparent;
   border: none;
 }

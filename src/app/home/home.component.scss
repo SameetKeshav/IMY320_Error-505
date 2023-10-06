@@ -35,10 +35,14 @@
   height: 50px;
   background-color: #bfcdee;
   margin-top: 15px;
-  margin-bottom: 45px;
+  margin-bottom: 15px;
   border-radius: 10px;
   display: flex;
   align-self: center;
+}
+
+.fa-plus-square {
+  color: #007bff;
 }
 
 .input {
@@ -150,9 +154,14 @@ input:focus {
   margin-right: 20px;
 }
 
-.moduleIcons .fa-cog:hover {
+.moduleIcons .fa-minus-circle:hover {
   cursor: pointer;
-  color: #0572c0;
+  color: #007bff;
+}
+
+.removeTooltip {
+  background-color: transparent;
+  border: none;
 }
 
 .content {
@@ -162,14 +171,14 @@ input:focus {
 
 .headings {
   width: 100%;
-  height: 20%;
+  height: 15%;
   display: flex;
   justify-content: end;
 }
 
 .Options {
   width: 70%;
-  height: 60%;
+  height: 80%;
   border-bottom-left-radius: 100px;
   background-color: #f0f5ff;
   display: flex;
@@ -313,10 +322,10 @@ input:focus {
   font-size: 12px;
 }
 
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
+// ::-webkit-scrollbar {
+//   width: 0;
+//   height: 0;
+// }
 
 /* Hide scrollbars in Firefox */
 /* Note: Firefox uses a different approach, and the following style is used to hide the scrollbars */
@@ -373,25 +382,220 @@ html {
 
 //============================module page============================
 
-::-webkit-scrollbar {
-  width: 0px;
+// ::-webkit-scrollbar {
+//   width: 0px;
+// }
+
+.chatroomContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  // margin-top: 100px;
+}
+
+.scheduleLineModule {
+  // width: 140px;
+  // height: 30px;
+  left: 3px;
+  top: 45px;
+  position: absolute;
+  // transform: rotate(180deg);
+  // transform-origin: 0 0;
+  border: none;
+  background-color: #80a0eabb;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 11px;
+  font-family: Outfit, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.fileIcon{
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+}
+
+.scheduleContainerModule {
+  width: 144px;
+  height: 66px;
+  position: relative;
+}
+
+.scheduleContainerModule:hover {
+  cursor: pointer;
+  .scheduleInnerModule {
+    opacity: 0;
+  }
+  .scheduleInnerModuleDesc {
+    opacity: 1;
+  }
+}
+
+.scheduleInnerModule {
+  width: 129px;
+  height: 44px;
+  left: 7px;
+  top: 11px;
+  position: absolute;
+}
+
+.scheduleClassNameModule {
+  left: 5px;
+  top: 0px;
+  position: absolute;
+  color: #4e4e4e;
+  font-size: 14px;
+  font-family: Outfit, sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.scheduleClassNameModuleDesc {
+  left: 5px;
+  top: 0px;
+  position: absolute;
+  color: #757575;
+  font-size: 12px;
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.scheduleInnerModuleDesc {
+  width: 129px;
+  height: 44px;
+  left: 7px;
+  top: 11px;
+  position: absolute;
+  opacity: 0;
+}
+
+
+.scheduleClassLocationModule {
+  left: 1px;
+  top: 31px;
+  position: absolute;
+  color: rgba(51.25, 51.25, 51.25, 0.8);
+  font-size: 10px;
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.modulechatroom {
+  width: 150px;
+  height: 80px;
+  background-color: #f0f5ff;
+  border-radius: 10px;
+  margin-bottom: 5px;
 }
 
 .modulePage {
   display: flex;
   // flex-direction: column;
-  justify-content: left;
-  margin-left: 25px;
-  height: 90vh;
+  justify-content: center;
+  // margin-left: 8%;
+  height: 70vh;
+  width: 73%;
+}
+
+.headerInfoContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.roomHeader {
+  width: 80%;
+}
+
+.headerInfoContainerOpen {
+  display: flex;
+  justify-content: center;
+}
+
+.Open{
+  cursor: pointer;
+}
+
+.roomTitle {
+  font-size: 24px;
+  margin-top: 3px;
+  margin-left: 10px;
+}
+
+.roomTitleOpen {
+  font-size: 24px;
+  margin-top: 3px;
+  margin-left: -5px;
+}
+
+.roomFilename {
+  font-size: 14px;
+  color: #757575;
+  margin-top: 2px;
+  margin-left: 15px;
+}
+
+.fileContainer {
+  display: flex;
+}
+
+.loadBtns {
+  font-size: 24px;
+  margin-top: 12px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.loadBtns:hover {
+  color: #0572c0;
+}
+
+.headerline {
   width: 100%;
+  height: 2px;
+  background-color: #e5e5e5;
+  margin-top: 10px;
+}
+
+.chatroomspage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.headerlineOpen {
+  width: 110%;
+  height: 2px;
+  background-color: #e5e5e5;
+  margin-top: 10px;
+  margin-left: -30px;
 }
 
 .messages {
   width: 620px;
-  height: 70vh;
+  height: 60vh;
   position: absolute;
   overflow: auto;
   //   left: 25%;
+  top: 200px;
+  font-family: Inter, sans-serif;
+}
+
+.messagesDM {
+  width: 620px;
+  height: 60vh;
+  position: absolute;
+  overflow: auto;
+  //   left: 25%;
+  top: 25%;
   font-family: Inter, sans-serif;
 }
 
@@ -481,27 +685,6 @@ html {
   position: absolute;
 }
 
-.messageIconInner {
-  width: 87px;
-  height: 33px;
-  left: 0px;
-  top: 0px;
-  position: absolute;
-  background: #809fea;
-  border-radius: 50px;
-}
-
-.messageIconContainer {
-  width: 58px;
-  height: 19px;
-  left: 15px;
-  top: 7px;
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .messageIcon {
   width: 19px;
   height: 19px;
@@ -534,20 +717,25 @@ html {
 }
 
 .usersContainerStyles {
-  width: 276px;
-  height: 123%;
+  width: 100%;
+  height: 125%;
   right: 0px;
   top: 0px;
   position: absolute;
   background: #f0f5ff;
   border-bottom-left-radius: 70px;
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  // padding-top: 10px;
 }
 
 .usersContainerInner {
+  margin-top: 20px;
   width: 244px;
   height: 265.75px;
-  right: 20px;
-  top: 16px;
+  // right: 20px;
+  // top: 16px;
   position: absolute;
 }
 
@@ -695,9 +883,9 @@ html {
   border: 1px #e5e5e5 solid;
 }
 
-::-webkit-scrollbar {
-  width: 0px; /* Adjust the width to make it thinner */
-}
+// ::-webkit-scrollbar {
+//   width: 0px; /* Adjust the width to make it thinner */
+// }
 
 ::-webkit-scrollbar {
   width: 0px;
@@ -878,33 +1066,6 @@ html {
   position: absolute;
 }
 
-.messageIconInner {
-  width: 87px;
-  height: 33px;
-  left: 0px;
-  top: 0px;
-  position: absolute;
-  background: #809fea;
-  border-radius: 50px;
-}
-
-.messageIconContainer {
-  width: 58px;
-  height: 19px;
-  left: 15px;
-  top: 7px;
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.messageIcon {
-  width: 19px;
-  height: 19px;
-  cursor: pointer;
-}
-
 .messageInputText {
   left: 17.36px;
   top: 7px;
@@ -1018,9 +1179,9 @@ html {
 
 //   =========================================class chat==========================================
 
-::-webkit-scrollbar {
-  width: 0px;
-}
+// ::-webkit-scrollbar {
+//   width: 0px;
+// }
 
 .tutorPage {
   display: flex;
@@ -1138,9 +1299,9 @@ html {
 }
 
 .messageIconInner {
-  width: 87px;
+  width: 50px;
   height: 33px;
-  left: 0px;
+  right: 0px;
   top: 0px;
   position: absolute;
   background: #809fea;
@@ -1150,18 +1311,13 @@ html {
 .messageIconContainer {
   width: 58px;
   height: 19px;
-  left: 15px;
-  top: 7px;
+  // left: 15px;
+  right: -24px;
+  top: 8px;
   position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.messageIcon {
-  width: 19px;
-  height: 19px;
-  cursor: pointer;
 }
 
 .messageInputText {
@@ -1399,8 +1555,8 @@ html {
 
 .removeBtn {
   position: absolute;
-  left: 280px;
-  top: 185px;
+  left: 330px;
+  margin-top: 5px;
   background-color: #bfcdee;
   color: #00355c;
   border: none;
@@ -1408,6 +1564,51 @@ html {
   padding: 10px 15px;
   font-weight: 700;
   opacity: 0;
+}
+
+.removeHover:hover + .removeBtn {
+  opacity: 1;
+}
+
+.updateBtn {
+  position: absolute;
+  left: 110px;
+  margin-top: 5px;
+  // top: 185px;
+  background-color: #bfcdee;
+  color: #00355c;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-weight: 700;
+  opacity: 0;
+}
+
+.removeHover:hover + .updateBtn {
+  opacity: 1;
+}
+
+.newBtn {
+  position: absolute;
+  left: 10px;
+  margin-top: 5px;
+  // top: 185px;
+  background-color: #bfcdee;
+  color: #00355c;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-weight: 700;
+  opacity: 0;
+}
+
+.removeHover:hover + .newBtn {
+  opacity: 1;
+}
+
+.removeHover {
+  background-color: transparent;
+  border: none;
 }
 
 .scheduleContainer {
@@ -1488,4 +1689,140 @@ html {
   transform: rotate(180deg);
   transform-origin: 0 0;
   border: 1px #e5e5e5 solid;
+}
+
+/* app.component.css */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  // display: none; /* Initially hidden */
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.closeBtn {
+  width: 87px;
+  height: 33px;
+  //   left: 333px;
+  // margin-left: 320px;
+  // top: 290px;
+  // position: absolute;
+  background: #007bff;
+  border-radius: 50px;
+  font-family: Outfit, sans-serif;
+  border: none;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.inputData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.custom-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.custom-input::placeholder {
+  color: #aaa;
+}
+
+.custom-input:focus {
+  border-color: #007bff; 
+  box-shadow: 0 0 2px #1f262e; 
+}
+
+/* app.component.css */
+.file-input-container {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+#fileInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-input-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.selected-file-name {
+  font-size: 12px; 
+  margin-top: 5px;
+  text-align: center;
+  color: #555;
+}
+
+.options-list {
+  list-style-type: none;
+  padding: 0;
+  width: 90%;
+  margin: 0px;
+}
+
+.OptionalModule:last-child {
+  border-bottom: none;
+}
+
+.scrollable-list {
+  width: 90%;
+  max-height: 500px; /* Set the maximum height to 500px */
+  overflow-y: auto; /* Add vertical scroll when content exceeds max height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d5e2ff;
+}
+
+.scrollable-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-list::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.scrollable-list::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }

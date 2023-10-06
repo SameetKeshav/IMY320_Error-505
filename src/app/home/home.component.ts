@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
 import * as activityData from '../../data/activityStream.json';
 // import * as chatData from '../../data/chatList.json'
 import * as scheduleData from '../../data/scheduleData.json';
 import * as moduleChatData from '../../data/moduleChat.json';
 import * as tutorChatData from '../../data/tutorChat.json';
 import * as classChatData from '../../data/classmateChat.json';
-import * as cos330ChatList from '../../data/cos330ChatList.json';
+import {Component, Inject} from '@angular/core';
+
+export interface DialogData {
+  animal: string;
+  name: string;
+}
+
 
 @Component({
   selector: 'app-home',
@@ -42,6 +47,8 @@ export class HomeComponent {
   days: string[] = [];
   days2: number[] = [];
   showModules = true;
+  showPopup = false;
+  hasMemo = false;
   allOptions = [
     'COS341',
     'COS332',
@@ -499,5 +506,22 @@ export class HomeComponent {
   
     window.URL.revokeObjectURL(url);
   }
+
+  selectedFileName: string = ''; 
+
+  onFileSelected(event: any): void {
+    const selectedFile = event.target.files[0];
+    
+    if (selectedFile) {
+      this.selectedFileName = selectedFile.name; 
+
+      console.log('Selected file:', selectedFile);
+    } else {
+      this.selectedFileName = ''; 
+    }
+  }
   
 }
+
+
+

@@ -53,7 +53,7 @@
         <b (click)="openModule(module)" style="cursor: pointer">{{ module }}</b>
       </div>
       <div class="moduleIcons">
- 
+
         <button class="newHover">
           <i
           *ngIf="activityData[0].module.includes(module)"
@@ -72,7 +72,7 @@
           <i class="fa fa-graduation-cap" aria-hidden="true"></i>
         </button>
 
-        <button class="removeHover">
+        <button class="removeHover" (click)="remove(module)">
           <i class="fa fa-minus-circle" aria-hidden="true"></i>
         </button>
 
@@ -81,9 +81,9 @@
         <button class="newBtn">New Chatrooms</button>
       </div>
     </div>
-    
+
     </div>
-    
+
 
     <!-- <div
       *ngIf="!showModules"
@@ -104,7 +104,7 @@
       </div>
     </div> -->
 
-   
+
 <div *ngIf="!showModules" class="scrollable-list">
   <ul class="options-list">
     <li *ngFor="let module of options" class="OptionalModule">
@@ -117,7 +117,7 @@
 </div>
 
 
-    
+
   </div>
   <div class="content">
     <div class="headings">
@@ -177,7 +177,7 @@
           <label *ngIf="mySchedule" style="color: #0572c0">My Schedule</label>
         </div>
       </div>
-      <!-- 
+      <!--
       <div class="Options" *ngIf="modulePage">
         <div class="moduleNameHeader">{{ moduleName }}</div>
         <div class="searchChatOuter">
@@ -313,7 +313,7 @@
         </div>
         <div class="Calander">
           <div class="Day">
-            <div *ngFor="let class of monday">
+            <div *ngFor="let class of monday" class="weekday" >
               <div class="class" *ngIf="class.module !== undefined">
                 <div class="scheduleContainer">
                   <div class="scheduleInner">
@@ -332,7 +332,7 @@
             </div>
           </div>
           <div class="Day">
-            <div *ngFor="let class of tuesday">
+            <div *ngFor="let class of tuesday" class="weekday">
               <div class="class" *ngIf="class.module !== undefined">
                 <div class="scheduleContainer">
                   <div class="scheduleInner">
@@ -351,7 +351,7 @@
             </div>
           </div>
           <div class="Day">
-            <div *ngFor="let class of wednesday">
+            <div *ngFor="let class of wednesday" class="weekday">
               <div class="class" *ngIf="class.module !== undefined">
                 <div class="scheduleContainer">
                   <div class="scheduleInner">
@@ -370,7 +370,7 @@
             </div>
           </div>
           <div class="Day">
-            <div *ngFor="let class of thursday">
+            <div *ngFor="let class of thursday" class="weekday">
               <div class="class" *ngIf="class.module !== undefined">
                 <div class="scheduleContainer">
                   <div class="scheduleInner">
@@ -389,7 +389,7 @@
             </div>
           </div>
           <div class="Day" style="border-right: none">
-            <div *ngFor="let class of friday">
+            <div *ngFor="let class of friday" class="weekday">
               <div class="class" *ngIf="class.module !== undefined">
                 <div class="scheduleContainer">
                   <div class="scheduleInner">

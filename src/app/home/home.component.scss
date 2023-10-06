@@ -35,10 +35,14 @@
   height: 50px;
   background-color: #bfcdee;
   margin-top: 15px;
-  margin-bottom: 45px;
+  margin-bottom: 15px;
   border-radius: 10px;
   display: flex;
   align-self: center;
+}
+
+.fa-plus-square {
+  color: #007bff;
 }
 
 .input {
@@ -1737,4 +1741,38 @@ html {
   margin-top: 5px;
   text-align: center;
   color: #555;
+}
+
+.options-list {
+  list-style-type: none;
+  padding: 0;
+  width: 90%;
+  margin: 0px;
+}
+
+.OptionalModule:last-child {
+  border-bottom: none;
+}
+
+.scrollable-list {
+  width: 90%;
+  max-height: 500px; /* Set the maximum height to 500px */
+  overflow-y: auto; /* Add vertical scroll when content exceeds max height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d5e2ff;
+}
+
+.scrollable-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-list::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.scrollable-list::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }

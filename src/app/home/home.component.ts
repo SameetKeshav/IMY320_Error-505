@@ -469,7 +469,7 @@ export class HomeComponent {
     console.log(message);
 
     if (message !== '') {
-      this.moduleChat.messages.push({
+      this.moduleChat.messages[this.roomId].push({
         from: 'Julianna Venter',
         date: this.formatCurrentDate(),
         profilePicture:

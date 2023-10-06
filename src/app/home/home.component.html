@@ -390,9 +390,33 @@
       <!-- ==========================================module page====================================== -->
 
       <div class="modulePage" *ngIf="modulePage">
+        <div class="roomHeader" *ngIf="chatRoom">
+          <div class="headerInfoContainer">
+            <div class="fileContainer">
+              <i
+                style="
+                  font-size: 40px;
+                  color: #11507e;
+                  cursor: pointer;
+                  margin-top: 5px;
+                "
+                class="fas fa-file-alt roomFileIcon"
+              ></i>
+              <div class="roomtext">
+              <div class="roomTitle">{{chatrooms[roomId].name}}</div>
+              <div class="roomFilename">{{chatrooms[roomId].filename}}</div>
+            </div>
+            </div>
+            <div class="loadIconsContainer">
+              <i class="fas fa-download loadBtns" (click)="download()"></i>
+              <!-- <i class="fas fa-upload loadBtns"></i> -->
+            </div>
+          </div>
+          <div class="headerline"></div>
+        </div>
         <div class="messages" *ngIf="chatRoom">
           <div class="messagesContainer">
-            <div class="messageContainer2" *ngIf="!showSearch && showJob">
+            <!-- <div class="messageContainer2" *ngIf="!showSearch && showJob">
               <div class="messageImg">
                 <img
                   class="userImg"
@@ -413,9 +437,9 @@
               <div class="messageTime" style="margin-left: 50px">
                 21/09/2023 10:17
               </div>
-            </div>
+            </div> -->
 
-            <div class="messageContainer2" *ngIf="!showSearch && showMaterial">
+            <!-- <div class="messageContainer2" *ngIf="!showSearch && showMaterial">
               <div class="messageImg">
                 <img
                   class="userImg"
@@ -444,7 +468,7 @@
               <div class="messageTime" style="margin-left: 50px">
                 12/09/2023 14:43
               </div>
-            </div>
+            </div> -->
             <div *ngFor="let chat of moduleChat.messages">
               <div class="messageContainer2" *ngIf="!showJob && !showMaterial">
                 <div>
@@ -507,24 +531,33 @@
 
         <div class="chatroomContainer" *ngIf="roomsPage">
           <div *ngFor="let moduleRoom of chatrooms">
-            <div class="modulechatroom"  (click)="openChatRoom('moduleRoom.name')">
+            <div
+              class="modulechatroom"
+              (click)="openChatRoom(moduleRoom.id)"
+            >
               <div class="scheduleContainerModule">
                 <div class="scheduleInnerModule">
-                  <div class="scheduleClassNameModule">{{moduleRoom.name}}</div>
+                  <div class="scheduleClassNameModule">
+                    {{ moduleRoom.name }}
+                  </div>
                   <!-- <div class="scheduleClassLocationModule">{{moduleRoom.description}}</div> -->
                   <i
-                  style="
-                    font-size: 26px;
-                    color: #11507e;
-                    cursor: pointer;
-                    margin-top: 5px;
-                  "
-                  class="fas fa-file-alt fileIcon"
-                ></i>
-                  <button *ngIf="moduleRoom.memo" class="scheduleLineModule">Memo</button>
+                    style="
+                      font-size: 26px;
+                      color: #11507e;
+                      cursor: pointer;
+                      margin-top: 5px;
+                    "
+                    class="fas fa-file-alt fileIcon"
+                  ></i>
+                  <button *ngIf="moduleRoom.memo" class="scheduleLineModule">
+                    Memo
+                  </button>
                 </div>
                 <div class="scheduleInnerModuleDesc">
-                  <div class="scheduleClassNameModuleDesc">{{moduleRoom.description}}</div>
+                  <div class="scheduleClassNameModuleDesc">
+                    {{ moduleRoom.description }}
+                  </div>
                 </div>
               </div>
             </div>

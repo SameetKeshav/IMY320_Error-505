@@ -20,15 +20,16 @@ export class HomeComponent {
   classChat = classChatData;
   schedule: any[];
   notifications = [1, 2, 3];
-  activityStream = true;
+  activityStream = false;
   myChats = false;
   mySchedule = false;
-  modulePage = false;
+  modulePage = true;
   tutorPage = false;
   classPage = false;
-  chatRoom = false;
-  roomsPage = true;
+  chatRoom = true;
+  roomsPage = false;
   request = true;
+  roomId : number = 0;
   className = '';
   moduleName = '';
   tutorName = '';
@@ -56,63 +57,63 @@ export class HomeComponent {
 
   chatrooms = [
     {
-      id: '1',
+      id: 1,
       name: 'Semester Test 1 Papers',
       description: 'Past papers for semester test 1',
       filename: 'semester_test_1.zip',
       memo: true,
     },
     {
-      id: '2',
+      id: 2,
       name: 'Semester Test 2 Papers',
       description: 'Past papers for semester test 2',
       filename: 'semester_test_2.zip',
       memo: true,
     },
     {
-      id: '3',
+      id: 3,
       name: 'Exam Papers',
       description: 'Past papers for exams',
       filename: 'exams.zip',
       memo: true,
     },
     {
-      id: '4',
+      id: 4,
       name: 'Assignment 1',
       description: 'Previous assignment 1 papers',
       filename: 'assignment_1.pdf',
       memo: false,
     },
     {
-      id: '5',
+      id: 5,
       name: 'Assignment 2',
       description: 'Previous assignment 2 papers',
       filename: 'assignment_2.pdf',
       memo: false,
     },
     {
-      id: '6',
+      id: 6,
       name: 'Assignment 3',
       description: 'Previous assignment 3 papers',
       filename: 'assignment_3.pdf',
       memo: true,
     },
     {
-      id: '7',
+      id: 7,
       name: 'Assignment 4',
       description: 'Previous assignment 4 papers',
       filename: 'assignment_4.pdf',
       memo: false,
     },
     {
-      id: '7',
+      id: 8,
       name: 'Tutorial 1',
       description: 'Tutorial 1 Prep Questions',
       filename: 'tut1.pdf',
       memo: false,
     },
     {
-      id: '7',
+      id: 9,
       name: 'Chapter 4 Notes',
       description: 'Detailed textbook notes on chapter 4',
       filename: 'Ch4.pdf',
@@ -476,8 +477,27 @@ export class HomeComponent {
     this.options = this.options.filter((item) => item !== m);
   }
 
-  openChatRoom(roomName : string) {
+  openChatRoom(roomName : number) {
     this.chatRoom = true;
     this.roomsPage = false;
+    this.roomId = roomName-1;
+    console.log("id: " + this.roomId);
   }
+
+  download() {
+    const fileContent = "This is the content of the files you are downloading";
+    const blob = new Blob([fileContent], { type: "text/plain" });
+  
+    const url = URL.createObjectURL(blob);
+  
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = this.chatrooms[this.roomId].filename;
+    a.style.display = "none";
+    document.body.appendChild(a);
+    a.click();
+  
+    window.URL.revokeObjectURL(url);
+  }
+  
 }

@@ -528,32 +528,45 @@
         </div>
 
         <!-- module chat rooms -->
-
-        <div class="chatroomContainer" *ngIf="roomsPage">
-          <div *ngFor="let moduleRoom of chatrooms">
-            <div class="modulechatroom" (click)="openChatRoom(moduleRoom.id)">
-              <div class="scheduleContainerModule">
-                <div class="scheduleInnerModule">
-                  <div class="scheduleClassNameModule">
-                    {{ moduleRoom.name }}
+        <div class="chatroomspage">
+          <div class="roomHeader">
+            <div class="headerInfoContainerOpen">
+              <div class="fileContainer">
+                <div class="roomTitleOpen">Open Discussion Room</div>
+                <i
+                  class="fas fa-plus-circle"
+                  style="width: 25px; height: 25px; color: #00355c; font-size: 24px; margin-left: 10px; margin-top: 5px;"
+                ></i>
+              </div>
+            </div>
+            <div class="headerlineOpen"></div>
+          </div>
+          <div class="chatroomContainer" *ngIf="roomsPage">
+            <div *ngFor="let moduleRoom of chatrooms">
+              <div class="modulechatroom" (click)="openChatRoom(moduleRoom.id)">
+                <div class="scheduleContainerModule">
+                  <div class="scheduleInnerModule">
+                    <div class="scheduleClassNameModule">
+                      {{ moduleRoom.name }}
+                    </div>
+                    <!-- <div class="scheduleClassLocationModule">{{moduleRoom.description}}</div> -->
+                    <i
+                      style="
+                        font-size: 26px;
+                        color: #11507e;
+                        cursor: pointer;
+                        margin-top: 5px;
+                      "
+                      class="fas fa-file-alt fileIcon"
+                    ></i>
+                    <button *ngIf="moduleRoom.memo" class="scheduleLineModule">
+                      Memo
+                    </button>
                   </div>
-                  <!-- <div class="scheduleClassLocationModule">{{moduleRoom.description}}</div> -->
-                  <i
-                    style="
-                      font-size: 26px;
-                      color: #11507e;
-                      cursor: pointer;
-                      margin-top: 5px;
-                    "
-                    class="fas fa-file-alt fileIcon"
-                  ></i>
-                  <button *ngIf="moduleRoom.memo" class="scheduleLineModule">
-                    Memo
-                  </button>
-                </div>
-                <div class="scheduleInnerModuleDesc">
-                  <div class="scheduleClassNameModuleDesc">
-                    {{ moduleRoom.description }}
+                  <div class="scheduleInnerModuleDesc">
+                    <div class="scheduleClassNameModuleDesc">
+                      {{ moduleRoom.description }}
+                    </div>
                   </div>
                 </div>
               </div>

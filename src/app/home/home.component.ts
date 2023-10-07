@@ -43,6 +43,7 @@ export class HomeComponent {
   showModules = true;
   showPopup = false;
   hasMemo = false;
+  seenModules = [false,false,false];
   options = [
     'COS341',
     'COS332',
@@ -588,8 +589,10 @@ export class HomeComponent {
 
   add(m: any) {
     this.modules.push(m);
+    this.seenModules.push(false);
     this.showModules = !this.showModules;
     this.options = this.options.filter((item) => item !== m);
+    console.log(this.options);
 
     if (m == 'COS301') {
       this.monday[3] = {
@@ -1044,5 +1047,9 @@ export class HomeComponent {
 
   toggleRequest() {
     this.request = !this.request;
+  }
+
+  SeeModule(i: number) {
+    this.seenModules[i] = true;
   }
 }

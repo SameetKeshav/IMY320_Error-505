@@ -399,7 +399,7 @@ export class HomeComponent {
     this.activityStream = false;
     this.tutorName = tutor;
     this.tutorUrl = url;
-    this.request = true;
+    // this.request = true;
   }
 
   openClass(name: string, url: string) {

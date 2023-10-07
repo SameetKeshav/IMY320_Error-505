@@ -255,7 +255,7 @@ export class HomeComponent {
       message: [
         'sent you a private message',
         'replied to your request',
-        'were mentioned on COS 330',
+        'were mentioned on COS 333',
         'sent you a private message',
       ],
       module: ['none', 'COS333', 'COS330', 'none'],

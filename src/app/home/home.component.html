@@ -70,8 +70,11 @@
         </button>
 
         <button class="updateHover">
-          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+          <i *ngIf="module=='COS301'" class="fa fa-graduation-cap" aria-hidden="true" style="color: #c34ffd;"></i>
+          <i *ngIf="module!='COS301'"class="fa fa-graduation-cap" aria-hidden="true"></i>
+
         </button>
+
 
         <button class="removeHover" (click)="remove(module)">
           <i class="fa fa-minus-circle" aria-hidden="true"></i>
@@ -552,6 +555,7 @@
             </div>
           </div>
           <input
+            (keyup.enter)="sendModuleMessage()"
             id="moduleMessage"
             type="text"
             class="messageInputText"
@@ -915,6 +919,7 @@
             </div>
           </div>
           <input
+          (keyup.enter)="sendTutorMessage()"
             id="tutorMessage"
             type="text"
             class="messageInputText"
@@ -993,6 +998,7 @@
             </div>
           </div>
           <input
+            (keyup.enter)="sendClassMessage()"
             id="classMessage"
             type="text"
             class="messageInputText"

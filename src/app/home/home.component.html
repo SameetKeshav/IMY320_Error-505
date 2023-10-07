@@ -22,6 +22,7 @@
         [(ngModel)]="searchText"
         placeholder="Search for a module..."
         (input)="search()"
+        (click)="searchAll()"
       />
       <div class="searchIcon">
         <i
@@ -783,6 +784,7 @@
                 type="text"
                 class="requestTextInput"
                 placeholder="{{ tutorChat.request.description }}"
+                id="requestMessage"
               ></textarea>
             </div>
 
@@ -851,7 +853,7 @@
 
               <div
                 class="myMessageContainer2"
-                *ngIf="chat.from === 'Julianna Venter'"
+                *ngIf="chat.from === 'Julianna Venter' && !chat.isRequest"
               >
                 <div class="myMessageImg">
                   <img class="myUserImg" src="{{ chat.profilePicture }}" />
@@ -861,6 +863,30 @@
                   {{ chat.message }}
                 </div>
                 <div class="myMessageTime">{{ chat.date }}</div>
+              </div>
+
+              <div class="messageContainerRequest" *ngIf="chat.from === 'Julianna Venter' && chat.isRequest">
+                <div class="myMessageImg">
+                  <img
+                    class="myUserImg"
+                    src="{{ chat.profilePicture }}"
+                  />
+                </div>
+                <div class="myMessageName">{{ chat.from }}</div>
+  
+                <div class="requestNoti">
+                  <div class="requestNotiInner">
+                    <div class="requestNotiTitle">Request Made:</div>
+                    <div class="requestNotiModule">COS 330</div>
+                    <div class="requestNotiText">
+                      {{ chat.message }}
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="myMessageTime" style="margin-top: 3px">
+                  {{ chat.date }}
+                </div>
               </div>
             </div>
           </div>

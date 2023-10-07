@@ -251,7 +251,7 @@ export class HomeComponent {
         'Kaden Bernard',
       ],
       category: ['message', 'tutor', 'notification', 'message'],
-      time: ['3:30 PM', '2:00 PM', '1:00 PM', '11:00 AM'],
+      time: ['3:30 AM', '1:00 PM', '2:00 PM', '11:00 PM'],
       message: [
         'sent you a private message',
         'replied to your request',
@@ -273,20 +273,18 @@ export class HomeComponent {
         'Natasha Schwarts',
         'a Tutor (James Payne)',
         '52',
-        'Natasha Schwarts',
         'Tutor (James Payne)',
       ],
-      category: ['message', 'tutor', 'notification', 'job', 'material'],
-      time: ['5:00 PM', '4:00 PM', '11:30 AM', '10:00 AM', '9:00 AM'],
+      category: ['message', 'tutor', 'notification', 'material'],
+      time: ['5:00 PM', '4:00 PM', '11:30 AM', '12:00 PM'],
       message: [
         'sent you a private message',
         'replied to your request',
         'new messages on COS 330',
-        'posted a new job',
         'posted material for COS 330',
       ],
-      module: ['none', 'COS333', 'COS330', 'none', 'COS330'],
-      route: ['Natasha Schwarts', 'James Payne', 'cos330', 'job', 'cos330'],
+      module: ['none', 'COS333', 'COS330', 'COS330'],
+      route: ['Natasha Schwarts', 'James Payne', 'cos330', 'cos330'],
       url: [
         'https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg',
         'https://media.istockphoto.com/id/597958694/photo/young-adult-male-student-in-the-lobby-of-a-university.jpg?s=612x612&w=0&k=20&c=QaNEzmcKrLJzmwOcu2lgwm1B7rm3Ouq2McYYdmoMGpU=',
@@ -358,6 +356,15 @@ export class HomeComponent {
   }
 
   requestChange() {
+    const message = (<HTMLInputElement>document.getElementById('requestMessage'))
+      .value;
+    this.tutorChat.messages.push({
+      from: "Julianna Venter",
+      date: this.formatCurrentDate(),
+      profilePicture: "https://image.shutterstock.com/image-photo/image-young-asian-woman-company-260nw-2122700972.jpg",
+      message: message,
+      isRequest: true
+    })
     this.request = false;
   }
 
@@ -481,6 +488,7 @@ export class HomeComponent {
         profilePicture:
           'https://image.shutterstock.com/image-photo/image-young-asian-woman-company-260nw-2122700972.jpg',
         message: message,
+        isRequest: false
       });
     }
   }
@@ -528,11 +536,17 @@ export class HomeComponent {
 
     this.options = filterModules;
 
+    
+  }
+
+  searchAll(){
+    this.options = this.allOptions;
     this.showModules = false;
   }
 
   searchClose() {
     this.showModules = true;
+    this.searchText = '';
   }
 
   openChatRoom(roomName: number) {

@@ -492,7 +492,7 @@ export class HomeComponent {
     console.log(message);
 
     if (message !== '') {
-      this.moduleChat.messages.push({
+      this.moduleChat.messages[this.roomId].push({
         from: 'Julianna Venter',
         date: this.formatCurrentDate(),
         profilePicture:
@@ -1009,5 +1009,22 @@ export class HomeComponent {
       this.friday[3] = {};
       return;
     }
+  }
+
+  onSubmit(){
+    const roomName = (<HTMLInputElement>document.getElementById('roomName')).value;
+    const roomDescription = (<HTMLInputElement>document.getElementById('roomDescription')).value;
+
+    const newRoom = {
+      id: this.chatrooms.length + 1,
+      name: roomName,
+      description: roomDescription,
+      filename: this.selectedFileName,
+      memo: this.hasMemo
+    }
+
+    this.chatrooms.push(newRoom);
+    this.showPopup = false;
+    this.moduleChat.messages.push([]);
   }
 }

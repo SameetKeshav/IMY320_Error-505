@@ -222,7 +222,7 @@ input:focus {
 
 .Chat_container {
   width: 50%;
-  margin-left: 15%;
+  margin-left: 26%;
 }
 
 .Schedule_container {
@@ -234,9 +234,24 @@ input:focus {
 .TopicTitle {
   font-size: 30px;
   color: #0572c0;
-  margin-left: 30px;
-  margin-bottom: 20px;
+  margin-left: 10%;
+  margin-bottom: 10px;
+  width: 82%;
 }
+
+.TopicTitleChat{
+  font-size: 30px;
+  color: #0572c0;
+  margin-top: 8%;
+  margin-bottom: 10px;
+  width: 82%;
+}
+
+.scheduleBorder {
+  padding-bottom: 10px;
+  border-bottom: 2.5px solid #e5e5e5;
+}
+
 
 .TopicTitle2 {
   font-size: 30px;
@@ -287,17 +302,26 @@ input:focus {
   background-color: #e5e5e5;
   margin-top: 20px;
 }
+
 .border3 {
   height: 2px;
-  width: 100%;
+  width: 80%;
   background-color: #e5e5e5;
-  margin-top: 20px;
+  margin-bottom: 10px;
+  
+}
+
+.border3Chat {
+  height: 2px;
+  width: 90%;
+  background-color: #e5e5e5;
+  margin-bottom: 10px;
+  
 }
 
 .border4 {
   width: 90%;
   height: 2px;
-  margin-left: 10%;
   background-color: #e5e5e5;
 }
 
@@ -585,21 +609,21 @@ html {
 
 .messages {
   width: 620px;
-  height: 60vh;
+  height: 66vh;
   position: absolute;
   overflow: auto;
   //   left: 25%;
-  top: 200px;
+  top: 25%;
   font-family: Inter, sans-serif;
 }
 
 .messagesDM {
   width: 620px;
-  height: 60vh;
+  height: 68vh;
   position: absolute;
   overflow: auto;
   //   left: 25%;
-  top: 25%;
+  top: 23%;
   font-family: Inter, sans-serif;
 }
 

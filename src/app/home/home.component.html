@@ -238,9 +238,17 @@
       </div> -->
     </div>
 
+    <div *ngIf="activityStream" class="TopicTitle"><b>Activity Stream</b></div>
+    
+    <div class="scheduleContainerTheBigOne" *ngIf="mySchedule">
+      <div  class="TopicTitle scheduleBorder"><b>Schedule</b></div>
+      <!-- <div *ngIf="mySchedule" class="border3"></div> -->
+    </div>
+    
+
     <div class="scrollable" (click)="setButtonOpacityToZero()">
       <div *ngIf="activityStream" class="Activity_container">
-        <div class="TopicTitle"><b>Activity Stream</b></div>
+        
         <div *ngFor="let day of activityData; let i = index">
           <div class="recordDay">
             <div class="icon"></div>
@@ -282,8 +290,8 @@
         </div>
       </div>
       <div *ngIf="myChats" class="Chat_container">
-        <div class="TopicTitle"><b>Chats</b></div>
-        <div class="border3"></div>
+        <div class="TopicTitleChat"><b>Chats</b></div>
+        <div class="border3Chat"></div>
         <div *ngFor="let chat of chatList">
           <div class="chat" (click)="openClass(chat.name, chat.profilePicture)">
             <div class="profile">
@@ -302,8 +310,8 @@
         </div>
       </div>
       <div *ngIf="mySchedule" class="Schedule_container">
-        <div class="TopicTitle2"><b>Schedule</b></div>
-        <div class="border3"></div>
+        
+        
         <div class="days">
           <Label>Monday</Label>
           <Label>Tuesday</Label>
@@ -437,7 +445,7 @@
           </div>
           <div class="headerline"></div>
         </div>
-        <div class="messagesDM" *ngIf="chatRoom">
+        <div class="messages" *ngIf="chatRoom">
           <div class="messagesContainer">
             <!-- <div class="messageContainer2" *ngIf="!showSearch && showJob">
               <div class="messageImg">

@@ -790,8 +790,9 @@
         <!-- //chat stuff -->
         <div class="roomHeader" *ngIf="!request">
           <div class="headerInfoContainer">
-            <div class="fileContainer">
+            <div class="fileContainerTutor">
               <div class="roomTitle">{{ tutorName }}</div>
+              <button class="requestBtn" (click)="toggleRequest()">Make Request</button>
             </div>
           </div>
           <div class="headerline"></div>

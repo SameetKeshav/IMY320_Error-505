@@ -19,15 +19,15 @@ export class HomeComponent {
   classChat = classChatData;
   schedule: any[];
   notifications = [1, 2, 3];
-  activityStream = true;
+  activityStream = false;
   myChats = false;
   mySchedule = false;
   modulePage = false;
-  tutorPage = false;
+  tutorPage = true;
   classPage = false;
   chatRoom = false;
   roomsPage = true;
-  request = true;
+  request = false;
   roomId: number = 0;
   className = 'TempName';
   moduleName = '';
@@ -1026,5 +1026,9 @@ export class HomeComponent {
     this.chatrooms.push(newRoom);
     this.showPopup = false;
     this.moduleChat.messages.push([]);
+  }
+
+  toggleRequest() {
+    this.request = !this.request;
   }
 }

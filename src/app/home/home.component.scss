@@ -242,6 +242,9 @@ input:focus {
   font-size: 30px;
   color: #0572c0;
   margin-bottom: 20px;
+  // position: static;
+  // top: 20px;
+
 }
 
 .record {
@@ -250,6 +253,7 @@ input:focus {
   display: flex;
   align-items: center;
   color: #333333;
+  cursor: pointer;
 }
 
 .recordDay {
@@ -540,6 +544,12 @@ html {
   display: flex;
 }
 
+.fileContainerTutor{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .loadBtns {
   font-size: 24px;
   margin-top: 12px;
@@ -606,7 +616,8 @@ html {
 
 .messageContainer2 {
   width: 597px;
-  height: 57px;
+  height: 70px;
+  // border-bottom: solid 2px #75757525;
 }
 
 .messageImg {
@@ -629,10 +640,10 @@ html {
 
 .messageText {
   width: 552px;
-  left: 45px;
+  // margin-left: 0px;
   //   top: 25px;
   margin-top: 20px;
-  position: absolute;
+  // position: absolute;
   color: black;
   font-size: 13px;
   font-family: Inter, sans-serif;
@@ -908,7 +919,7 @@ html {
   width: 552px;
   left: 45px;
   //   top: 25px;
-  margin-top: 20px;
+  margin-top: 25px;
   position: absolute;
   color: black;
   font-size: 13px;
@@ -920,6 +931,7 @@ html {
 .myMessageContainer2 {
   width: 590.17px;
   height: 59px;
+  // border-bottom: solid 2px #75757525;
 }
 
 .myMessageImg {
@@ -1079,7 +1091,7 @@ html {
 
 .requestContainer {
   position: absolute;
-  top: 80px;
+  top: 130px;
   width: 632px;
   height: 339px;
 }
@@ -1171,6 +1183,24 @@ html {
   cursor: pointer;
 }
 
+.requestBtn {
+  // width: 87px;
+  height: 33px;
+  //   left: 333px;
+  // margin-left: 320px;
+  padding-left: 10px;
+  padding-right: 10px;
+  // top: 290px;
+  // position: absolute;
+  background: #be4cf7;
+  border-radius: 50px;
+  font-family: Outfit, sans-serif;
+  border: none;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
 //   =========================================class chat==========================================
 
 // ::-webkit-scrollbar {
@@ -1215,11 +1245,7 @@ html {
   font-family: Inter, sans-serif;
   font-weight: 400;
   word-wrap: break-word;
-}
 
-.myMessageContainer2 {
-  width: 590.17px;
-  height: 59px;
 }
 
 .myMessageImg {

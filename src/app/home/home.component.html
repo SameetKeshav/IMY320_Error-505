@@ -49,29 +49,36 @@
         margin-top: 20px;
       "
     >
-    <div class="module" *ngFor="let module of modules">
-      <div class="moduleName">
-        <b (click)="openModule(module)" style="cursor: pointer">{{ module }}</b>
+    <div class="module" *ngFor="let module of modules; let i = index">
+      <div class="moduleName" (click)="openModule(module)" (click)="SeeModule(i)" >
+        <b style="cursor: pointer">{{ module }}</b>
       </div>
       <div class="moduleIcons">
 
         <button class="newHover">
           <i
-          *ngIf="activityData[0].module.includes(module)"
+          *ngIf="!seenModules[i]&&i!=1"
           class="fa fa-bell"
           aria-hidden="true"
           style="color: #c34ffd"
         ></i>
         <i
-          *ngIf="!activityData[0].module.includes(module)"
+          *ngIf="i==1"
+          class="fa fa-bell"
+          aria-hidden="true"
+        ></i>
+        <i
+          *ngIf="i!=1&&seenModules[i]"
           class="fa fa-bell"
           aria-hidden="true"
         ></i>
         </button>
 
         <button class="updateHover">
-          <i *ngIf="module=='COS301'" class="fa fa-graduation-cap" aria-hidden="true" style="color: #c34ffd;"></i>
-          <i *ngIf="module!='COS301'"class="fa fa-graduation-cap" aria-hidden="true"></i>
+          <i *ngIf="!seenModules[i]&&i==1" class="fa fa-graduation-cap" aria-hidden="true" style="color: #c34ffd;"></i>
+          <i *ngIf="seenModules[i]&&i==1" class="fa fa-graduation-cap" aria-hidden="true"></i>
+          <i *ngIf="i!=1" class="fa fa-graduation-cap" aria-hidden="true"></i>
+
 
         </button>
 
@@ -569,9 +576,9 @@
         <div class="chatroomspage">
           <div class="roomHeader" *ngIf="roomsPage">
             <div class="headerInfoContainerOpen">
-              <div class="roomTitleOpen">{{moduleName}}</div>
+              <div class="roomTitleOpen"><b>{{moduleName}}</b></div>
               <div class="fileContainer Open" (click)="showPopup = true">
-                <div class="roomTitleOpen">Open Discussion Room</div>
+                <div class="roomTitleOpen2">Open Discussion Room</div>
                 <i
                   class="fas fa-plus-circle"
                   style="

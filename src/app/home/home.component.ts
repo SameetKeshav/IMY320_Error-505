@@ -592,6 +592,7 @@ export class HomeComponent {
     this.seenModules.push(false);
     this.showModules = !this.showModules;
     this.options = this.options.filter((item) => item !== m);
+    this.allOptions = this.allOptions.filter((item) => item !== m);
     console.log(this.options);
 
     if (m == 'COS301') {
@@ -944,7 +945,8 @@ export class HomeComponent {
   }
   remove(m: any) {
     this.modules = this.modules.filter((item) => item !== m);
-    this.options.push(m);
+    // this.options.push(m);
+    this.allOptions.push(m);
     if (m == 'COS301') {
       this.monday[3] = {};
       this.friday[7] = {};

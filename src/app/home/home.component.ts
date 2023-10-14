@@ -244,56 +244,85 @@ export class HomeComponent {
   modules = ['COS330', 'COS301', 'COS333'];
   activityData = [
     {
-      date: '22/09',
-      name: [
-        'Natasha Schwarts',
-        'a Tutor (James Payne)',
-        'You',
-        'Kaden Bernard',
+      "date": "22/09",
+      "name": [
+        "Natasha Schwarts",
+        "A Tutor (James Payne)",
+        "You",
+        "Kaden Bernard",
+        "A Tutor (James Payne)",
+        "Natasha Schwarts",
+        "Kaden Bernard",
+        "A Tutor (James Payne)",
+        "Kaden Bernard"
       ],
-      category: ['message', 'tutor', 'notification', 'message'],
-      time: ['3:30 AM', '1:00 PM', '2:00 PM', '11:00 PM'],
-      message: [
-        'sent you a private message',
-        'replied to your request',
-        'were mentioned on COS 333',
-        'sent you a private message',
+      "category": ["message", "tutor", "notification", "message", "message", "notification", "message", "tutor", "message"],
+      "time": ["3:30 AM", "1:00 PM", "2:00 PM", "11:00 PM", "4:30 AM", "6:00 AM", "8:45 AM", "9:30 AM", "12:00 PM", "3:15 PM"],
+      "message": [
+        "sent you a private message",
+        "replied to your request",
+        "were mentioned on COS 333",
+        "sent you a private message",
+        "sent you a private message",
+        "shared a resource on COS 330",
+        "sent you 20 messages",
+        "shared a resource on COS 330",
+        "sent you 15 messages"
       ],
-      module: ['none', 'COS333', 'COS330', 'none'],
-      route: ['Natasha Schwarts', 'James Payne', 'cos330', 'Kaden Bernard'],
-      url: [
-        'https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg',
-        'https://media.istockphoto.com/id/597958694/photo/young-adult-male-student-in-the-lobby-of-a-university.jpg?s=612x612&w=0&k=20&c=QaNEzmcKrLJzmwOcu2lgwm1B7rm3Ouq2McYYdmoMGpU=',
-        'none',
-        'https://remembermephotography.com/wp-content/uploads/2016/04/BD008cc.jpg',
-      ],
-    },
+      "module": ["none", "COS333", "COS330", "none", "COS333", "none", "none", "COS330", "none"],
+      "route": ["Natasha Schwarts", "James Payne", "cos330", "Kaden Bernard", "James Payne", "Natasha Schwarts", "Kaden Bernard", "cos330", "Kaden Bernard"],
+      "url": [
+        "https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg",
+        "https://media.istockphoto.com/id/597958694/photo/young-adult-male-student-in-the-lobby-of-a-university.jpg?s=612x612&w=0&k=20&c=QaNEzmcKrLJzmwOcu2lgwm1B7rm3Ouq2McYYdmoMGpU=",
+        "none",
+        "https://remembermephotography.com/wp-content/uploads/2016/04/BD008cc.jpg",
+        "https://media.istockphoto.com/id/597958694/photo/young-adult-male-student-in-the-lobby-of-a-university.jpg?s=612x612&w=0&k=20&c=QaNEzmcKrLJzmwOcu2lgwm1B7rm3Ouq2McYYdmoMGpU=",
+        "https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg",
+        "https://remembermephotography.com/wp-content/uploads/2016/04/BD008cc.jpg",
+        "https://media.istockphoto.com/id/597958694/photo/young-adult-male-student-in-the-lobby-of-a-university.jpg?s=612x612&w=0&k=20&c=QaNEzmcKrLJzmwOcu2lgwm1B7rm3Ouq2McYYdmoMGpU=",
+        "https://remembermephotography.com/wp-content/uploads/2016/04/BD008cc.jpg"
+      ]
+    },    
     {
-      date: '21/09',
-      name: [
-        'Natasha Schwarts',
-        'a Tutor (James Payne)',
-        '52',
-        'Tutor (James Payne)',
+      "date": "21/09",
+      "name": [
+        "Natasha Schwarts",
+        "A Tutor (James Payne)",
+        "52",
+        "Tutor (James Payne)",
+        "Kaden Bernard",
+        "Natasha Schwarts",
+        "Tutor (James Payne)",
+        "Kaden Bernard",
+        "A Tutor (James Payne)"
       ],
-      category: ['message', 'tutor', 'notification', 'material'],
-      time: ['5:00 PM', '4:00 PM', '11:30 AM', '12:00 PM'],
-      message: [
-        'sent you a private message',
-        'replied to your request',
-        'new messages on COS 330',
-        'posted material for COS 330',
+      "category": ["message", "tutor", "notification", "material", "message", "notification", "tutor", "message", "notification", "tutor"],
+      "time": ["5:00 AM", "4:00 AM", "11:30 AM", "12:00 PM", "1:45 PM", "3:20 PM", "6:15 PM", "7:30 PM", "8:00 PM", "9:10 PM"],
+      "message": [
+        "sent you a private message",
+        "replied to your request",
+        "new messages on COS 330",
+        "shared a resource on COS 330",
+        "sent you a private message",
+        "shared a resource on COS 330",
+        "shared a resource on COS 330",
+        "sent you 10 private messages",
+        "sent you 5 messages"
       ],
-      module: ['none', 'COS333', 'COS330', 'COS330'],
-      route: ['Natasha Schwarts', 'James Payne', 'cos330', 'cos330'],
-      url: [
-        'https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg',
-        'https://media.istockphoto.com/id/597958694/photo/young-adult-male-student-in-the-lobby-of-a-university.jpg?s=612x612&w=0&k=20&c=QaNEzmcKrLJzmwOcu2lgwm1B7rm3Ouq2McYYdmoMGpU=',
-        'none',
-        'none',
-        'none',
-      ],
-    },
+      "module": ["none", "COS333", "COS330", "COS330", "COS331", "COS330", "COS330", "none", "COS330"],
+      "route": ["Natasha Schwarts", "James Payne", "cos330", "cos330", "Kaden Bernard", "cos330", "cos330", "Kaden Bernard", "James Payne"],
+      "url": [
+        "https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg",
+        "https://media.istockphoto.com/id/597958694/photo/young-adult-male-student-in-the-lobby-of-a-university.jpg?s=612x612&w=0&k=20&c=QaNEzmcKrLJzmwOcu2lgwm1B7rm3Ouq2McYYdmoMGpU=",
+        "none",
+        "none",
+        "https://remembermephotography.com/wp-content/uploads/2016/04/BD008cc.jpg",
+        "none",
+        "none",
+        "https://remembermephotography.com/wp-content/uploads/2016/04/BD008cc.jpg",
+        "none"
+      ]
+    }    
   ];
 
   chatList = [

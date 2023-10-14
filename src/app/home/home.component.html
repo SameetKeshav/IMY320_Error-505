@@ -188,72 +188,15 @@
           <label *ngIf="mySchedule" style="color: #0572c0">My Schedule</label>
         </div>
       </div>
-      <!--
-      <div class="Options" *ngIf="modulePage">
-        <div class="moduleNameHeader">{{ moduleName }}</div>
-        <div class="searchChatOuter">
-          <div class="searchChat">
-            <div class="searchChatContainer">
-              <input
-                type="text"
-                class="searchChatInput"
-                placeholder="Search chat or category..."
-                (click)="openSearch()"
-              />
-              <div class="searchChatIconContainer">
-                <div class="searchChatIcon">
-                  <i
-                    class="fas fa-search"
-                    *ngIf="!showSearch && !showJob && !showMaterial"
-                  ></i>
-                  <i
-                    class="fas fa-times"
-                    (click)="closeSearch()"
-                    *ngIf="showSearch || showJob || showMaterial"
-                  ></i>
-                </div>
-              </div>
-            </div>
-            <div class="searchOptions" *ngIf="showSearch">
-              <div class="searchOptionsContainer">
-                <button class="searchFilter" (click)="openJob()">Jobs</button>
-                <button class="searchFilter" (click)="openMaterial()">
-                  Materials
-                </button>
-              </div>
-
-              <div class="searchLine"></div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- <div class="Options" *ngIf="tutorPage">
-        <div class="tutorNameHeader">{{ tutorName }}</div>
-        <div class="tutorHeaderImg">
-          <img class="tutorUserImg" src="{{ tutorUrl }}" />
-        </div>
-        <div class="tutorHeaderIcon">
-          <i
-            class="fas fa-graduation-cap"
-            style="font-size: 16px; color: #c34ffd"
-          ></i>
-        </div>
-      </div> -->
-
-      <!-- <div class="Options" *ngIf="classPage">
-        <div class="classNameHeader">{{ className }}</div>
-        <div class="classImg">
-          <img class="classUserImg" src="{{ classUrl }}" />
-        </div>
-      </div> -->
+     
     </div>
 
     <div *ngIf="activityStream" class="TopicTitle"><b>Activity Stream</b></div>
     
+    <div *ngIf="myChats" class="TopicTitle "><b>Chats</b></div>
+
     <div class="scheduleContainerTheBigOne" *ngIf="mySchedule">
       <div  class="TopicTitle scheduleBorder"><b>Schedule</b></div>
-      <!-- <div *ngIf="mySchedule" class="border3"></div> -->
     </div>
     
 
@@ -299,10 +242,9 @@
             </div>
           </div>
         </div>
+        
       </div>
       <div *ngIf="myChats" class="Chat_container">
-        <div class="TopicTitleChat"><b>Chats</b></div>
-        <div class="border3Chat"></div>
         <div *ngFor="let chat of chatList">
           <div class="chat" (click)="openClass(chat.name, chat.profilePicture)">
             <div class="profile">

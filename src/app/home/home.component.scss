@@ -225,8 +225,8 @@ input:focus {
 }
 
 .Chat_container {
-  width: 50%;
-  margin-left: 26%;
+  width: 80%;
+  margin-left: 10%;
 }
 
 .Schedule_container {
@@ -239,7 +239,7 @@ input:focus {
   font-size: 30px;
   color: #0572c0;
   margin-left: 10%;
-  margin-bottom: 10px;
+  height: 5%;
   width: 82%;
 }
 
@@ -252,7 +252,6 @@ input:focus {
 }
 
 .scheduleBorder {
-  padding-bottom: 10px;
   border-bottom: 2.5px solid #e5e5e5;
 }
 
@@ -367,7 +366,6 @@ html {
 
 .chat {
   width: 90%;
-  margin-left: 10%;
   height: 90px;
   display: flex;
   align-items: center;

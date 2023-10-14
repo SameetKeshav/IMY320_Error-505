@@ -244,7 +244,7 @@ export class HomeComponent {
   modules = ['COS330', 'COS301', 'COS333'];
   activityData = [
     {
-      "date": "22/09",
+      "date": this.getDateInDDMM(0),
       "name": [
         "Natasha Schwarts",
         "A Tutor (James Payne)",
@@ -284,7 +284,7 @@ export class HomeComponent {
       ]
     },    
     {
-      "date": "21/09",
+      "date": this.getDateInDDMM(1),
       "name": [
         "Natasha Schwarts",
         "A Tutor (James Payne)",
@@ -296,7 +296,7 @@ export class HomeComponent {
         "Kaden Bernard",
         "A Tutor (James Payne)"
       ],
-      "category": ["message", "tutor", "notification", "material", "message", "notification", "tutor", "message", "notification", "tutor"],
+      "category": ["message", "tutor", "notification", "material", "message", "notification", "tutor", "message", "tutor"],
       "time": ["5:00 AM", "4:00 AM", "11:30 AM", "12:00 PM", "1:45 PM", "3:20 PM", "6:15 PM", "7:30 PM", "8:00 PM", "9:10 PM"],
       "message": [
         "sent you a private message",
@@ -322,7 +322,57 @@ export class HomeComponent {
         "https://remembermephotography.com/wp-content/uploads/2016/04/BD008cc.jpg",
         "none"
       ]
-    }    
+    },
+    {
+      "date": this.getDateInDDMM(2),
+      "name": [
+        "Natasha Schwarts",
+        "A Tutor (James Payne)",
+        "Kaden Bernard",
+        "Tutor (James Payne)",
+      ],
+      "category": ["notification", "tutor", "message", "material"],
+      "time": ["5:00 AM", "4:00 AM", "11:30 AM", "12:00 PM"],
+      "message": [
+        "shared a resource on COS 330",
+        "sent you a private message",
+        "sent you a private message",
+        "shared a resource on COS 330",
+      ],
+      "module": ["COS330", "James Payne", "Kaden Bernard", "COS330"],
+      "route": ["cos330", "James Payne", "Kaden Bernard", "cos330"],
+      "url": [
+        "none",
+        "none",
+        "https://remembermephotography.com/wp-content/uploads/2016/04/BD008cc.jpg",
+        "none",
+      ]
+    },
+    {
+      "date": this.getDateInDDMM(3),
+      "name": [
+        "Natasha Schwarts",
+        "Kaden Bernard",
+        "Kaden Bernard",
+        "Tutor (James Payne)",
+      ],
+      "category": ["notification", "message", "notification", "material"],
+      "time": ["5:00 AM", "4:00 AM", "11:30 AM", "12:00 PM"],
+      "message": [
+        "shared a resource on COS 330",
+        "sent you 5 private messages",
+        "shared a resource on COS 330",
+        "sent you a private message",
+      ],
+      "module": ["COS330", "Kaden Bernard", "COS330", "James Payne"],
+      "route": ["cos330", "Kaden Bernard", "cos330", "James Payne"],
+      "url": [
+        "none",
+        "https://remembermephotography.com/wp-content/uploads/2016/04/BD008cc.jpg",
+        "none",
+        "none",
+      ]
+    }         
   ];
 
   chatList = [
@@ -345,6 +395,15 @@ export class HomeComponent {
       message: 'Hey Julianna, how are you?',
     },
   ];
+
+  getDateInDDMM(offset: number): string {
+    const today = new Date();
+    const targetDate = new Date(today.getTime() - offset * 24 * 60 * 60 * 1000);
+  
+    const dd = String(targetDate.getDate()).padStart(2, '0');
+    const mm = String(targetDate.getMonth() + 1).padStart(2, '0'); // January is 0!
+    return dd + '/' + mm;
+  }
 
   constructor() {
     this.activityStreamData = activityData;

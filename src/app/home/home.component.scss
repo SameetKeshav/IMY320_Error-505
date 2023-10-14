@@ -14,6 +14,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  // overflow-y: auto;
+}
+
+.headerstuff {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
@@ -92,36 +100,35 @@ input:focus {
   font-size: 16px;
   transition: 0.3s;
 }
-.OptionalModule{
-    height: 50px;
-    width: 100%;
-    display: flex;
-    color: #333333;
-    font-size: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-     margin-bottom: 7.5px;
-     margin-top: 7.5px;
-    border-bottom: #ffffff solid 1px;
+.OptionalModule {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  color: #333333;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7.5px;
+  margin-top: 7.5px;
+  border-bottom: #ffffff solid 1px;
 
-    
-    align-items: center;
+  align-items: center;
 }
 
-.add{
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
+.add {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
 }
 
-.add:hover{
-    color: #0572c0;
-    cursor: pointer;
+.add:hover {
+  color: #0572c0;
+  cursor: pointer;
 }
 
-.OptionName{
-    margin-left: 20px;
+.OptionName {
+  margin-left: 20px;
 }
 .module:hover {
   transform: translateY(-5px);
@@ -133,9 +140,9 @@ input:focus {
   align-items: center;
   margin-left: 20px;
 }
-.moduleName:hover{
-    cursor: pointer;
-    color: #0572c0;
+.moduleName:hover {
+  cursor: pointer;
+  color: #0572c0;
 }
 
 .Remove {
@@ -243,7 +250,7 @@ input:focus {
   width: 82%;
 }
 
-.TopicTitleChat{
+.TopicTitleChat {
   font-size: 30px;
   color: #0572c0;
   margin-top: 8%;
@@ -255,14 +262,12 @@ input:focus {
   border-bottom: 2.5px solid #e5e5e5;
 }
 
-
 .TopicTitle2 {
   font-size: 30px;
   color: #0572c0;
   margin-bottom: 20px;
   // position: static;
   // top: 20px;
-
 }
 
 .record {
@@ -272,9 +277,7 @@ input:focus {
   align-items: center;
   color: #333333;
   cursor: pointer;
-
 }
-
 
 .recordDay {
   width: 100%;
@@ -293,7 +296,7 @@ input:focus {
 .record:hover .icon {
   color: #0572c0;
 }
-.record:hover .recordText{
+.record:hover .recordText {
   color: #0572c0;
 }
 .icon label {
@@ -319,7 +322,6 @@ input:focus {
   width: 80%;
   background-color: #e5e5e5;
   margin-bottom: 10px;
-  
 }
 
 .border3Chat {
@@ -327,7 +329,6 @@ input:focus {
   width: 90%;
   background-color: #e5e5e5;
   margin-bottom: 10px;
-  
 }
 
 .border4 {
@@ -348,8 +349,8 @@ input:focus {
   padding-left: 25px;
   width: 90%;
 }
-.dayText:hover{
-  cursor:default;
+.dayText:hover {
+  cursor: default;
 }
 .recordText {
   font-size: larger;
@@ -386,7 +387,7 @@ html {
 .profile:hover {
   cursor: pointer;
 }
-.chat:hover .details{
+.chat:hover .details {
   color: #0572c0;
 }
 .profile {
@@ -410,8 +411,6 @@ html {
   height: 120%;
   display: flex;
 }
-
-
 
 .Day Label {
   font-size: 20px;
@@ -451,7 +450,7 @@ html {
   padding-bottom: 2px;
 }
 
-.fileIcon{
+.fileIcon {
   position: absolute;
   right: 0;
   bottom: -10px;
@@ -512,7 +511,6 @@ html {
   opacity: 0;
 }
 
-
 .scheduleClassLocationModule {
   left: 1px;
   top: 31px;
@@ -556,7 +554,7 @@ html {
   justify-content: space-between;
 }
 
-.Open{
+.Open {
   cursor: pointer;
 }
 
@@ -565,11 +563,11 @@ html {
   margin-top: 3px;
   margin-left: 10px;
 }
-.roomTitle:hover{
-  cursor:default;
+.roomTitle:hover {
+  cursor: default;
 }
-.roomFilename:hover{
-  cursor:default;
+.roomFilename:hover {
+  cursor: default;
 }
 .roomTitleOpen {
   font-size: 24px;
@@ -584,26 +582,24 @@ html {
   display: flex;
   align-items: center;
 }
-.loadIconsContainer{
+.loadIconsContainer {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.roomTitleOpen2:hover{
+.roomTitleOpen2:hover {
   color: #0572c0;
 }
-.roomTitleOpen2:hover .fa-plus-circle{
+.roomTitleOpen2:hover .fa-plus-circle {
   color: #c34ffd;
 }
-.fa-plus-circle{
+.fa-plus-circle {
   color: #0572c0;
 }
 
-.fa-plus-circle:hover{
+.fa-plus-circle:hover {
   color: #c34ffd;
 }
-
-
 
 .roomFilename {
   font-size: 14px;
@@ -616,7 +612,7 @@ html {
   display: flex;
 }
 
-.fileContainerTutor{
+.fileContainerTutor {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -635,7 +631,7 @@ html {
 
 .loadBtns1 {
   font-size: 20px;
- 
+
   cursor: pointer;
 }
 
@@ -738,31 +734,31 @@ html {
   word-wrap: break-word;
 }
 
-.messageImg2:hover{
-  cursor:default
+.messageImg2:hover {
+  cursor: default;
 }
-.messageName2:hover{
-  cursor:default
+.messageName2:hover {
+  cursor: default;
 }
 
-.messageName:hover{
+.messageName:hover {
   cursor: pointer;
   color: #0572c0;
 }
 
-.messageImg:hover .messageName{
+.messageImg:hover .messageName {
   color: #0572c0;
   cursor: pointer;
 }
 
-.myMessageName:hover{
+.myMessageName:hover {
   cursor: default;
 }
-.myMessageText:hover{
+.myMessageText:hover {
   cursor: default;
 }
 
-.myMessageTime:hover{
+.myMessageTime:hover {
   cursor: default;
 }
 
@@ -779,10 +775,10 @@ html {
   word-wrap: break-word;
 }
 
-.messageText:hover{
+.messageText:hover {
   cursor: default;
 }
-.messageTime:hover{
+.messageTime:hover {
   cursor: default;
 }
 .messageTime {
@@ -829,16 +825,15 @@ html {
   height: 19px;
   cursor: pointer;
 }
-.fa-paper-plane{
+.fa-paper-plane {
   color: #00355c;
 }
-.messageIcon:hover i{
+.messageIcon:hover i {
   cursor: pointer;
   color: #0572c0;
 }
 
-
-.fa-upload:hover{
+.fa-upload:hover {
   background-color: #c34ffd;
 }
 
@@ -924,9 +919,9 @@ html {
   top: 38px;
   position: absolute;
 }
-.tutorContainer:hover .tutorName{
+.tutorContainer:hover .tutorName {
   color: #0572c0;
-} 
+}
 .tutorImg {
   width: 34px;
   height: 34px;
@@ -961,7 +956,7 @@ html {
   cursor: pointer;
 }
 
-.userInfoContainer:hover .userName{
+.userInfoContainer:hover .userName {
   color: #0572c0;
 }
 .usersList {
@@ -1300,10 +1295,10 @@ html {
   color: white;
   cursor: pointer;
 }
-.requestCancelBtn:hover{
+.requestCancelBtn:hover {
   background-color: #888;
 }
-.requestAcceptBtn:hover{
+.requestAcceptBtn:hover {
   background-color: #c34ffd;
 }
 .requestAcceptBtn {
@@ -1387,7 +1382,6 @@ html {
   font-family: Inter, sans-serif;
   font-weight: 400;
   word-wrap: break-word;
-
 }
 
 .myMessageImg {
@@ -1481,7 +1475,6 @@ html {
   justify-content: space-between;
   align-items: center;
 }
-
 
 //   ==================headers========================
 .moduleNameHeader {
@@ -1634,10 +1627,11 @@ html {
   font-size: 20px;
 }
 
-.weekday{
-  display: flex; flex-direction: column; align-items: center;
+.weekday {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-right: #e5e5e5 solid 2px;
-
 }
 
 .days {
@@ -1648,7 +1642,7 @@ html {
   padding: 5px;
 }
 
-.days label{
+.days label {
   width: 20%;
   text-align: center;
 }
@@ -1761,7 +1755,6 @@ html {
   display: block;
   background-color: #0572c0;
 }
-
 
 .removeHover {
   background-color: transparent;
@@ -1887,7 +1880,7 @@ html {
   width: 87px;
   height: 33px;
   background: #5e5e5e;
-    border-radius: 50px;
+  border-radius: 50px;
   font-family: Outfit, sans-serif;
   border: none;
   font-size: 16px;
@@ -1907,11 +1900,11 @@ html {
   cursor: pointer;
 }
 
-.closeBtn:hover{
+.closeBtn:hover {
   background-color: #888;
 }
 
-.closeBtn1:hover{
+.closeBtn1:hover {
   background-color: #c34ffd;
 }
 
@@ -1938,8 +1931,8 @@ html {
 }
 
 .custom-input:focus {
-  border-color: #007bff; 
-  box-shadow: 0 0 2px #1f262e; 
+  border-color: #007bff;
+  box-shadow: 0 0 2px #1f262e;
 }
 
 /* app.component.css */
@@ -1969,9 +1962,8 @@ html {
   cursor: pointer;
 }
 
-
 .selected-file-name {
-  font-size: 12px; 
+  font-size: 12px;
   margin-top: 5px;
   text-align: center;
   color: #555;
@@ -2011,6 +2003,6 @@ html {
   background-color: #555;
 }
 
-.msg1:hover .messageName{
+.msg1:hover .messageName {
   color: #0572c0;
 }

@@ -5,6 +5,7 @@
 
 <div class="container">
   <div class="menu">
+    <div class="headerstuff">
     <div class="title" (click)="isactivityStream()" style="cursor: pointer">
       <img
         src="assets/logo.png"
@@ -39,14 +40,16 @@
         ></i>
       </div>
     </div>
+  </div>
+    <div *ngIf="showModules" style="overflow-y: auto; height: 100%; width: 100%; padding-bottom: 20px;">
     <div
-      *ngIf="showModules"
+      
       style="
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 20px;
+        
       "
     >
     <div class="module" *ngFor="let module of modules; let i = index">
@@ -86,15 +89,15 @@
         <button class="removeHover" (click)="remove(module)">
           <i class="fa fa-minus-circle" aria-hidden="true"></i>
         </button>
-
+<!-- 
         <button class="removeBtn">Remove</button>
         <button class="updateBtn">Tutor Updates</button>
-        <button class="newBtn">New Chatrooms</button>
+        <button class="newBtn">New Chatrooms</button> -->
       </div>
     </div>
 
     </div>
-
+  </div>
 
     <!-- <div
       *ngIf="!showModules"

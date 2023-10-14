@@ -565,7 +565,12 @@ html {
   margin-top: 3px;
   margin-left: 10px;
 }
-
+.roomTitle:hover{
+  cursor:default;
+}
+.roomFilename:hover{
+  cursor:default;
+}
 .roomTitleOpen {
   font-size: 24px;
   margin-top: 3px;
@@ -576,7 +581,29 @@ html {
   font-size: 24px;
   margin-top: 3px;
   margin-left: -5px;
+  display: flex;
+  align-items: center;
 }
+.loadIconsContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.roomTitleOpen2:hover{
+  color: #0572c0;
+}
+.roomTitleOpen2:hover .fa-plus-circle{
+  color: #c34ffd;
+}
+.fa-plus-circle{
+  color: #0572c0;
+}
+
+.fa-plus-circle:hover{
+  color: #c34ffd;
+}
+
+
 
 .roomFilename {
   font-size: 14px;
@@ -603,6 +630,16 @@ html {
 }
 
 .loadBtns:hover {
+  color: #0572c0;
+}
+
+.loadBtns1 {
+  font-size: 20px;
+ 
+  cursor: pointer;
+}
+
+.loadBtns1:hover {
   color: #0572c0;
 }
 
@@ -683,6 +720,52 @@ html {
   word-wrap: break-word;
 }
 
+.messageImg2 {
+  width: 34.17px;
+  height: 33.41px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.messageName2 {
+  left: 45px;
+  //   top: 2px;
+  position: absolute;
+  color: black;
+  font-size: 16px;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.messageImg2:hover{
+  cursor:default
+}
+.messageName2:hover{
+  cursor:default
+}
+
+.messageName:hover{
+  cursor: pointer;
+  color: #0572c0;
+}
+
+.messageImg:hover .messageName{
+  color: #0572c0;
+  cursor: pointer;
+}
+
+.myMessageName:hover{
+  cursor: default;
+}
+.myMessageText:hover{
+  cursor: default;
+}
+
+.myMessageTime:hover{
+  cursor: default;
+}
+
 .messageText {
   width: 552px;
   // margin-left: 0px;
@@ -696,6 +779,12 @@ html {
   word-wrap: break-word;
 }
 
+.messageText:hover{
+  cursor: default;
+}
+.messageTime:hover{
+  cursor: default;
+}
 .messageTime {
   right: 300px;
   //   top: 6px;
@@ -740,6 +829,13 @@ html {
   height: 19px;
   cursor: pointer;
 }
+.fa-paper-plane{
+  color: #00355c;
+}
+.messageIcon:hover i{
+  cursor: pointer;
+  color: #0572c0;
+}
 
 .messageInputText {
   left: 17.36px;
@@ -754,6 +850,10 @@ html {
   outline: none;
   background: transparent;
   width: 80%;
+}
+
+.fa-upload:hover{
+  background-color: #c34ffd;
 }
 
 //===================================================userlist===============================
@@ -837,9 +937,10 @@ html {
   left: 20px;
   top: 38px;
   position: absolute;
-  cursor: pointer;
 }
-
+.tutorContainer:hover .tutorName{
+  color: #0572c0;
+} 
 .tutorImg {
   width: 34px;
   height: 34px;
@@ -874,6 +975,9 @@ html {
   cursor: pointer;
 }
 
+.userInfoContainer:hover .userName{
+  color: #0572c0;
+}
 .usersList {
   width: 245px;
   height: 34px;
@@ -907,7 +1011,6 @@ html {
   //   position: absolute;
   border-radius: 100px;
   object-fit: cover;
-  cursor: pointer;
 }
 
 .line1 {
@@ -1204,14 +1307,19 @@ html {
   margin-left: 200px;
   position: absolute;
   font-family: Outfit, sans-serif;
-  background: #868288;
+  background-color: #868288;
   border-radius: 50px;
   border: none;
   font-size: 16px;
   color: white;
   cursor: pointer;
 }
-
+.requestCancelBtn:hover{
+  background-color: #888;
+}
+.requestAcceptBtn:hover{
+  background-color: #c34ffd;
+}
 .requestAcceptBtn {
   width: 87px;
   height: 33px;
@@ -1219,7 +1327,7 @@ html {
   margin-left: 320px;
   top: 290px;
   position: absolute;
-  background: #c34ffd;
+  background-color: #0572c0;
   border-radius: 50px;
   font-family: Outfit, sans-serif;
   border: none;
@@ -1237,7 +1345,7 @@ html {
   padding-right: 10px;
   // top: 290px;
   // position: absolute;
-  background: #be4cf7;
+  background: #0572c0;
   border-radius: 50px;
   font-family: Outfit, sans-serif;
   border: none;
@@ -1246,6 +1354,9 @@ html {
   cursor: pointer;
 }
 
+.requestBtn:hover {
+  background-color: #c34ffd;
+}
 //   =========================================class chat==========================================
 
 // ::-webkit-scrollbar {
@@ -1803,10 +1914,18 @@ html {
 .closeBtn {
   width: 87px;
   height: 33px;
-  //   left: 333px;
-  // margin-left: 320px;
-  // top: 290px;
-  // position: absolute;
+  background: #5e5e5e;
+    border-radius: 50px;
+  font-family: Outfit, sans-serif;
+  border: none;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.closeBtn1 {
+  width: 87px;
+  height: 33px;
   background: #007bff;
   border-radius: 50px;
   font-family: Outfit, sans-serif;
@@ -1814,6 +1933,14 @@ html {
   font-size: 16px;
   color: white;
   cursor: pointer;
+}
+
+.closeBtn:hover{
+  background-color: #888;
+}
+
+.closeBtn1:hover{
+  background-color: #c34ffd;
 }
 
 .inputData {
@@ -1870,6 +1997,7 @@ html {
   cursor: pointer;
 }
 
+
 .selected-file-name {
   font-size: 12px; 
   margin-top: 5px;
@@ -1909,4 +2037,8 @@ html {
 
 .scrollable-list::-webkit-scrollbar-thumb:hover {
   background-color: #555;
+}
+
+.msg1:hover .messageName{
+  color: #0572c0;
 }

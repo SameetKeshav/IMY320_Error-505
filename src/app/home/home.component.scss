@@ -272,7 +272,9 @@ input:focus {
   align-items: center;
   color: #333333;
   cursor: pointer;
+
 }
+
 
 .recordDay {
   width: 100%;
@@ -287,6 +289,12 @@ input:focus {
   height: 100%;
   display: flex;
   align-items: center;
+}
+.record:hover .icon {
+  color: #0572c0;
+}
+.record:hover .recordText{
+  color: #0572c0;
 }
 .icon label {
   font-size: 12px;
@@ -340,7 +348,9 @@ input:focus {
   padding-left: 25px;
   width: 90%;
 }
-
+.dayText:hover{
+  cursor:default;
+}
 .recordText {
   font-size: larger;
   color: #333333;
@@ -375,6 +385,9 @@ html {
 .chat:hover,
 .profile:hover {
   cursor: pointer;
+}
+.chat:hover .details{
+  color: #0572c0;
 }
 .profile {
   width: 75px;

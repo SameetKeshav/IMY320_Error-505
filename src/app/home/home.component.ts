@@ -28,6 +28,9 @@ export class HomeComponent {
   chatRoom = false;
   roomsPage = true;
   request = false;
+  loggedIn = false;
+  signUp = false;
+  about = false;
   roomId: number = 0;
   className = 'TempName';
   moduleName = '';
@@ -43,6 +46,7 @@ export class HomeComponent {
   showModules = true;
   showPopup = false;
   hasMemo = false;
+  username = '';
   seenModules = [false,false,false];
   options = [
     'COS341',
@@ -386,13 +390,13 @@ export class HomeComponent {
       name: 'Natasha Schwarts',
       profilePicture:
         'https://writestylesonline.com/wp-content/uploads/2018/11/Three-Statistics-That-Will-Make-You-Rethink-Your-Professional-Profile-Picture-1024x1024.jpg',
-      message: 'Hey Julianna, nice to see you here.',
+      message: 'Hey, nice to see you here.',
     },
     {
       name: 'Kaden Bernard',
       profilePicture:
         'https://remembermephotography.com/wp-content/uploads/2016/04/BD008cc.jpg',
-      message: 'Hey Julianna, how are you?',
+      message: 'Hey, how are you?',
     },
   ];
 
@@ -426,6 +430,7 @@ export class HomeComponent {
     this.modulePage = false;
     this.tutorPage = false;
     this.classPage = false;
+    this.about = false;
   }
   ismyChats() {
     this.activityStream = false;
@@ -434,6 +439,7 @@ export class HomeComponent {
     this.modulePage = false;
     this.tutorPage = false;
     this.classPage = false;
+    this.about = false;
   }
   ismySchedule() {
     this.activityStream = false;
@@ -442,13 +448,14 @@ export class HomeComponent {
     this.modulePage = false;
     this.tutorPage = false;
     this.classPage = false;
+    this.about = false;
   }
 
   requestChange() {
     const message = (<HTMLInputElement>document.getElementById('requestMessage'))
       .value;
     this.tutorChat.messages.push({
-      from: "Julianna Venter",
+      from: this.username,
       date: this.formatCurrentDate(),
       profilePicture: "https://image.shutterstock.com/image-photo/image-young-asian-woman-company-260nw-2122700972.jpg",
       message: message,
@@ -484,6 +491,7 @@ export class HomeComponent {
     this.moduleName = module;
     this.chatRoom = false;
     this.roomsPage = true;
+    this.about = false;
   }
 
   openTutor(tutor: string, url: string) {
@@ -495,6 +503,7 @@ export class HomeComponent {
     this.activityStream = false;
     this.tutorName = tutor;
     this.tutorUrl = url;
+    this.about = false;
     // this.request = true;
   }
 
@@ -513,30 +522,35 @@ export class HomeComponent {
       this.className = name;
       this.classUrl = url;
     }
+    this.about = false;
   }
 
   openSearch() {
     this.showSearch = true;
     this.showJob = false;
     this.showMaterial = false;
+    this.about = false;
   }
 
   closeSearch() {
     this.showSearch = false;
     this.showJob = false;
     this.showMaterial = false;
+    this.about = false;
   }
 
   openJob() {
     this.showJob = true;
     this.showMaterial = false;
     this.showSearch = false;
+    this.about = false;
   }
 
   openMaterial() {
     this.showJob = false;
     this.showMaterial = true;
     this.showSearch = false;
+    this.about = false;
   }
 
   setButtonOpacityToOne() {
@@ -572,7 +586,7 @@ export class HomeComponent {
 
     if (message !== '') {
       this.tutorChat.messages.push({
-        from: 'Julianna Venter',
+        from: this.username,
         date: this.formatCurrentDate(),
         profilePicture:
           'https://image.shutterstock.com/image-photo/image-young-asian-woman-company-260nw-2122700972.jpg',
@@ -590,7 +604,7 @@ export class HomeComponent {
 
     if (message !== '') {
       this.moduleChat.messages[this.roomId].push({
-        from: 'Julianna Venter',
+        from: this.username,
         date: this.formatCurrentDate(),
         profilePicture:
           'https://image.shutterstock.com/image-photo/image-young-asian-woman-company-260nw-2122700972.jpg',
@@ -607,7 +621,7 @@ export class HomeComponent {
 
     if (message !== '') {
       this.classChat.messages.push({
-        from: 'Julianna Venter',
+        from: this.username,
         date: this.formatCurrentDate(),
         profilePicture:
           'https://image.shutterstock.com/image-photo/image-young-asian-woman-company-260nw-2122700972.jpg',
@@ -643,6 +657,16 @@ export class HomeComponent {
     this.roomsPage = false;
     this.roomId = roomName - 1;
     console.log('id: ' + this.roomId);
+  }
+
+  showAbout() {
+    this.about = true;
+    this.activityStream = false;
+    this.myChats = false;
+    this.mySchedule = false;
+    this.modulePage = false;
+    this.tutorPage = false;
+    this.classPage = false;
   }
 
   download() {
@@ -1142,4 +1166,11 @@ export class HomeComponent {
   SeeModule(i: number) {
     this.seenModules[i] = true;
   }
+
+  getUsername(value: string) {
+    this.username = value;
+    console.log(this.username);
+  }
+
+
 }

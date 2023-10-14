@@ -3,101 +3,129 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
 />
 
-<div class="container">
+<div *ngIf="loggedIn" class="container">
   <div class="menu">
     <div class="headerstuff">
-    <div class="title" (click)="isactivityStream()" style="cursor: pointer">
-      <img
-        src="assets/logo.png"
-        style="object-fit: cover"
-        width="50px"
-        height="50px"
-      />
-      <h1>OmniHub</h1>
-    </div>
-    <div class="search">
-      <input
-        style="margin-top: 3px"
-        type="text"
-        class="input"
-        [(ngModel)]="searchText"
-        placeholder="Search for a module..."
-        (input)="search()"
-        (click)="searchAll()"
-      />
-      <div class="searchIcon">
-        <i
-          class="fa fa-search"
-          aria-hidden="true"
-          style="font-size: 20px; margin-left: 10px"
-          *ngIf="showModules"
-        ></i>
-        <i
-          style="font-size: 20px; margin-left: 10px"
-          class="fas fa-times"
-          (click)="searchClose()"
-          *ngIf="!showModules"
-        ></i>
+      <div class="title" (click)="isactivityStream()" style="cursor: pointer">
+        <img
+          src="assets/logo.png"
+          style="object-fit: cover"
+          width="50px"
+          height="50px"
+        />
+        <h1>OmniHub</h1>
       </div>
-    </div>
-  </div>
-    <div *ngIf="showModules" style="overflow-y: auto; height: 100%; width: 100%; padding-bottom: 20px;">
-    <div
-      
-      style="
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-      "
-    >
-    <div class="module" *ngFor="let module of modules; let i = index">
-      <div class="moduleName" (click)="openModule(module)" (click)="SeeModule(i)" >
-        <b style="cursor: pointer">{{ module }}</b>
-      </div>
-      <div class="moduleIcons">
-
-        <button class="newHover">
+      <div class="search">
+        <input
+          style="margin-top: 3px"
+          type="text"
+          class="input"
+          [(ngModel)]="searchText"
+          placeholder="Search for a module..."
+          (input)="search()"
+          (click)="searchAll()"
+        />
+        <div class="searchIcon">
           <i
-          *ngIf="!seenModules[i]&&i!=1"
-          class="fa fa-bell"
-          aria-hidden="true"
-          style="color: #c34ffd"
-        ></i>
-        <i
-          *ngIf="i==1"
-          class="fa fa-bell"
-          aria-hidden="true"
-        ></i>
-        <i
-          *ngIf="i!=1&&seenModules[i]"
-          class="fa fa-bell"
-          aria-hidden="true"
-        ></i>
-        </button>
+            class="fa fa-search"
+            aria-hidden="true"
+            style="font-size: 20px; margin-left: 10px"
+            *ngIf="showModules"
+          ></i>
+          <i
+            style="font-size: 20px; margin-left: 10px"
+            class="fas fa-times"
+            (click)="searchClose()"
+            *ngIf="!showModules"
+          ></i>
+        </div>
+      </div>
+    </div>
+    <div
+      *ngIf="showModules"
+      style="overflow-y: auto; height: 100%; width: 100%; padding-bottom: 20px"
+    >
+      <div
+        style="
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        "
+      >
+        <div class="module" *ngFor="let module of modules; let i = index">
+          <div
+            class="moduleName"
+            (click)="openModule(module)"
+            (click)="SeeModule(i)"
+          >
+            <b style="cursor: pointer">{{ module }}</b>
+          </div>
+          <div class="moduleIcons">
+            <button class="newHover">
+              <i
+                *ngIf="!seenModules[i] && i != 1"
+                class="fa fa-bell"
+                aria-hidden="true"
+                style="color: #c34ffd"
+              ></i>
+              <i *ngIf="i == 1" class="fa fa-bell" aria-hidden="true"></i>
+              <i
+                *ngIf="i != 1 && seenModules[i]"
+                class="fa fa-bell"
+                aria-hidden="true"
+              ></i>
+            </button>
 
-        <button class="updateHover">
-          <i *ngIf="!seenModules[i]&&i==1" class="fa fa-graduation-cap" aria-hidden="true" style="color: #c34ffd;"></i>
-          <i *ngIf="seenModules[i]&&i==1" class="fa fa-graduation-cap" aria-hidden="true"></i>
-          <i *ngIf="i!=1" class="fa fa-graduation-cap" aria-hidden="true"></i>
+            <button class="updateHover">
+              <i
+                *ngIf="!seenModules[i] && i == 1"
+                class="fa fa-graduation-cap"
+                aria-hidden="true"
+                style="color: #c34ffd"
+              ></i>
+              <i
+                *ngIf="seenModules[i] && i == 1"
+                class="fa fa-graduation-cap"
+                aria-hidden="true"
+              ></i>
+              <i
+                *ngIf="i != 1"
+                class="fa fa-graduation-cap"
+                aria-hidden="true"
+              ></i>
+            </button>
 
-
-        </button>
-
-
-        <button class="removeHover" (click)="remove(module)">
-          <i class="fa fa-minus-circle" aria-hidden="true"></i>
-        </button>
-<!-- 
+            <button class="removeHover" (click)="remove(module)">
+              <i class="fa fa-minus-circle" aria-hidden="true"></i>
+            </button>
+            <!-- 
         <button class="removeBtn">Remove</button>
         <button class="updateBtn">Tutor Updates</button>
         <button class="newBtn">New Chatrooms</button> -->
+          </div>
+        </div>
       </div>
     </div>
-
+    <div
+      style="
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      "
+    >
+      <i
+        style="margin-left: 20px; font-size: 30px; color: rgb(59, 59, 59)"
+        class="fas fa-sign-out-alt"
+        (click)="loggedIn = false"
+      ></i>
+      <i
+        style="margin-right: 20px; font-size: 30px; color: rgb(59, 59, 59)"
+        class="fas fa-info-circle"
+      (click)="showAbout()"></i>
     </div>
-  </div>
 
     <!-- <div
       *ngIf="!showModules"
@@ -118,20 +146,19 @@
       </div>
     </div> -->
 
-
-<div *ngIf="!showModules" class="scrollable-list">
-  <ul class="options-list">
-    <li *ngFor="let module of options" class="OptionalModule">
-      <span class="optionName">{{ module }}<br /> Semester 2</span>
-      <div class="add" (click)="add(module)">
-        <i class="fa fa-plus-square" aria-hidden="true"></i>
-      </div>
-    </li>
-  </ul>
-</div>
-
-
-
+    <div *ngIf="!showModules" class="scrollable-list">
+      <ul class="options-list">
+        <li *ngFor="let module of options" class="OptionalModule">
+          <span class="optionName"
+            >{{ module }}<br />
+            Semester 2</span
+          >
+          <div class="add" (click)="add(module)">
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
   <div class="content">
     <div class="headings">
@@ -191,21 +218,18 @@
           <label *ngIf="mySchedule" style="color: #0572c0">My Schedule</label>
         </div>
       </div>
-     
     </div>
 
     <div *ngIf="activityStream" class="TopicTitle"><b>Activity Stream</b></div>
-    
-    <div *ngIf="myChats" class="TopicTitle "><b>Chats</b></div>
+
+    <div *ngIf="myChats" class="TopicTitle"><b>Chats</b></div>
 
     <div class="scheduleContainerTheBigOne" *ngIf="mySchedule">
-      <div  class="TopicTitle scheduleBorder"><b>Schedule</b></div>
+      <div class="TopicTitle scheduleBorder"><b>Schedule</b></div>
     </div>
-    
 
     <div class="scrollable" (click)="setButtonOpacityToZero()">
       <div *ngIf="activityStream" class="Activity_container">
-        
         <div *ngFor="let day of activityData; let i = index">
           <div class="recordDay">
             <div class="icon"></div>
@@ -219,7 +243,11 @@
               <div class="border2"></div>
             </div>
           </div>
-          <div *ngFor="let note of day.message;let k = index" class="record" (click)="notificationClick(day.route[k], day.url[k])">
+          <div
+            *ngFor="let note of day.message; let k = index"
+            class="record"
+            (click)="notificationClick(day.route[k], day.url[k])"
+          >
             <div class="icon">
               <div *ngIf="day.category[k] == 'notification'">
                 <i class="fa fa-bell" aria-hidden="true"></i>
@@ -245,7 +273,7 @@
             </div>
           </div>
         </div>
-        
+        <div style="height: 50px"></div>
       </div>
       <div *ngIf="myChats" class="Chat_container">
         <div *ngFor="let chat of chatList">
@@ -265,9 +293,8 @@
           <div class="border4"></div>
         </div>
       </div>
+
       <div *ngIf="mySchedule" class="Schedule_container">
-        
-        
         <div class="days">
           <Label>Monday</Label>
           <Label>Tuesday</Label>
@@ -277,7 +304,7 @@
         </div>
         <div class="Calander">
           <div class="Day">
-            <div *ngFor="let class of monday" class="weekday" >
+            <div *ngFor="let class of monday" class="weekday">
               <div class="class" *ngIf="class.module !== undefined">
                 <div class="scheduleContainer">
                   <div class="scheduleInner">
@@ -374,6 +401,99 @@
         </div>
       </div>
 
+      <div *ngIf="about" style="width: 100%; font-size: 40px; text-align: center; margin: 0px 0px 15px 0px; font-weight: 700; color:#004d85">
+        ERROR 505
+      </div>
+      <div *ngIf="about" class="aboutPage">
+        
+        <div class="image-grid">
+          <div class="image-container">
+            <img
+              src="https://avatars.githubusercontent.com/u/104779369?v=4"
+              alt="Image 1"
+            />
+            <div class="imageAlt">
+              <div style="margin-top: 35%;">Julianna Venter </div>
+              <a
+                href="https://www.linkedin.com/in/julianna-venter-3b4841232/"
+                target="_blank"
+                class="linkedin-link"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="image-container">
+            <img
+              src="https://user-images.githubusercontent.com/126817281/236040993-d213e57b-6ae3-4b3e-9c6a-72b8dc3f8d2b.jpg"
+              alt="Image 1"
+            />
+            <div class="imageAlt">
+              <div style="margin-top: 35%;">Morgan Bentley </div>
+              <a
+                href="https://www.linkedin.com/mwlite/in/morgan-bentley-0bb21a149/"
+                target="_blank"
+                class="linkedin-link"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="image-container">
+            <img
+              src="https://user-images.githubusercontent.com/89075980/239496127-9cf0de27-e5cd-4828-b9e8-39df0b4a41c3.jpeg"
+              alt="Image 1"
+            />
+            <div class="imageAlt">
+              <div style="margin-top: 35%;">Ronin Brookes  </div>
+              <a
+                href="https://www.linkedin.com/in/ronin-brookes/"
+                target="_blank"
+                class="linkedin-link"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="image-container">
+            <img
+              src="https://user-images.githubusercontent.com/105606137/236011909-a6deb24d-d46b-4ae1-8157-3dd9484e1b3c.jpeg"
+              alt="Image 1"
+            />
+            <div class="imageAlt">
+              <div style="margin-top: 35%;">Sameet Keshav </div>
+              <a
+                href="https://user-images.githubusercontent.com/105606137/236011909-a6deb24d-d46b-4ae1-8157-3dd9484e1b3c.jpeg"
+                target="_blank"
+                class="linkedin-link"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="image-container">
+            <img
+              src="https://user-images.githubusercontent.com/98401898/234882981-8ba00dc3-a1c9-405e-8632-d45fa3254c07.png"
+              alt="Image 1"
+            />
+            <div class="imageAlt">
+              <div style="margin-top: 35%;">Thapelo Thoka  </div>
+              <a
+                href="https://www.linkedin.com/in/thapelo-thoka-231b43231/"
+                target="_blank"
+                class="linkedin-link"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- ==========================================module page====================================== -->
 
       <div class="modulePage" *ngIf="modulePage">
@@ -403,10 +523,9 @@
         </div>
         <div class="messages" *ngIf="chatRoom">
           <div class="messagesContainer">
-           
             <div *ngFor="let chat of moduleChat.messages[roomId]">
               <div class="messageContainer2" *ngIf="!showJob && !showMaterial">
-                <div >
+                <div>
                   <div class="messageImg">
                     <img
                       class="userImg"
@@ -439,11 +558,10 @@
           <div class="messageIcons">
             <div class="messageIconInner"></div>
             <div class="messageIconContainer">
-             
               <div class="messageIcon">
                 <i
                   class="fas fa-paper-plane"
-                  style="width: 16.62px; height: 16.62px;"
+                  style="width: 16.62px; height: 16.62px"
                   (click)="sendModuleMessage()"
                 ></i>
               </div>
@@ -464,21 +582,22 @@
         <div class="chatroomspage">
           <div class="roomHeader" *ngIf="roomsPage">
             <div class="headerInfoContainerOpen">
-              <div class="roomTitleOpen"><b>{{moduleName}}</b></div>
+              <div class="roomTitleOpen">
+                <b>{{ moduleName }}</b>
+              </div>
               <div class="fileContainer Open" (click)="showPopup = true">
-                <div class="roomTitleOpen2">Open Discussion Room
+                <div class="roomTitleOpen2">
+                  Open Discussion Room
                   <i
-                  class="fas fa-plus-circle"
-                  style="
-                    width: 25px;
-                    height: 25px;
-                    font-size: 24px;
-                    margin-left: 10px;
-                    
-                  "
-                ></i>
+                    class="fas fa-plus-circle"
+                    style="
+                      width: 25px;
+                      height: 25px;
+                      font-size: 24px;
+                      margin-left: 10px;
+                    "
+                  ></i>
                 </div>
-                
               </div>
             </div>
             <div class="headerlineOpen"></div>
@@ -511,7 +630,8 @@
                       (change)="onFileSelected($event)"
                     />
                     <label for="fileInput" class="file-input-label">
-                      <i class="fa fa-upload" style="margin-right: 8px;"></i> Upload File
+                      <i class="fa fa-upload" style="margin-right: 8px"></i>
+                      Upload File
                     </label>
                     <div class="selected-file-name">{{ selectedFileName }}</div>
                   </div>
@@ -527,7 +647,7 @@
                   </label>
                   <div>
                     <button
-                      style="margin-right: 20px; "
+                      style="margin-right: 20px"
                       class="closeBtn"
                       (click)="showPopup = false"
                     >
@@ -580,10 +700,7 @@
             <div class="usersContainerInner">
               <div class="tutorheader">
                 <div class="tutorheader2">
-                  <i
-                    class="fas fa-graduation-cap"
-                    style="font-size: 20px"
-                  ></i>
+                  <i class="fas fa-graduation-cap" style="font-size: 20px"></i>
                 </div>
                 <div class="tutorheaderText">Tutors</div>
               </div>
@@ -703,7 +820,9 @@
           <div class="headerInfoContainer">
             <div class="fileContainerTutor">
               <div class="roomTitle">{{ tutorName }}</div>
-              <button class="requestBtn" (click)="toggleRequest()">Make Request</button>
+              <button class="requestBtn" (click)="toggleRequest()">
+                Make Request
+              </button>
             </div>
           </div>
           <div class="headerline"></div>
@@ -719,7 +838,7 @@
                   src="{{ tutorChat.request.profilePicture }}"
                 />
               </div>
-              <div class="myMessageName">{{ tutorChat.request.from }}</div>
+              <div class="myMessageName">{{ username }}</div>
 
               <div class="requestNoti">
                 <div class="requestNotiInner">
@@ -744,7 +863,7 @@
                   <img class="userImg" src="{{ chat.profilePicture }}" />
                 </div>
 
-                <div class="messageName2">{{ chat.from }}</div>
+                <div class="messageName2">{{ username }}</div>
                 <div class="messageText">
                   {{ chat.message }}
                 </div>
@@ -758,22 +877,22 @@
                 <div class="myMessageImg">
                   <img class="myUserImg" src="{{ chat.profilePicture }}" />
                 </div>
-                <div class="myMessageName">{{ chat.from }}</div>
+                <div class="myMessageName">{{ username }}</div>
                 <div class="myMessageText">
                   {{ chat.message }}
                 </div>
                 <div class="myMessageTime">{{ chat.date }}</div>
               </div>
 
-              <div class="messageContainerRequest" *ngIf="chat.from === 'Julianna Venter' && chat.isRequest">
+              <div
+                class="messageContainerRequest"
+                *ngIf="chat.from === 'Julianna Venter' && chat.isRequest"
+              >
                 <div class="myMessageImg">
-                  <img
-                    class="myUserImg"
-                    src="{{ chat.profilePicture }}"
-                  />
+                  <img class="myUserImg" src="{{ chat.profilePicture }}" />
                 </div>
-                <div class="myMessageName">{{ chat.from }}</div>
-  
+                <div class="myMessageName">{{ username }}</div>
+
                 <div class="requestNoti">
                   <div class="requestNotiInner">
                     <div class="requestNotiTitle">Request Made:</div>
@@ -783,7 +902,7 @@
                     </div>
                   </div>
                 </div>
-  
+
                 <div class="myMessageTime" style="margin-top: 3px">
                   {{ chat.date }}
                 </div>
@@ -815,7 +934,7 @@
             </div>
           </div>
           <input
-          (keyup.enter)="sendTutorMessage()"
+            (keyup.enter)="sendTutorMessage()"
             id="tutorMessage"
             type="text"
             class="messageInputText"
@@ -862,7 +981,7 @@
                 <div class="myMessageImg">
                   <img class="myUserImg" src="{{ chat.profilePicture }}" />
                 </div>
-                <div class="myMessageName">{{ chat.from }}</div>
+                <div class="myMessageName">{{ username }}</div>
                 <div class="myMessageText">
                   {{ chat.message }}
                 </div>
@@ -887,7 +1006,7 @@
               <div class="messageIcon">
                 <i
                   class="fas fa-paper-plane"
-                  style="width: 16.62px; height: 16.62px;"
+                  style="width: 16.62px; height: 16.62px"
                   (click)="sendClassMessage()"
                 ></i>
               </div>
@@ -902,6 +1021,148 @@
           />
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- login and signup -->
+
+<div *ngIf="!loggedIn" class="loginContainer">
+  <div *ngIf="!signUp" class="loginBackground">
+    <div class="loginHeader">Welcome Back!</div>
+    <div class="loginSubHeader">Please enter your details below.</div>
+
+    <div class="loginEmail">Username</div>
+    <input class="loginEmailContainer" #usernameInput />
+
+    <div class="loginPass">Password</div>
+    <input type="password" class="loginPassContainer" />
+
+    <div class="loginRem">Remember me</div>
+
+    <button class="loginForgot">Forgot Password</button>
+
+    <button
+      class="loginBtn"
+      (click)="loggedIn = true; getUsername(usernameInput.value)"
+    >
+      LOGIN
+    </button>
+
+    <div class="googleBtn"></div>
+    <input
+      class="loginCheckbox"
+      type="checkbox"
+      id="myCheckbox"
+      name="myCheckbox"
+      value="true"
+    />
+
+    <div class="loginSeparator">OR</div>
+    <div class="sepLineLeft"></div>
+    <div class="sepLineRight"></div>
+
+    <button
+      class="googleContainer"
+      id="google-signin-button"
+      data-onsuccess="onSignIn"
+    >
+      <img
+        class="googleIcon"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png"
+        alt="Example Image"
+      />
+      <div
+        style="
+          vertical-align: middle;
+          height: 60px;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <span>Continue with Google</span>
+      </div>
+    </button>
+
+    <div class="loginFooter">
+      <span class="loginFooterText">New to OMNIHUB? </span
+      ><span class="loginSignup" (click)="signUp = true">Sign Up</span>
+    </div>
+  </div>
+
+  <!-- signup -->
+
+  <div *ngIf="signUp" class="signupBackground">
+    <div class="signupHeader">get started</div>
+    <div class="signupSubHeader">Please enter your details below.</div>
+
+    <div class="signupNameText">
+      <div class="signupName">Full Name</div>
+      <div class="signupSurname">Username</div>
+    </div>
+
+    <div class="signupNameContainers">
+      <input type="text" class="signupNameContainer" />
+      <input type="text" #usernameInput class="signupSurnameContainer" />
+    </div>
+
+    <div class="signupEmail">Email</div>
+    <input class="signupEmailContainer" />
+
+    <div class="signupPass">Password</div>
+    <input type="password" class="signupPassContainer" />
+    <span class="passTextSignup">Password must be more than 8 characters</span>
+
+    <div class="signupRem">
+      I have read and accept the <i class="terms">terms of service</i>
+    </div>
+
+    <button
+      class="signupBtn"
+      (click)="loggedIn = true; getUsername(usernameInput.value)"
+    >
+      signup
+    </button>
+
+    <div class="googleBtn"></div>
+    <input
+      class="signupCheckbox"
+      type="checkbox"
+      id="myCheckbox"
+      name="myCheckbox"
+      value="true"
+    />
+
+    <div class="signupSeparator">OR</div>
+    <div class="sepLineLeftSignup"></div>
+    <div class="sepLineRightSignup"></div>
+
+    <button
+      class="googleContainerSignup"
+      id="google-signin-button"
+      data-onsuccess="onSignIn"
+    >
+      <img
+        class="googleIcon"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png"
+        alt="Example Image"
+      />
+      <div
+        style="
+          vertical-align: middle;
+          height: 60px;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <span>Continue with Google</span>
+      </div>
+    </button>
+
+    <div class="signupFooter">
+      <span class="signupFooterText">Already have an </span
+      ><span class="signupSignup" (click)="signUp = false">account</span
+      ><span class="signupFooterText"> ?</span>
     </div>
   </div>
 </div>

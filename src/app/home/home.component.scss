@@ -2006,3 +2006,608 @@ html {
 .msg1:hover .messageName {
   color: #0572c0;
 }
+
+.loginContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: #ffffff;
+  font-family: CustomFont;
+  // align-items: center;
+  justify-content: center;
+  background-color: #031e31;
+  overflow-y: auto;
+
+  input:focus {
+    border: 2px #007bff solid;
+    outline: none;
+  }
+}
+
+.loginBackground {
+  width: 602px;
+  height: 730px;
+  left: 0px;
+  top: 5%;
+  position: relative;
+  background: rgba(240, 234, 236, 0.9);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  margin-bottom: 5%;
+}
+
+.loginHeader {
+  width: 346px;
+  left: 97px;
+  top: 49px;
+  position: absolute;
+  color: #1a1a1a;
+  font-size: 65px;
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+  text-transform: lowercase;
+  line-height: 55px;
+  word-wrap: break-word;
+}
+
+.loginSubHeader {
+  width: 381px;
+  height: 25px;
+  left: 97px;
+  top: 165px;
+  position: absolute;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  text-transform: lowercase;
+  word-wrap: break-word;
+}
+
+.loginEmail {
+  width: 381px;
+  height: 25px;
+  left: 97px;
+  top: 231px;
+  position: absolute;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  word-wrap: break-word;
+}
+
+.loginPass {
+  width: 381px;
+  height: 25px;
+  left: 97px;
+  top: 327px;
+  position: absolute;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  word-wrap: break-word;
+}
+
+.loginRem {
+  left: 131px;
+  top: 422px;
+  position: absolute;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.loginFooter {
+  left: 196px;
+  top: 665px;
+  position: absolute;
+}
+
+.loginFooterText {
+  color: #1a1a1a;
+  font-size: 18px;
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.loginSignup {
+  color: #4e9dc6;
+  font-size: 18px;
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+
+.loginForgot {
+  left: 370px;
+  top: 422px;
+  position: absolute;
+  color: #3a95c4;
+  font-size: 14px;
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.loginEmailContainer {
+  width: 400px;
+  height: 44px;
+  left: 97px;
+  top: 257px;
+  position: absolute;
+  background: #ded5d7;
+  border-radius: 10px;
+  border: 1px #1c3643 solid;
+}
+
+.loginPassContainer {
+  width: 400px;
+  height: 44px;
+  left: 97px;
+  top: 352px;
+  position: absolute;
+  background: #ded5d7;
+  border-radius: 10px;
+  border: 1px #1c3643 solid;
+}
+
+.loginBtn {
+  width: 400px;
+  height: 44px;
+  left: 97px;
+  top: 466px;
+  position: absolute;
+  background: #4e9dc6;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+
+.loginCheckbox {
+  width: 21px;
+  height: 21px;
+  left: 100px;
+  top: 416px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.loginSeparator {
+  left: 290px;
+  top: 537px;
+  position: absolute;
+  color: #999999;
+  font-size: 10px;
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+.sepLineLeft {
+  width: 190px;
+  height: 0px;
+  left: 97px;
+  top: 543px;
+  position: absolute;
+  border: 1px #999999 solid;
+}
+
+.sepLineRight {
+  width: 190px;
+  height: 0px;
+  left: 307px;
+  top: 543px;
+  position: absolute;
+  border: 1px #999999 solid;
+}
+
+.googleIcon {
+  width: 30px;
+  height: 30px;
+  // left: 97px;
+  // top: 577px;
+  // position: absolute;
+  margin-right: 10px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: inline-flex;
+}
+
+.googleContainer {
+  // width: 223px;
+  // height: 30px;
+  // left: 185px;
+  // top: 584px;
+  // position: absolute;
+  width: 400px;
+  height: 44px;
+  left: 97px;
+  top: 577px;
+  position: absolute;
+  border-radius: 25px;
+  border: 1px #4e9dc6 solid;
+  background-color: transparent;
+  color: #1a1a1a;
+  font-size: 19px;
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//signup
+
+.signupBackground {
+  width: 602px;
+  height: 830px;
+  left: 0px;
+  top: 5%;
+  position: relative;
+  background: rgba(240, 234, 236, 0.9);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  margin-bottom: 5%;
+}
+
+.signupHeader {
+  width: 300px;
+  left: 97px;
+  top: 49px;
+  position: absolute;
+  color: #1a1a1a;
+  font-size: 65px;
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+  text-transform: lowercase;
+  line-height: 55px;
+  word-wrap: break-word;
+}
+
+.signupSubHeader {
+  width: 381px;
+  height: 25px;
+  left: 97px;
+  top: 165px;
+  position: absolute;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  text-transform: lowercase;
+  word-wrap: break-word;
+}
+
+.signupNameText {
+  left: 97px;
+  top: 221px;
+  height: 25px;
+  width: 400px;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.signupName {
+  width: 210px;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  word-wrap: break-word;
+}
+
+.signupSurname {
+  width: 200px;
+  height: 25px;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  word-wrap: break-word;
+}
+
+.signupEmail {
+  width: 381px;
+  height: 25px;
+  left: 97px;
+  top: 311px;
+  position: absolute;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  word-wrap: break-word;
+}
+
+.signupPass {
+  width: 381px;
+  height: 25px;
+  left: 97px;
+  top: 407px;
+  position: absolute;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  word-wrap: break-word;
+}
+
+.signupFooter {
+  left: 196px;
+  top: 775px;
+  position: absolute;
+}
+
+.signupFooterText {
+  color: #1a1a1a;
+  font-size: 18px;
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.signupSignup {
+  color: #4e9dc6;
+  font-size: 18px;
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+
+.signupNameContainers {
+  left: 97px;
+  top: 247px;
+  width: 400px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+
+.signupNameContainer {
+  width: 190px;
+  height: 44px;
+  background: #ded5d7;
+  border-radius: 10px;
+  border: 1px #1c3643 solid;
+}
+
+.signupSurnameContainer {
+  width: 190px;
+  height: 44px;
+  background: #ded5d7;
+  border-radius: 10px;
+  border: 1px #1c3643 solid;
+}
+
+.signupEmailContainer {
+  width: 400px;
+  height: 44px;
+  left: 97px;
+  top: 337px;
+  position: absolute;
+  background: #ded5d7;
+  border-radius: 10px;
+  border: 1px #1c3643 solid;
+}
+
+.signupPassContainer {
+  width: 400px;
+  height: 44px;
+  left: 97px;
+  top: 432px;
+  position: absolute;
+  background: #ded5d7;
+  border-radius: 10px;
+  border: 1px #1c3643 solid;
+}
+
+.signupBtn {
+  width: 405px;
+  height: 44px;
+  left: 97px;
+  top: 576px;
+  position: absolute;
+  background: #4e9dc6;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+
+.signupCheckbox {
+  width: 21px;
+  height: 21px;
+  left: 100px;
+  top: 526px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.signupRem {
+  left: 141px;
+  top: 530px;
+  position: absolute;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.signupSeparator {
+  left: 290px;
+  top: 648px;
+  position: absolute;
+  color: #999999;
+  font-size: 10px;
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+.sepLineLeftSignup {
+  width: 190px;
+  height: 0px;
+  left: 97px;
+  top: 653px;
+  position: absolute;
+  border: 1px #999999 solid;
+}
+
+.sepLineRightSignup {
+  width: 190px;
+  height: 0px;
+  left: 307px;
+  top: 653px;
+  position: absolute;
+  border: 1px #999999 solid;
+}
+
+.passTextSignup {
+  left: 100px;
+  top: 485px;
+  position: absolute;
+  font-size: 13px;
+  color: darkred;
+}
+
+.googleIconSignup {
+  width: 30px;
+  height: 30px;
+  left: 97px;
+  top: 687px;
+  position: absolute;
+  margin-right: 10px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: inline-flex;
+}
+
+.googleContainerSignup {
+  // width: 223px;
+  // height: 30px;
+  // left: 185px;
+  // top: 584px;
+  // position: absolute;
+  width: 405px;
+  height: 44px;
+  left: 97px;
+  top: 687px;
+  position: absolute;
+  border-radius: 25px;
+  border: 1px #4e9dc6 solid;
+  background-color: transparent;
+  color: #1a1a1a;
+  font-size: 19px;
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  cursor: pointer;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.googleText {
+  margin-top: 10px;
+  vertical-align: top;
+}
+
+.terms {
+  color: #4e9dc6;
+  cursor: pointer;
+}
+
+.image-grid {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.image-item {
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.aboutPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  .imageAlt {
+    height: 180px;
+    width: 180px;
+    background-color: #bfcdee;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    font-size: 22px;
+
+    i {
+      font-size: 30px;
+      color: #031e31;
+    }
+  }
+
+  .imageAlt {
+    display: none;
+  }
+
+  .image-container:hover .imageAlt {
+    display: block;
+  }
+
+  .image-container:hover img {
+    display: none;
+  }
+}

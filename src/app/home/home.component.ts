@@ -398,6 +398,31 @@ export class HomeComponent {
         'https://remembermephotography.com/wp-content/uploads/2016/04/BD008cc.jpg',
       message: 'Hey, how are you?',
     },
+    {
+      name: "Kim Smith",
+      profilePicture: "https://c8.alamy.com/comp/E0CGET/woman-indoors-E0CGET.jpg",
+      message: "Hey"
+    },
+    {
+      name: "John Doe",
+      profilePicture: "https://previews.123rf.com/images/lightfieldstudios/lightfieldstudios1710/lightfieldstudios171000171/87883899-handsome-smiling-man.jpg?fj=1",
+      message: "How are you?"
+    },
+    {
+      name: "Lanna Lee",
+      profilePicture: "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?cs=srgb&dl=pexels-moose-photos-1036623.jpg&fm=jpg",
+      message: "Hello, I am Lanna"
+    },
+    {
+      name: "Nate Parker",
+      profilePicture: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      message: "Hi, I am Nate"
+    },
+    {
+      name: "Katie Smith",
+      profilePicture: "https://media.glamourmagazine.co.uk/photos/61388cc92b5bbea008291859/16:9/w_2560%2Cc_limit/iStock-545338914.jpg",
+      message: "Hey, I am Katie"
+    }
   ];
 
   getDateInDDMM(offset: number): string {

@@ -19,16 +19,16 @@ export class HomeComponent {
   classChat = classChatData;
   schedule: any[];
   notifications = [1, 2, 3];
-  activityStream = true;
+  activityStream = false;
   myChats = false;
   mySchedule = false;
-  modulePage = false;
+  modulePage = true;
   tutorPage = false;
   classPage = false;
   chatRoom = false;
   roomsPage = true;
   request = false;
-  loggedIn = false;
+  loggedIn = true;
   signUp = false;
   about = false;
   roomId: number = 0;
@@ -422,6 +422,31 @@ export class HomeComponent {
       name: "Katie Smith",
       profilePicture: "https://media.glamourmagazine.co.uk/photos/61388cc92b5bbea008291859/16:9/w_2560%2Cc_limit/iStock-545338914.jpg",
       message: "Hey, I am Katie"
+    },
+    {
+      name: "Emma Johnson",
+      profilePicture: "https://www.davidson.edu/sites/default/files/styles/small_16x9/public/2020-10/Grace_Rooker%2724_03.jpg?h=f8c78304&itok=MpvFeaQ9",
+      message: "Hey, how are you?!"
+    },
+    {
+      name: "Liam Williams",
+      profilePicture: "https://www.ntu.ac.uk/__data/assets/image/0018/110709/aamir-khalique.jpg",
+      message: "Did you do assignment 3..."
+    },
+    {
+      name: "Olivia Davis",
+      profilePicture: "https://media.illinois.edu/sites/default/files/styles/profile/public/2023-09/Veranika-400.jpg?itok=2lDdrkhH",
+      message: "I though we were going t..."
+    },
+    {
+      name: "Noah Jones",
+      profilePicture: "https://img.freepik.com/premium-photo/beautiful-realistic-portrait-smiling-young-college-student-with-books-backpack-against-white-background_908985-7634.jpg",
+      message: "Did they ever release t..."
+    },
+    {
+      name: "Sophia Nijgard",
+      profilePicture: "https://media.istockphoto.com/id/1333838172/photo/indoor-headshot-portrait-of-cheerful-young-indian-female-businesswoman-student.jpg?s=612x612&w=0&k=20&c=GGPz0QlmMKYEt497R4HNRC8Pacha-lwpSe1fiqRwcjI=",
+      message: "No, I don't think that th..."
     }
   ];
 
@@ -477,6 +502,10 @@ export class HomeComponent {
   }
 
   requestChange() {
+    this.request = false;
+  }
+
+  makeRequest() {
     const message = (<HTMLInputElement>document.getElementById('requestMessage'))
       .value;
     this.tutorChat.messages.push({
@@ -486,7 +515,6 @@ export class HomeComponent {
       message: message,
       isRequest: true
     })
-    this.request = false;
   }
 
   notificationClick(route: string, url: string) {

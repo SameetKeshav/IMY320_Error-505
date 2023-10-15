@@ -698,209 +698,63 @@
         <div class="usersContainer">
           <div class="usersContainerStyles">
             <div class="usersContainerInner">
+              
               <div class="tutorheader">
-                <div class="tutorheader2">
-                  <i class="fas fa-graduation-cap" style="font-size: 20px"></i>
-                </div>
-                <div class="tutorheaderText">Tutors</div>
+                <span>Tutors</span>
+                <i class="fas fa-graduation-cap" style="font-size: 20px"></i>
               </div>
 
-              <div
-                class="tutorContainer"
-                (click)="
-                  openTutor(chatList[0].name, chatList[0].profilePicture)
-                "
-              >
-                <img
-                  class="tutorImg"
-                  (click)="
-                    openTutor(chatList[0].name, chatList[0].profilePicture)
-                  "
-                  src="{{ chatList[0].profilePicture }}"
-                />
-                <div
-                  class="tutorName"
-                  (click)="
-                    openTutor(chatList[0].name, chatList[0].profilePicture)
-                  "
-                >
-                  {{ chatList[0].name }}
-                </div>
+              <ul style="padding-left: 20px">
+                <li style="display:flex; gap: 10px; align-items: left; margin-bottom: 20px;">
+                  <img
+                    class="tutorImg"
+                    (click)="openTutor(chatList[0].name, chatList[0].profilePicture)"
+                    src="{{ chatList[0].profilePicture }}"
+                  />
+                  <div
+                    class="tutorName"
+                    (click)="openTutor(chatList[0].name, chatList[0].profilePicture)"
+                  >
+                    {{ chatList[0].name }}
+                  </div>
+                </li>
+                <li style="display:flex; gap: 10px; align-items: left;">
+                  <img
+                    class="tutorImg"
+                    (click)="openTutor(chatList[12].name, chatList[12].profilePicture)"
+                    src="{{ chatList[12].profilePicture }}"
+                  />
+                  <div
+                    class="tutorName"
+                    (click)="openTutor(chatList[12].name, chatList[12].profilePicture)"
+                  >
+                    {{ chatList[12].name }}
+                  </div>
+                </li>
+              </ul>
+
+              <div class="tutorheader">
+                <span>Classmates</span>
               </div>
 
-              <div class="line1"></div>
-
-              <div class="classHeader">Classmates</div>
-
-              <div class="usersList">
-                <div
-                  class="userInfoContainer"
-                  (click)="
-                    openClass(chatList[1].name, chatList[1].profilePicture)
-                  "
-                >
-                  <div
-                    (click)="
-                      openClass(chatList[1].name, chatList[1].profilePicture)
-                    "
-                    class="userName"
-                  >
-                    {{ chatList[1].name }}
-                  </div>
+              <ul style="padding-left: 20px" *ngFor="let chat of chatList.slice(1, 12)">
+                <li style="display:flex; gap: 10px; align-items: left; margin-bottom: 20px;">
                   <img
-                    (click)="
-                      openClass(chatList[1].name, chatList[1].profilePicture)
-                    "
-                    class="userImg"
-                    src="{{ chatList[1].profilePicture }}"
+                    class="tutorImg"
+                    (click)="openClass(chat.name, chat.profilePicture)"
+                    src="{{ chat.profilePicture }}"
                   />
-                  <div class="line2"></div>
-                </div>
+                  <div
+                    class="tutorName"
+                    (click)="openClass(chat.name, chat.profilePicture)"
+                  >
+                    {{ chat.name }}
+                  </div>
+                </li>
+              </ul>
 
-                <div
-                  class="userInfoContainer"
-                  (click)="
-                    openClass(chatList[2].name, chatList[2].profilePicture)
-                  "
-                >
-                  <div
-                    (click)="
-                      openClass(chatList[2].name, chatList[2].profilePicture)
-                    "
-                    class="userName"
-                  >
-                    {{ chatList[2].name }}
-                  </div>
-                  <img
-                    (click)="
-                      openClass(chatList[2].name, chatList[2].profilePicture)
-                    "
-                    class="userImg"
-                    src="{{ chatList[2].profilePicture }}"
-                  />
-                  <div class="line2"></div>
-                </div>
-                
-                <div
-                  class="userInfoContainer"
-                  (click)="
-                    openClass(chatList[3].name, chatList[3].profilePicture)
-                  "
-                >
-                  <div
-                    (click)="
-                      openClass(chatList[3].name, chatList[3].profilePicture)
-                    "
-                    class="userName"
-                  >
-                    {{ chatList[3].name }}
-                  </div>
-                  <img
-                    (click)="
-                      openClass(chatList[3].name, chatList[3].profilePicture)
-                    "
-                    class="userImg"
-                    src="{{ chatList[3].profilePicture }}"
-                  />
-                  <div class="line2"></div>
-                </div>
+              <div style="height: 20px"></div>
 
-                <div
-                  class="userInfoContainer"
-                  (click)="
-                    openClass(chatList[4].name, chatList[4].profilePicture)
-                  "
-                >
-                  <div
-                    (click)="
-                      openClass(chatList[4].name, chatList[4].profilePicture)
-                    "
-                    class="userName"
-                  >
-                    {{ chatList[2].name }}
-                  </div>
-                  <img
-                    (click)="
-                      openClass(chatList[4].name, chatList[4].profilePicture)
-                    "
-                    class="userImg"
-                    src="{{ chatList[4].profilePicture }}"
-                  />
-                  <div class="line2"></div>
-                </div>
-
-                <div
-                  class="userInfoContainer"
-                  (click)="
-                    openClass(chatList[5].name, chatList[5].profilePicture)
-                  "
-                >
-                  <div
-                    (click)="
-                      openClass(chatList[5].name, chatList[5].profilePicture)
-                    "
-                    class="userName"
-                  >
-                    {{ chatList[5].name }}
-                  </div>
-                  <img
-                    (click)="
-                      openClass(chatList[5].name, chatList[5].profilePicture)
-                    "
-                    class="userImg"
-                    src="{{ chatList[5].profilePicture }}"
-                  />
-                  <div class="line2"></div>
-                </div>
-
-                <div
-                  class="userInfoContainer"
-                  (click)="
-                    openClass(chatList[6].name, chatList[6].profilePicture)
-                  "
-                >
-                  <div
-                    (click)="
-                      openClass(chatList[6].name, chatList[6].profilePicture)
-                    "
-                    class="userName"
-                  >
-                    {{ chatList[6].name }}
-                  </div>
-                  <img
-                    (click)="
-                      openClass(chatList[6].name, chatList[6].profilePicture)
-                    "
-                    class="userImg"
-                    src="{{ chatList[6].profilePicture }}"
-                  />
-                  <div class="line2"></div>
-                </div>
-
-                <div
-                  class="userInfoContainer"
-                  (click)="
-                    openClass(chatList[7].name, chatList[7].profilePicture)
-                  "
-                >
-                  <div
-                    (click)="
-                      openClass(chatList[7].name, chatList[7].profilePicture)
-                    "
-                    class="userName"
-                  >
-                    {{ chatList[7].name }}
-                  </div>
-                  <img
-                    (click)="
-                      openClass(chatList[7].name, chatList[7].profilePicture)
-                    "
-                    class="userImg"
-                    src="{{ chatList[7].profilePicture }}"
-                  />
-                  <div class="line2"></div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -929,7 +783,7 @@
               Cancel
             </button>
 
-            <button class="requestAcceptBtn" (click)="requestChange()">
+            <button class="requestAcceptBtn" (click)="requestChange(); makeRequest()">
               Request
             </button>
           </div>

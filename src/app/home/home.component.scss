@@ -845,6 +845,7 @@ html {
   position: absolute;
   right: 1px;
   top: 10%;
+  
 }
 
 .usersContainerStyles {
@@ -859,6 +860,7 @@ html {
   // flex-direction: column;
   justify-content: center;
   // padding-top: 10px;
+  overflow-y: auto;
 }
 
 .usersContainerInner {
@@ -873,33 +875,18 @@ html {
 .tutorheader {
   width: 244px;
   height: 28px;
-  left: 0px;
-  top: 0px;
-  position: absolute;
-}
-
-.tutorheader2 {
-  width: 24px;
-  height: 24px;
-  left: 220px;
-  top: 4px;
-  position: absolute;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  display: inline-flex;
-}
-
-.tutorheaderText {
-  left: 0px;
-  top: 0px;
-  position: absolute;
+  display: flex;
+  justify-content: space-between;
   color: #333333;
   font-size: 22px;
   font-family: Outfit, sans-serif;
   font-weight: 600;
   word-wrap: break-word;
+  // left: 0px;
+  // top: 0px;
+  // position: absolute;
 }
+
 
 .classHeader {
   left: 0px;
@@ -915,9 +902,9 @@ html {
 .tutorContainer {
   width: 231px;
   height: 34px;
-  left: 20px;
-  top: 38px;
-  position: absolute;
+  // left: 20px;
+  // top: 38px;
+  // position: absolute;
 }
 .tutorContainer:hover .tutorName {
   color: #0572c0;
@@ -925,9 +912,9 @@ html {
 .tutorImg {
   width: 34px;
   height: 34px;
-  left: 0px;
-  top: 0px;
-  position: absolute;
+  // left: 0px;
+  // top: 0px;
+  // position: absolute;
   border-radius: 100px;
   object-fit: cover;
   cursor: pointer;
@@ -935,9 +922,10 @@ html {
 }
 
 .tutorName {
-  left: 44px;
-  top: 8px;
-  position: absolute;
+  // left: 44px;
+  // top: 8px;
+  // position: absolute;
+  margin-top: 10px;
   color: #333333;
   font-size: 15px;
   font-family: Outfit, sans-serif;

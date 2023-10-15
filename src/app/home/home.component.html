@@ -115,11 +115,12 @@
         justify-content: space-between;
         align-items: center;
       "
+      *ngIf="showModules"
     >
       <i
         style="margin-left: 20px; font-size: 30px; cursor: pointer"
         class="fas fa-sign-out-alt extra hover-icon"
-        (click)="loggedIn = false"
+        (click)="loggedIn = false; welcome=true"
       ></i>
       <i
         style="margin-right: 20px; font-size: 30px; cursor: pointer"
@@ -1179,6 +1180,18 @@
         value="true"
         [(ngModel)]="terms"
       />
+
+      <input
+        class="tutorCheckbox"
+        type="checkbox"
+        id="myCheckbox"
+        name="myCheckbox"
+        value="true"
+      />
+
+      <div class="signupTutor">
+        I am a <b class="terms">Tutor</b>
+      </div>
 
       <div class="signupSeparator">OR</div>
       <div class="sepLineLeftSignup"></div>

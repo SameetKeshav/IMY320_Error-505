@@ -2346,7 +2346,7 @@ html {
 
 .signupFooter {
   left: 196px;
-  top: 775px;
+  top: 795px;
   position: absolute;
 }
 
@@ -2418,7 +2418,7 @@ html {
   width: 405px;
   height: 44px;
   left: 97px;
-  top: 576px;
+  top: 616px;
   position: absolute;
   background: #4e9dc6;
   border-radius: 25px;
@@ -2452,9 +2452,29 @@ html {
   word-wrap: break-word;
 }
 
+.tutorCheckbox {
+  width: 21px;
+  height: 21px;
+  left: 100px;
+  top: 566px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.signupTutor {
+  left: 141px;
+  top: 573px;
+  position: absolute;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
 .signupSeparator {
   left: 290px;
-  top: 648px;
+  top: 688px;
   position: absolute;
   color: #999999;
   font-size: 10px;
@@ -2468,7 +2488,7 @@ html {
   width: 190px;
   height: 0px;
   left: 97px;
-  top: 653px;
+  top: 693px;
   position: absolute;
   border: 1px #999999 solid;
 }
@@ -2477,7 +2497,7 @@ html {
   width: 190px;
   height: 0px;
   left: 307px;
-  top: 653px;
+  top: 693px;
   position: absolute;
   border: 1px #999999 solid;
 }
@@ -2494,7 +2514,7 @@ html {
   width: 30px;
   height: 30px;
   left: 97px;
-  top: 687px;
+  top: 727px;
   position: absolute;
   margin-right: 10px;
   flex-direction: column;
@@ -2512,7 +2532,7 @@ html {
   width: 405px;
   height: 44px;
   left: 97px;
-  top: 687px;
+  top: 727px;
   position: absolute;
   border-radius: 25px;
   border: 1px #4e9dc6 solid;

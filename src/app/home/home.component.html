@@ -117,34 +117,16 @@
       "
     >
       <i
-        style="margin-left: 20px; font-size: 30px; color: rgb(59, 59, 59)"
-        class="fas fa-sign-out-alt"
+        style="margin-left: 20px; font-size: 30px; cursor: pointer"
+        class="fas fa-sign-out-alt extra hover-icon"
         (click)="loggedIn = false"
       ></i>
       <i
-        style="margin-right: 20px; font-size: 30px; color: rgb(59, 59, 59)"
-        class="fas fa-info-circle"
-      (click)="showAbout()"></i>
+        style="margin-right: 20px; font-size: 30px; cursor: pointer"
+        class="fas fa-info-circle extra hover-icon"
+        (click)="showAbout()"
+      ></i>
     </div>
-
-    <!-- <div
-      *ngIf="!showModules"
-      style="
-        width: 90%;
-        margin-top: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #d5e2ff;
-      "
-    >
-      <div *ngFor="let module of options" class="OptionalModule">
-        <div class="OptionName">{{ module }}<br />Semester 2</div>
-        <div class="add" (click)="add(module)">
-          <i class="fa fa-plus-square" aria-hidden="true"></i>
-        </div>
-      </div>
-    </div> -->
 
     <div *ngIf="!showModules" class="scrollable-list">
       <ul class="options-list">
@@ -401,11 +383,20 @@
         </div>
       </div>
 
-      <div *ngIf="about" style="width: 100%; font-size: 40px; text-align: center; margin: 0px 0px 15px 0px; font-weight: 700; color:#004d85">
+      <div
+        *ngIf="about"
+        style="
+          width: 100%;
+          font-size: 40px;
+          text-align: center;
+          margin: 0px 0px 15px 0px;
+          font-weight: 700;
+          color: #004d85;
+        "
+      >
         ERROR 505
       </div>
       <div *ngIf="about" class="aboutPage">
-        
         <div class="image-grid">
           <div class="image-container">
             <img
@@ -413,7 +404,7 @@
               alt="Image 1"
             />
             <div class="imageAlt">
-              <div style="margin-top: 35%;">Julianna Venter </div>
+              <div style="margin-top: 35%">Julianna Venter</div>
               <a
                 href="https://www.linkedin.com/in/julianna-venter-3b4841232/"
                 target="_blank"
@@ -430,7 +421,7 @@
               alt="Image 1"
             />
             <div class="imageAlt">
-              <div style="margin-top: 35%;">Morgan Bentley </div>
+              <div style="margin-top: 35%">Morgan Bentley</div>
               <a
                 href="https://www.linkedin.com/mwlite/in/morgan-bentley-0bb21a149/"
                 target="_blank"
@@ -447,7 +438,7 @@
               alt="Image 1"
             />
             <div class="imageAlt">
-              <div style="margin-top: 35%;">Ronin Brookes  </div>
+              <div style="margin-top: 35%">Ronin Brookes</div>
               <a
                 href="https://www.linkedin.com/in/ronin-brookes/"
                 target="_blank"
@@ -464,7 +455,7 @@
               alt="Image 1"
             />
             <div class="imageAlt">
-              <div style="margin-top: 35%;">Sameet Keshav </div>
+              <div style="margin-top: 35%">Sameet Keshav</div>
               <a
                 href="https://user-images.githubusercontent.com/105606137/236011909-a6deb24d-d46b-4ae1-8157-3dd9484e1b3c.jpeg"
                 target="_blank"
@@ -481,7 +472,7 @@
               alt="Image 1"
             />
             <div class="imageAlt">
-              <div style="margin-top: 35%;">Thapelo Thoka  </div>
+              <div style="margin-top: 35%">Thapelo Thoka</div>
               <a
                 href="https://www.linkedin.com/in/thapelo-thoka-231b43231/"
                 target="_blank"
@@ -698,35 +689,53 @@
         <div class="usersContainer">
           <div class="usersContainerStyles">
             <div class="usersContainerInner">
-              
               <div class="tutorheader">
                 <span>Tutors</span>
                 <i class="fas fa-graduation-cap" style="font-size: 20px"></i>
               </div>
 
               <ul style="padding-left: 20px">
-                <li style="display:flex; gap: 10px; align-items: left; margin-bottom: 20px;">
+                <li
+                  style="
+                    display: flex;
+                    gap: 10px;
+                    align-items: left;
+                    margin-bottom: 20px;
+                  "
+                  class="highlight-on-hover"
+                >
                   <img
                     class="tutorImg"
-                    (click)="openTutor(chatList[0].name, chatList[0].profilePicture)"
+                    (click)="
+                      openTutor(chatList[0].name, chatList[0].profilePicture)
+                    "
                     src="{{ chatList[0].profilePicture }}"
                   />
                   <div
                     class="tutorName"
-                    (click)="openTutor(chatList[0].name, chatList[0].profilePicture)"
+                    (click)="
+                      openTutor(chatList[0].name, chatList[0].profilePicture)
+                    "
                   >
                     {{ chatList[0].name }}
                   </div>
                 </li>
-                <li style="display:flex; gap: 10px; align-items: left;">
+                <li
+                  style="display: flex; gap: 10px; align-items: left"
+                  class="highlight-on-hover"
+                >
                   <img
                     class="tutorImg"
-                    (click)="openTutor(chatList[12].name, chatList[12].profilePicture)"
+                    (click)="
+                      openTutor(chatList[12].name, chatList[12].profilePicture)
+                    "
                     src="{{ chatList[12].profilePicture }}"
                   />
                   <div
                     class="tutorName"
-                    (click)="openTutor(chatList[12].name, chatList[12].profilePicture)"
+                    (click)="
+                      openTutor(chatList[12].name, chatList[12].profilePicture)
+                    "
                   >
                     {{ chatList[12].name }}
                   </div>
@@ -737,8 +746,19 @@
                 <span>Classmates</span>
               </div>
 
-              <ul style="padding-left: 20px" *ngFor="let chat of chatList.slice(1, 12)">
-                <li style="display:flex; gap: 10px; align-items: left; margin-bottom: 20px;">
+              <ul
+                style="padding-left: 20px"
+                *ngFor="let chat of chatList.slice(1, 12)"
+              >
+                <li
+                  style="
+                    display: flex;
+                    gap: 10px;
+                    align-items: left;
+                    margin-bottom: 20px;
+                  "
+                  class="highlight-on-hover"
+                >
                   <img
                     class="tutorImg"
                     (click)="openClass(chat.name, chat.profilePicture)"
@@ -754,7 +774,6 @@
               </ul>
 
               <div style="height: 20px"></div>
-
             </div>
           </div>
         </div>
@@ -783,7 +802,10 @@
               Cancel
             </button>
 
-            <button class="requestAcceptBtn" (click)="requestChange(); makeRequest()">
+            <button
+              class="requestAcceptBtn"
+              (click)="requestChange(); makeRequest()"
+            >
               Request
             </button>
           </div>
@@ -1002,141 +1024,193 @@
 <!-- login and signup -->
 
 <div *ngIf="!loggedIn" class="loginContainer">
-  <div *ngIf="!signUp" class="loginBackground">
-    <div class="loginHeader">Welcome Back!</div>
-    <div class="loginSubHeader">Please enter your details below.</div>
-
-    <div class="loginEmail">Username</div>
-    <input class="loginEmailContainer" #usernameInput />
-
-    <div class="loginPass">Password</div>
-    <input type="password" class="loginPassContainer" />
-
-    <div class="loginRem">Remember me</div>
-
-    <button class="loginForgot">Forgot Password</button>
-
-    <button
-      class="loginBtn"
-      (click)="loggedIn = true; getUsername(usernameInput.value)"
+  <div *ngIf="welcome">
+    <img src="assets/file.png" class="welcomeSide" />
+    <div
+      class="gradient-overlay"
     >
-      LOGIN
-    </button>
+    <img src="assets/logo.png" style="object-fit: cover" class="welcomeLogo" />
+   
+     <h1 class="welcomeTitle">OmniHub</h1>
+     <h2 class="welcomeSub">Everything you need, all in one place.</h2>
 
-    <div class="googleBtn"></div>
-    <input
-      class="loginCheckbox"
-      type="checkbox"
-      id="myCheckbox"
-      name="myCheckbox"
-      value="true"
-    />
-
-    <div class="loginSeparator">OR</div>
-    <div class="sepLineLeft"></div>
-    <div class="sepLineRight"></div>
-
-    <button
-      class="googleContainer"
-      id="google-signin-button"
-      data-onsuccess="onSignIn"
-    >
-      <img
-        class="googleIcon"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png"
-        alt="Example Image"
-      />
-      <div
-        style="
-          vertical-align: middle;
-          height: 60px;
-          display: flex;
-          align-items: center;
-        "
-      >
-        <span>Continue with Google</span>
-      </div>
-    </button>
-
-    <div class="loginFooter">
-      <span class="loginFooterText">New to OMNIHUB? </span
-      ><span class="loginSignup" (click)="signUp = true">Sign Up</span>
-    </div>
+    <button (click)="welcome=false; signUp=true" class="welcomeLogin">SIGN UP</button>
+    <button (click)="welcome=false; signUp=false" class="welcomeSignup">LOGIN</button>
   </div>
 
-  <!-- signup -->
+  </div>
 
-  <div *ngIf="signUp" class="signupBackground">
-    <div class="signupHeader">get started</div>
-    <div class="signupSubHeader">Please enter your details below.</div>
+  <div *ngIf="!welcome">
+    <div *ngIf="!signUp" class="loginBackground">
+      <i (click)="welcome=true" class="fas fa-times closeIconLog"></i>
+      <div class="loginHeader">Welcome Back!</div>
+      <div class="loginSubHeader">Please enter your details below.</div>
 
-    <div class="signupNameText">
-      <div class="signupName">Full Name</div>
-      <div class="signupSurname">Username</div>
-    </div>
-
-    <div class="signupNameContainers">
-      <input type="text" class="signupNameContainer" />
-      <input type="text" #usernameInput class="signupSurnameContainer" />
-    </div>
-
-    <div class="signupEmail">Email</div>
-    <input class="signupEmailContainer" />
-
-    <div class="signupPass">Password</div>
-    <input type="password" class="signupPassContainer" />
-    <span class="passTextSignup">Password must be more than 8 characters</span>
-
-    <div class="signupRem">
-      I have read and accept the <i class="terms">terms of service</i>
-    </div>
-
-    <button
-      class="signupBtn"
-      (click)="loggedIn = true; getUsername(usernameInput.value)"
-    >
-      signup
-    </button>
-
-    <div class="googleBtn"></div>
-    <input
-      class="signupCheckbox"
-      type="checkbox"
-      id="myCheckbox"
-      name="myCheckbox"
-      value="true"
-    />
-
-    <div class="signupSeparator">OR</div>
-    <div class="sepLineLeftSignup"></div>
-    <div class="sepLineRightSignup"></div>
-
-    <button
-      class="googleContainerSignup"
-      id="google-signin-button"
-      data-onsuccess="onSignIn"
-    >
-      <img
-        class="googleIcon"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png"
-        alt="Example Image"
+      <div class="loginEmail">Username</div>
+      <input
+        class="loginEmailContainer"
+        [(ngModel)]="username"
+        #usernameInput
       />
-      <div
-        style="
-          vertical-align: middle;
-          height: 60px;
-          display: flex;
-          align-items: center;
-        "
-      >
-        <span>Continue with Google</span>
-      </div>
-    </button>
 
-    <div class="signupFooter">
-      <span class="signupFooterText">Already have an </span
-      ><span class="signupSignup" (click)="signUp = false">account</span
-      ><span class="signupFooterText"> ?</span>
+      <div class="loginPass">Password</div>
+      <input
+        type="password"
+        class="loginPassContainer"
+        [(ngModel)]="password"
+      />
+
+      <div class="loginRem">Remember me</div>
+
+      <button class="loginForgot">Forgot Password</button>
+
+      <button
+        [disabled]="!(username && password)"
+        class="loginBtn"
+        [ngClass]="{ 'disabled-button': !(username && password) }"
+        (click)="loggedIn = true; getUsername(username)"
+      >
+        LOGIN
+      </button>
+
+      <div class="googleBtn"></div>
+      <input
+        class="loginCheckbox"
+        type="checkbox"
+        id="myCheckbox"
+        name="myCheckbox"
+        value="true"
+      />
+
+      <div class="loginSeparator">OR</div>
+      <div class="sepLineLeft"></div>
+      <div class="sepLineRight"></div>
+
+      <button
+        class="googleContainer"
+        id="google-signin-button"
+        data-onsuccess="onSignIn"
+      >
+        <img
+          class="googleIcon"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png"
+          alt="Example Image"
+        />
+        <div
+          style="
+            vertical-align: middle;
+            height: 60px;
+            display: flex;
+            align-items: center;
+          "
+        >
+          <span>Continue with Google</span>
+        </div>
+      </button>
+
+      <div class="loginFooter">
+        <span class="loginFooterText">New to OMNIHUB? </span
+        ><span class="loginSignup" (click)="signUp = true">Sign Up</span>
+      </div>
+    </div>
+
+    <!-- signup -->
+
+    <div *ngIf="signUp" class="signupBackground">
+      <i (click)="welcome=true" class="fas fa-times closeIconLog"></i>
+      <div class="signupHeader">get started</div>
+      <div class="signupSubHeader">Please enter your details below.</div>
+
+      <div class="signupNameText">
+        <div class="signupName">Full Name</div>
+        <div class="signupSurname">Username</div>
+      </div>
+
+      <div class="signupNameContainers">
+        <input type="text" class="signupNameContainer" [(ngModel)]="fullName" />
+        <input
+          type="text"
+          #usernameInput
+          class="signupSurnameContainer"
+          [(ngModel)]="username"
+        />
+      </div>
+
+      <div class="signupEmail">Email</div>
+      <input class="signupEmailContainer" [(ngModel)]="email" />
+
+      <div class="signupPass">Password</div>
+      <input
+        type="password"
+        class="signupPassContainer"
+        [(ngModel)]="password"
+      />
+      <span class="passTextSignup"
+        >Password must be more than 8 characters</span
+      >
+
+      <div class="signupRem">
+        I have read and accept the <i class="terms">terms of service</i>
+      </div>
+
+      <button
+        [disabled]="!(username && password && email && fullName && terms)"
+        class="signupBtn"
+        [ngClass]="{
+          'disabled-button': !(
+            username &&
+            password &&
+            email &&
+            fullName &&
+            terms
+          )
+        }"
+        (click)="loggedIn = true; getUsername(username)"
+      >
+        signup
+      </button>
+
+      <div class="googleBtn"></div>
+      <input
+        class="signupCheckbox"
+        type="checkbox"
+        id="myCheckbox"
+        name="myCheckbox"
+        value="true"
+        [(ngModel)]="terms"
+      />
+
+      <div class="signupSeparator">OR</div>
+      <div class="sepLineLeftSignup"></div>
+      <div class="sepLineRightSignup"></div>
+
+      <button
+        class="googleContainerSignup"
+        id="google-signin-button"
+        data-onsuccess="onSignIn"
+      >
+        <img
+          class="googleIcon"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png"
+          alt="Example Image"
+        />
+        <div
+          style="
+            vertical-align: middle;
+            height: 60px;
+            display: flex;
+            align-items: center;
+          "
+        >
+          <span>Continue with Google</span>
+        </div>
+      </button>
+
+      <div class="signupFooter">
+        <span class="signupFooterText">Already have an </span
+        ><span class="signupSignup" (click)="signUp = false">account</span
+        ><span class="signupFooterText"> ?</span>
+      </div>
     </div>
   </div>
 </div>

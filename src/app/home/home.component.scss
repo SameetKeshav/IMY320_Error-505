@@ -222,7 +222,7 @@ input:focus {
 }
 .scrollable {
   width: 100%;
-  height: 80%;
+  height: 79%;
   overflow-y: scroll;
 }
 
@@ -845,7 +845,6 @@ html {
   position: absolute;
   right: 1px;
   top: 10%;
-  
 }
 
 .usersContainerStyles {
@@ -886,7 +885,6 @@ html {
   // top: 0px;
   // position: absolute;
 }
-
 
 .classHeader {
   left: 0px;
@@ -2598,4 +2596,106 @@ html {
   .image-container:hover img {
     display: none;
   }
+}
+
+.disabled-button {
+  background-color: rgba(99, 99, 99, 0.527);
+  cursor: default;
+}
+
+.hover-icon {
+  color: rgb(59, 59, 59);
+
+  &:hover {
+    color: #0077b5;
+  }
+}
+
+.highlight-on-hover:hover .tutorName {
+  color: #0077b5;
+  cursor: pointer;
+}
+
+.welcomeLogo {
+  width: 130px;
+  height: auto;
+  position: absolute;
+  top: 110px;
+  left: 430px;
+}
+
+.welcomeSignup,
+.welcomeLogin {
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  width: 210px;
+  height: 50px;
+  position: absolute;
+  top: 330px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.welcomeSignup {
+  background-color: #0077b5;
+  color: white;
+  left: 85px;
+}
+
+.welcomeLogin {
+  background-color: #bfc4cfc2;
+  color: #031e31;
+  left: 345px;
+}
+
+.welcomeTitle {
+  font-size: 80px;
+  font-weight: 700;
+  color: #011d31;
+  position: absolute;
+  top: 110px;
+  left: 80px;
+}
+
+.welcomeSub {
+  font-size: 25px;
+  font-weight: 400;
+  color: #011d31c9;
+  position: absolute;
+  top: 230px;
+  left: 85px;
+}
+
+.welcomeSide {
+  position: absolute;
+}
+
+.welcomeSide {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
+
+.gradient-overlay {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    90deg,
+    rgb(230, 230, 230) 40%,
+    rgba(82, 30, 32, 0) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.closeIconLog {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 30px;
+  color: #031e31;
+  cursor: pointer;
 }
